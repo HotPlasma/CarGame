@@ -7,22 +7,18 @@ Game::Game()
 	generateMap(TexLoader.getTextureIterator(2));
 	m_Car.setCarTexture(TexLoader.getTextureIterator(3));
 	m_Spedo.SetRPMTexture(TexLoader.getTextureIterator(0));
-
+	
 }
 
 void Game::draw(RenderTarget & target, RenderStates states) const 
 {
 	target.draw(MapSprite);
 	target.draw(m_Car);  // Draws car to screen
-	//target.draw(Tyre1);
-	//target.draw(Tyre3);
 
 	for (int i = 0; i < Tyres.size(); i++) // Draws all tyres in vector of tyres
 	{
 		target.draw(*Tyres.at(i));
 	}
-	//target.draw(m_Spedo);
-	//target.draw(Tyre2);
 }
 
 void Game::update(float timestep)
@@ -47,6 +43,7 @@ void Game::update(float timestep)
 		}
 
 	}
+	m_Spedo.updateTimers();
 }
 
 void Game::processKeyPress(Keyboard::Key code)

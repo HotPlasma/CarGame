@@ -52,8 +52,9 @@ int main()
 			{
 				if (event.mouseButton.button == Mouse::Left)
 				{
-					game.CreateTyre(window.mapPixelToCoords(Mouse::getPosition(window),gameview));
+					//game.CreateTyre(window.mapPixelToCoords(Mouse::getPosition(window),gameview));
 					//cout << window.mapPixelToCoords(Mouse::getPosition(window)).x << "    " << window.mapPixelToCoords(Mouse::getPosition(window)).y << endl;
+					cout << Mouse::getPosition().x << "    " << Mouse::getPosition().y << endl;
 				}
 			}
 		
@@ -74,6 +75,7 @@ int main()
 		window.setView(gameview);
 		window.clear(Color::Black);
 		window.draw(game);
+		window.draw(game.m_Spedo.StartLine);
 
 		//if (Mouse::isButtonPressed(Mouse::Left))
 		//{

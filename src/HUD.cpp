@@ -27,6 +27,17 @@ HUD::HUD()
 		cout << "Font could not be found" << endl;
 	}
 
+
+	TimerText.setFont(DigiFont);
+	TimerText.setCharacterSize(35);
+	TimerText.setPosition(100, 100);
+	TimerText.setColor(Color::Red);
+
+	BestTime.setFont(DigiFont);
+	BestTime.setCharacterSize(35);
+	BestTime.setPosition(100, 140);
+	BestTime.setColor(Color::Red);
+	BestTime.setString("Best Time: " + to_string(m_timer.getElapsedTime().asSeconds()));
 }
 
 void HUD::updateNeedle(int rpm)
@@ -42,6 +53,9 @@ void HUD::draw(RenderTarget& target, RenderStates states) const
 	target.draw(RPMSprite);
 	target.draw(m_needle);
 	target.draw(GearText);
+	target.draw(TimerText);
+	target.draw(BestTime);
+	target.draw(StartLine);
 }
 
 void HUD::updateGear(int gear)
@@ -73,4 +87,30 @@ void HUD::SetRPMTexture(vector<Texture>::iterator GivenTexture)
 Vector2f HUD::getRPMCounterPos()
 {
 	return Vector2f(RPMSprite.getPosition().x, RPMSprite.getPosition().y);
+}
+
+void HUD::updateTimers()
+{
+	TimerText.setString(to_string(m_timer.getElapsedTime().asSeconds()));
+
+}
+
+void HUD::setupCheckpoints()
+{
+	/*StartLine.width = 500;
+	StartLine.height = 300;
+	StartLine.left = 800;
+	StartLine.top = 300;
+	
+	MidLine.width = 300;
+	MidLine.height = 300;
+	MidLine.left = 800;
+	MidLine.top = 605;*/
+
+	StartLine.setPosition(Vector2f(500, 500));
+	StartLine.setSize(Vector2f(500, 500));
+	StartLine.setOrigin(StartLine.getSize().x / 2.0f, StartLine.getSize().y / 2.0f); // Sets origin to centre
+	StartLine.setFillColor(Color::White); // Green
+	StartLine.setOutlineThickness(1);
+	StartLine.setOutlineColor((Color(0, 0, 0)));
 }

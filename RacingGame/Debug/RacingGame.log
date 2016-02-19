@@ -1,21 +1,6 @@
-﻿Build started 19/02/2016 15:28:55.
+﻿Build started 19/02/2016 17:15:20.
      1>Project "H:\Desktop\C++ Projects\RacingGame\RacingGame\RacingGame.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\Car.cpp
-         Car.cpp
-     1>h:\desktop\c++ projects\racinggame\src\car.cpp(5): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>h:\desktop\c++ projects\racinggame\src\car.cpp(23): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>h:\desktop\c++ projects\racinggame\src\car.cpp(82): warning C4244: 'argument' : conversion from 'int' to 'const float', possible loss of data
-     1>h:\desktop\c++ projects\racinggame\src\car.cpp(115): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>h:\desktop\c++ projects\racinggame\src\car.cpp(126): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>h:\desktop\c++ projects\racinggame\src\car.cpp(136): warning C4244: '-=' : conversion from 'float' to 'int', possible loss of data
-     1>h:\desktop\c++ projects\racinggame\src\car.cpp(149): warning C4244: '-=' : conversion from 'float' to 'int', possible loss of data
-     1>h:\desktop\c++ projects\racinggame\src\car.cpp(247): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>h:\desktop\c++ projects\racinggame\src\car.cpp(248): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>h:\desktop\c++ projects\racinggame\src\car.cpp(302): warning C4305: 'argument' : truncation from 'double' to 'const float'
-     1>h:\desktop\c++ projects\racinggame\src\car.cpp(302): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
-     1>h:\desktop\c++ projects\racinggame\src\car.cpp(346): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-       Link:
+     1>Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\Desktop\C++ Projects\RacingGame\Debug\RacingGame.exe" /INCREMENTAL /NOLOGO "sfml-main-d.lib" "sfml-system-d.lib" "sfml-graphics-d.lib" "sfml-window-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:\Desktop\C++ Projects\RacingGame\Debug\RacingGame.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\Desktop\C++ Projects\RacingGame\Debug\RacingGame.lib" /MACHINE:X86 Debug\Car.obj
          Debug\Collidable.obj
          Debug\Game.obj
@@ -29,4 +14,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.37
+Time Elapsed 00:00:01.26

@@ -32,9 +32,9 @@ Car::Car(myVector position, myVector acceleration, float invMass, myVector veloc
 	m_aiAccelRates[4] = 700;
 
 	//m_aiGearRates[0] = 0.4;
-	m_aiGearRates[1] = 0.3f;
-	m_aiGearRates[2] = 0.5f;
-	m_aiGearRates[3] = 0.6f;
+	m_aiGearRates[1] = 0.5f;
+	m_aiGearRates[2] = 0.6f;
+	m_aiGearRates[3] = 0.7f;
 	m_aiGearRates[4] = 0.8f;
 	m_aiGearRates[5] = 1.f;
 

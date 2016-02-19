@@ -16,13 +16,20 @@ private:
 	Texture RPMTexture;
 	Font DigiFont;
 	Text GearText;
+	Text TimerText;
+	Clock m_timer;
+	Text BestTime;
 public:
 	HUD();
+	RectangleShape StartLine;
+	RectangleShape MidLine;
 	void draw(RenderTarget& target, RenderStates states) const;
 	void updateNeedle(int rpm);
 	void updateGear(int gear);
 	Vector2f getRPMCounterPos();
 	void SetRPMTexture(vector<Texture>::iterator GivenTexture);
+	void updateTimers();
+	void setupCheckpoints();
 };
 
 #endif
