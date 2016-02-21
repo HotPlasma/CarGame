@@ -17,18 +17,21 @@ private:
 	Font DigiFont;
 	Text GearText;
 	Text TimerText;
+	float BestTime;
 	Clock m_timer;
-	Text BestTime;
+	Text BestTimeText;
 public:
 	HUD();
-	RectangleShape StartLine;
-	RectangleShape MidLine;
+	FloatRect StartLine;
+	FloatRect MidLine;
 	void draw(RenderTarget& target, RenderStates states) const;
 	void updateNeedle(int rpm);
 	void updateGear(int gear);
 	Vector2f getRPMCounterPos();
 	void SetRPMTexture(vector<Texture>::iterator GivenTexture);
 	void updateTimers();
+	void ResetTimer();
+	void UpdateBestTime();
 	void setupCheckpoints();
 };
 

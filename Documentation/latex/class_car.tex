@@ -1,0 +1,297 @@
+\hypertarget{class_car}{}\section{Car Class Reference}
+\label{class_car}\index{Car@{Car}}
+Inheritance diagram for Car\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_car}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_car_a1c803f7c5038d3e31b368b0d0a35493c}{Car} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_car_a41823a6e8deb3a08e8b1bb911ff44611}{Car} (\hyperlink{classmy_vector}{my\+Vector} position, \hyperlink{classmy_vector}{my\+Vector} acceleration, float inv\+Mass, \hyperlink{classmy_vector}{my\+Vector} velocity)
+\begin{DoxyCompactList}\small\item\em Overloaded constructer which contructs the car from its position, acceleration, inverse mass and starting velocity. \end{DoxyCompactList}\item 
+void \hyperlink{class_car_af40693325c1d0b50f9fd67a0fc8ace9b}{Accelerate} ()
+\begin{DoxyCompactList}\small\item\em Accelerates car by R\+P\+M of each gear multiplied by the rotation of the car after being affected by friction. \end{DoxyCompactList}\item 
+void \hyperlink{class_car_aa8a2aacbb529a44221893b4e2877b03b}{Neutral} ()
+\begin{DoxyCompactList}\small\item\em Stops accelerating the car and due to the R\+P\+M dropping and friction occuring car will eventally reach standstill. \end{DoxyCompactList}\item 
+void \hyperlink{class_car_afb8da2fa315e9bb953ec87fb23ddd653}{Reversing\+Accel} ()
+\begin{DoxyCompactList}\small\item\em Negetively accelerates the car by a constant after being affected by friction. \end{DoxyCompactList}\item 
+\hypertarget{class_car_ad3c6ba8be8f38d8a4fac3c11d2c851d5}{}void \hyperlink{class_car_ad3c6ba8be8f38d8a4fac3c11d2c851d5}{Turn} ()\label{class_car_ad3c6ba8be8f38d8a4fac3c11d2c851d5}
+
+\begin{DoxyCompactList}\small\item\em Called if a player is attempting to turn. Turns car left or right depending on which key was pressed. \end{DoxyCompactList}\item 
+void \hyperlink{class_car_a17070db3aab0bd07fc7aa33014577c44}{Gears\+Management} (float timestep)
+\begin{DoxyCompactList}\small\item\em Manages the gear and R\+P\+M of the car which is used for acceleration. \end{DoxyCompactList}\item 
+void \hyperlink{class_car_a00b4b7e97883fe68f6b6ce0cb314ac1d}{Car\+Set\+Pos} (\hyperlink{classmy_vector}{my\+Vector} Pos)
+\begin{DoxyCompactList}\small\item\em Sets the car\textquotesingle{}s position to a given \hyperlink{classmy_vector}{my\+Vector}. \end{DoxyCompactList}\item 
+void \hyperlink{class_car_a61fa68cf77c965400f16546a75278466}{draw} (Render\+Target \&target, Render\+States states) const 
+\begin{DoxyCompactList}\small\item\em Allows car and wheels to be drawn to the screen. \end{DoxyCompactList}\item 
+void \hyperlink{class_car_afe9470e7880c07e082633d900328b312}{update} (float timestep)
+\begin{DoxyCompactList}\small\item\em Updates the variables that need to be updated every frame such as R\+P\+M, Steering angle, \hyperlink{class_tyre}{Tyre} position, ect. \end{DoxyCompactList}\item 
+void \hyperlink{class_car_a6a4377866be6ad14841bb70f87a68327}{set\+Car\+Texture} (vector$<$ Texture $>$\+::iterator Given\+Texture)
+\begin{DoxyCompactList}\small\item\em Sets the texture to the car sprite from the texture loader. \end{DoxyCompactList}\item 
+void \hyperlink{class_car_abf01c052dd364f40cfbc2881b79b5ea4}{Collide} (\hyperlink{class_tyre}{Tyre} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Polymorphic function derived from collidable class which takes any collidable in this case a tyre and allows it to collide with any other collidable. \end{DoxyCompactList}\item 
+Vector2f \hyperlink{class_car_aa54320ce418c1f377eb595853dd1939c}{Return\+Car\+Pos} ()
+\begin{DoxyCompactList}\small\item\em Returns the position of the car as a vector2f. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_car_a46612ea1666db7c7332fe2d23d731a12}{}Rectangle\+Shape \hyperlink{class_car_a46612ea1666db7c7332fe2d23d731a12}{Front\+Wheel} \mbox{[}2\mbox{]}\label{class_car_a46612ea1666db7c7332fe2d23d731a12}
+
+\begin{DoxyCompactList}\small\item\em Array of two rectangle shapes which will be my front wheels. \end{DoxyCompactList}\item 
+\hypertarget{class_car_af8c8ae2d2e022338d13bce2eb4fed1e2}{}Rectangle\+Shape \hyperlink{class_car_af8c8ae2d2e022338d13bce2eb4fed1e2}{Rear\+Wheel} \mbox{[}2\mbox{]}\label{class_car_af8c8ae2d2e022338d13bce2eb4fed1e2}
+
+\begin{DoxyCompactList}\small\item\em Array of two rectangle shapes which will be my rear wheels. \end{DoxyCompactList}\item 
+\hypertarget{class_car_a4d453c99f080df6d44f0f44eaa5d24e1}{}int \hyperlink{class_car_a4d453c99f080df6d44f0f44eaa5d24e1}{m\+\_\+i\+R\+P\+M}\label{class_car_a4d453c99f080df6d44f0f44eaa5d24e1}
+
+\begin{DoxyCompactList}\small\item\em Integer which holds the Rotations Per Minute by which the car will accelerate. \end{DoxyCompactList}\item 
+\hypertarget{class_car_aa05d717a7339d5c9fc6fc420fec7041d}{}int \hyperlink{class_car_aa05d717a7339d5c9fc6fc420fec7041d}{m\+\_\+i\+Gear}\label{class_car_aa05d717a7339d5c9fc6fc420fec7041d}
+
+\begin{DoxyCompactList}\small\item\em Integer which holds which gear the car is in. \end{DoxyCompactList}\item 
+\hypertarget{class_car_a42b2cb593b38ebbf22733931740b68cc}{}int \hyperlink{class_car_a42b2cb593b38ebbf22733931740b68cc}{m\+\_\+ai\+Accel\+Rates} \mbox{[}5\mbox{]}\label{class_car_a42b2cb593b38ebbf22733931740b68cc}
+
+\begin{DoxyCompactList}\small\item\em Array of integers which store the rates of acceleration for each gear. \end{DoxyCompactList}\item 
+\hypertarget{class_car_aeec39fb67a456684cac701c2b828b173}{}float \hyperlink{class_car_aeec39fb67a456684cac701c2b828b173}{m\+\_\+ai\+Gear\+Rates} \mbox{[}6\mbox{]}\label{class_car_aeec39fb67a456684cac701c2b828b173}
+
+\begin{DoxyCompactList}\small\item\em Array of floats which hold what value the acceleration rates are multiplied by in order for the car to gain gain speed when accelerating. \end{DoxyCompactList}\item 
+\hypertarget{class_car_aa9a2cb08891629d7b40e9e01e219da21}{}float \hyperlink{class_car_aa9a2cb08891629d7b40e9e01e219da21}{m\+\_\+f\+Steering\+Angle}\label{class_car_aa9a2cb08891629d7b40e9e01e219da21}
+
+\begin{DoxyCompactList}\small\item\em Float which contains the angle my tyres would face. \end{DoxyCompactList}\item 
+\hypertarget{class_car_a982be320c4ff138458a2d9aa6c14ed54}{}float \hyperlink{class_car_a982be320c4ff138458a2d9aa6c14ed54}{m\+\_\+f\+Rotation\+Angle}\label{class_car_a982be320c4ff138458a2d9aa6c14ed54}
+
+\begin{DoxyCompactList}\small\item\em Float which holds the rotation angle of my car. \end{DoxyCompactList}\item 
+\hypertarget{class_car_ad3930029165ec53a59367e5c27261500}{}\hyperlink{classmy_vector}{my\+Vector} \hyperlink{class_car_ad3930029165ec53a59367e5c27261500}{Rotation\+Vector}\label{class_car_ad3930029165ec53a59367e5c27261500}
+
+\begin{DoxyCompactList}\small\item\em Vector which contains the direction my car is facing. \end{DoxyCompactList}\item 
+\hypertarget{class_car_a53ecb53c65d3a0a27905e8c080758188}{}bool \hyperlink{class_car_a53ecb53c65d3a0a27905e8c080758188}{Rotating\+Right} = false\label{class_car_a53ecb53c65d3a0a27905e8c080758188}
+
+\begin{DoxyCompactList}\small\item\em Rotational bool for right direction. \end{DoxyCompactList}\item 
+\hypertarget{class_car_a936486153a35079ef6faf7dd6ebdddbc}{}bool \hyperlink{class_car_a936486153a35079ef6faf7dd6ebdddbc}{Rotating\+Left} = false\label{class_car_a936486153a35079ef6faf7dd6ebdddbc}
+
+\begin{DoxyCompactList}\small\item\em Roational bool for left direction. \end{DoxyCompactList}\item 
+\hypertarget{class_car_aeaaafebefc59dfd9d3976b5bf3ac37e2}{}Sprite \hyperlink{class_car_aeaaafebefc59dfd9d3976b5bf3ac37e2}{m\+\_\+render}\label{class_car_aeaaafebefc59dfd9d3976b5bf3ac37e2}
+
+\begin{DoxyCompactList}\small\item\em Sprite which represents the car. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_car_a1c803f7c5038d3e31b368b0d0a35493c}{}\index{Car@{Car}!Car@{Car}}
+\index{Car@{Car}!Car@{Car}}
+\subsubsection[{Car()}]{\setlength{\rightskip}{0pt plus 5cm}Car\+::\+Car (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_car_a1c803f7c5038d3e31b368b0d0a35493c}
+
+
+Default constructor. 
+
+Creates a \hyperlink{class_car}{Car}. \hypertarget{class_car_a41823a6e8deb3a08e8b1bb911ff44611}{}\index{Car@{Car}!Car@{Car}}
+\index{Car@{Car}!Car@{Car}}
+\subsubsection[{Car(my\+Vector position, my\+Vector acceleration, float inv\+Mass, my\+Vector velocity)}]{\setlength{\rightskip}{0pt plus 5cm}Car\+::\+Car (
+\begin{DoxyParamCaption}
+\item[{{\bf my\+Vector}}]{position, }
+\item[{{\bf my\+Vector}}]{acceleration, }
+\item[{float}]{inv\+Mass, }
+\item[{{\bf my\+Vector}}]{velocity}
+\end{DoxyParamCaption}
+)}\label{class_car_a41823a6e8deb3a08e8b1bb911ff44611}
+
+
+Overloaded constructer which contructs the car from its position, acceleration, inverse mass and starting velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position \hyperlink{classmy_vector}{my\+Vector} \\
+\hline
+{\em acceleration} & Acceleration \hyperlink{classmy_vector}{my\+Vector} \\
+\hline
+{\em inv\+Mass} & Inverse Mass float \\
+\hline
+{\em velocity} & Velocity \hyperlink{classmy_vector}{my\+Vector} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_car_af40693325c1d0b50f9fd67a0fc8ace9b}{}\index{Car@{Car}!Accelerate@{Accelerate}}
+\index{Accelerate@{Accelerate}!Car@{Car}}
+\subsubsection[{Accelerate()}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+::\+Accelerate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_car_af40693325c1d0b50f9fd67a0fc8ace9b}
+
+
+Accelerates car by R\+P\+M of each gear multiplied by the rotation of the car after being affected by friction. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_car_aa8a2aacbb529a44221893b4e2877b03b}{Neutral} 
+
+\hyperlink{class_car_afb8da2fa315e9bb953ec87fb23ddd653}{Reversing\+Accel} 
+\end{DoxySeeAlso}
+\hypertarget{class_car_a00b4b7e97883fe68f6b6ce0cb314ac1d}{}\index{Car@{Car}!Car\+Set\+Pos@{Car\+Set\+Pos}}
+\index{Car\+Set\+Pos@{Car\+Set\+Pos}!Car@{Car}}
+\subsubsection[{Car\+Set\+Pos(my\+Vector Pos)}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+::\+Car\+Set\+Pos (
+\begin{DoxyParamCaption}
+\item[{{\bf my\+Vector}}]{Pos}
+\end{DoxyParamCaption}
+)}\label{class_car_a00b4b7e97883fe68f6b6ce0cb314ac1d}
+
+
+Sets the car\textquotesingle{}s position to a given \hyperlink{classmy_vector}{my\+Vector}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pos} & A \hyperlink{classmy_vector}{my\+Vector} to which the cars location will be set to \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_car_abf01c052dd364f40cfbc2881b79b5ea4}{}\index{Car@{Car}!Collide@{Collide}}
+\index{Collide@{Collide}!Car@{Car}}
+\subsubsection[{Collide(\+Tyre $\ast$\+B)}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+::\+Collide (
+\begin{DoxyParamCaption}
+\item[{{\bf Tyre} $\ast$}]{B}
+\end{DoxyParamCaption}
+)}\label{class_car_abf01c052dd364f40cfbc2881b79b5ea4}
+
+
+Polymorphic function derived from collidable class which takes any collidable in this case a tyre and allows it to collide with any other collidable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & A tyre collidable to be collided with \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_car_a61fa68cf77c965400f16546a75278466}{}\index{Car@{Car}!draw@{draw}}
+\index{draw@{draw}!Car@{Car}}
+\subsubsection[{draw(\+Render\+Target \&target, Render\+States states) const }]{\setlength{\rightskip}{0pt plus 5cm}void Car\+::draw (
+\begin{DoxyParamCaption}
+\item[{Render\+Target \&}]{target, }
+\item[{Render\+States}]{states}
+\end{DoxyParamCaption}
+) const}\label{class_car_a61fa68cf77c965400f16546a75278466}
+
+
+Allows car and wheels to be drawn to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Drawable to be drawn \\
+\hline
+{\em states} & States to be drawn \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_car_a17070db3aab0bd07fc7aa33014577c44}{}\index{Car@{Car}!Gears\+Management@{Gears\+Management}}
+\index{Gears\+Management@{Gears\+Management}!Car@{Car}}
+\subsubsection[{Gears\+Management(float timestep)}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+::\+Gears\+Management (
+\begin{DoxyParamCaption}
+\item[{float}]{timestep}
+\end{DoxyParamCaption}
+)}\label{class_car_a17070db3aab0bd07fc7aa33014577c44}
+
+
+Manages the gear and R\+P\+M of the car which is used for acceleration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timestep} & A float which holds gametime\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_car_a4d453c99f080df6d44f0f44eaa5d24e1}{m\+\_\+i\+R\+P\+M} 
+
+\hyperlink{class_car_aa05d717a7339d5c9fc6fc420fec7041d}{m\+\_\+i\+Gear} 
+
+\hyperlink{class_car_a42b2cb593b38ebbf22733931740b68cc}{m\+\_\+ai\+Accel\+Rates} 
+
+\hyperlink{class_car_aeec39fb67a456684cac701c2b828b173}{m\+\_\+ai\+Gear\+Rates} 
+
+\hyperlink{class_car_af40693325c1d0b50f9fd67a0fc8ace9b}{Accelerate} 
+\end{DoxySeeAlso}
+\hypertarget{class_car_aa8a2aacbb529a44221893b4e2877b03b}{}\index{Car@{Car}!Neutral@{Neutral}}
+\index{Neutral@{Neutral}!Car@{Car}}
+\subsubsection[{Neutral()}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+::\+Neutral (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_car_aa8a2aacbb529a44221893b4e2877b03b}
+
+
+Stops accelerating the car and due to the R\+P\+M dropping and friction occuring car will eventally reach standstill. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_car_af40693325c1d0b50f9fd67a0fc8ace9b}{Accelerate} 
+
+\hyperlink{class_car_afb8da2fa315e9bb953ec87fb23ddd653}{Reversing\+Accel} 
+\end{DoxySeeAlso}
+\hypertarget{class_car_aa54320ce418c1f377eb595853dd1939c}{}\index{Car@{Car}!Return\+Car\+Pos@{Return\+Car\+Pos}}
+\index{Return\+Car\+Pos@{Return\+Car\+Pos}!Car@{Car}}
+\subsubsection[{Return\+Car\+Pos()}]{\setlength{\rightskip}{0pt plus 5cm}Vector2f Car\+::\+Return\+Car\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_car_aa54320ce418c1f377eb595853dd1939c}
+
+
+Returns the position of the car as a vector2f. 
+
+\begin{DoxyReturn}{Returns}
+Vector2f Location of the car 
+\end{DoxyReturn}
+\hypertarget{class_car_afb8da2fa315e9bb953ec87fb23ddd653}{}\index{Car@{Car}!Reversing\+Accel@{Reversing\+Accel}}
+\index{Reversing\+Accel@{Reversing\+Accel}!Car@{Car}}
+\subsubsection[{Reversing\+Accel()}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+::\+Reversing\+Accel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_car_afb8da2fa315e9bb953ec87fb23ddd653}
+
+
+Negetively accelerates the car by a constant after being affected by friction. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_car_af40693325c1d0b50f9fd67a0fc8ace9b}{Accelerate} 
+
+\hyperlink{class_car_aa8a2aacbb529a44221893b4e2877b03b}{Neutral} 
+\end{DoxySeeAlso}
+\hypertarget{class_car_a6a4377866be6ad14841bb70f87a68327}{}\index{Car@{Car}!set\+Car\+Texture@{set\+Car\+Texture}}
+\index{set\+Car\+Texture@{set\+Car\+Texture}!Car@{Car}}
+\subsubsection[{set\+Car\+Texture(vector$<$ Texture $>$\+::iterator Given\+Texture)}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+::set\+Car\+Texture (
+\begin{DoxyParamCaption}
+\item[{vector$<$ Texture $>$\+::iterator}]{Given\+Texture}
+\end{DoxyParamCaption}
+)}\label{class_car_a6a4377866be6ad14841bb70f87a68327}
+
+
+Sets the texture to the car sprite from the texture loader. 
+
+Iterator is dereferenced to get texture 
+\begin{DoxyParams}{Parameters}
+{\em Given\+Texture} & A iterator of textures in a vector game time \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_car_afe9470e7880c07e082633d900328b312}{}\index{Car@{Car}!update@{update}}
+\index{update@{update}!Car@{Car}}
+\subsubsection[{update(float timestep)}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{timestep}
+\end{DoxyParamCaption}
+)}\label{class_car_afe9470e7880c07e082633d900328b312}
+
+
+Updates the variables that need to be updated every frame such as R\+P\+M, Steering angle, \hyperlink{class_tyre}{Tyre} position, ect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timestep} & Float game time \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Car.\+h\item 
+src/Car.\+cpp\end{DoxyCompactItemize}

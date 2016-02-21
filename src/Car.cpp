@@ -31,7 +31,7 @@ Car::Car(myVector position, myVector acceleration, float invMass, myVector veloc
 	m_aiAccelRates[3] = 1000;
 	m_aiAccelRates[4] = 700;
 
-	//m_aiGearRates[0] = 0.4;
+	m_aiGearRates[0] = 0.4;
 	m_aiGearRates[1] = 0.5f;
 	m_aiGearRates[2] = 0.6f;
 	m_aiGearRates[3] = 0.7f;
@@ -79,7 +79,9 @@ void Car::Accelerate() //Accelerates car by RPM multiplied by the rotation of th
 
 void Car::Neutral()
 {
-	m_acceleration = RotationVector.multiply(m_iRPM - 1800).subtract(getFriction());
+	float UnAccel = m_iRPM * m_aiGearRates[m_iGear];
+	m_acceleration = RotationVector.multiply(m_iRPM -1800 ).subtract(getFriction());
+	cout << m_iRPM / UnAccel << endl;
 }
 
 void Car::ReversingAccel()
@@ -303,19 +305,19 @@ void Car::Collide(Tyre* B)
 
 		if (NewVel.x() >= 0)
 		{
-			NewVel.setX(fmin(NewVel.x(), 2000));
+			NewVel.setX(fmin(NewVel.x(), 1000));
 		}
 		if (NewVel.x() < 0)
 		{
-			NewVel.setX(fmax(NewVel.x(), -2000));
+			NewVel.setX(fmax(NewVel.x(), -1000));
 		}
 		if (NewVel.y() >= 0)
 		{
-			NewVel.setY(fmin(NewVel.y(), 2000));
+			NewVel.setY(fmin(NewVel.y(), 1000));
 		}
 		if (NewVel.y() < 0)
 		{
-			NewVel.setY(fmax(NewVel.y(), -2000));
+			NewVel.setY(fmax(NewVel.y(), -1000));
 		}
 
 
@@ -330,10 +332,10 @@ void Car::Collide(Tyre* B)
 		//myVector CollisionNormal = myVector::normalise(Clamp);
 
 		//float J;
-		//J = (-(1 + 0.3) * (m_velocity.subtract(B->m_velocity)).dotProduct(CollisionNormal)) / (m_finvMass + B->m_finvMass);
+		//J = (-(1 + 0.6) * (m_velocity.subtract(B->m_velocity)).dotProduct(CollisionNormal)) / (m_finvMass + B->m_finvMass);
 
 		//m_velocity = m_velocity.add(CollisionNormal.multiply(J).multiply(m_finvMass));    // m_velocity + (myVector::normalise(Distance).multiply(J) / m_finvMass;
-		//B->m_velocity = B->m_velocity.add(CollisionNormal.multiply(-J).multiply(B->m_finvMass));
+		//B->m_velocity = B->m_velocity.add(CollisionNormal.MakeNegetive().multiply(J).multiply(B->m_finvMass));
 
 
 		//m_position = m_position.add(CollisionNormal.multiply(CollisionNormal.multiply(Distance)));
@@ -348,6 +350,5 @@ void Car::CarSetPos(myVector Pos)
 
 void Car::setCarTexture(vector<Texture>::iterator GivenTexture)
 {
-	CarTex = *GivenTexture;
-	m_render.setTexture(CarTex);
+	m_render.setTexture(*GivenTexture);
 }

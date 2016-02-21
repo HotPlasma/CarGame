@@ -17,12 +17,9 @@ public:
 	Car m_Car;
 	HUD m_Spedo;
 	vector<Tyre*> Tyres;
-	Tyre Tyre1;
-	Tyre Tyre2;
-	Tyre Tyre3;
 	TextureLoader TexLoader;
 	Sprite MapSprite;
-	Texture MapTexture;
+	bool MidPassed = false;
 	void CreatePlayerCar();
 	void CreateObstacles();
 	void CreateTrack();

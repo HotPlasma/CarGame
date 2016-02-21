@@ -1,0 +1,86 @@
+\hypertarget{class_game}{}\section{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+Inheritance diagram for Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_a79853b667c44be836272528805943168}{}void {\bfseries Create\+Player\+Car} ()\label{class_game_a79853b667c44be836272528805943168}
+
+\item 
+\hypertarget{class_game_adce15c5fa9ad798315a1a7e61c350636}{}void {\bfseries Create\+Obstacles} ()\label{class_game_adce15c5fa9ad798315a1a7e61c350636}
+
+\item 
+\hypertarget{class_game_a27ddb8fcd3bb5a510bc33dcc137bdc19}{}void {\bfseries Create\+Track} ()\label{class_game_a27ddb8fcd3bb5a510bc33dcc137bdc19}
+
+\item 
+\hypertarget{class_game_adf56462c5f8473018fad9b25cc5af607}{}void {\bfseries Create\+Tyre} (Vector2f Position)\label{class_game_adf56462c5f8473018fad9b25cc5af607}
+
+\item 
+\hypertarget{class_game_a260c4d5123eb3a51cbd0bb685546cef4}{}void {\bfseries draw} (Render\+Target \&target, Render\+States states) const \label{class_game_a260c4d5123eb3a51cbd0bb685546cef4}
+
+\item 
+\hypertarget{class_game_acc8519c7ced1cf9eb9bbb3a2f325f6a0}{}void {\bfseries update} (float timestep)\label{class_game_acc8519c7ced1cf9eb9bbb3a2f325f6a0}
+
+\item 
+\hypertarget{class_game_ad3053e3b15bbcb049dc040801d58be7c}{}void {\bfseries process\+Key\+Press} (Keyboard\+::\+Key code)\label{class_game_ad3053e3b15bbcb049dc040801d58be7c}
+
+\item 
+\hypertarget{class_game_adb2ea3b70e0038d2caceedfde3bfc663}{}void {\bfseries process\+Key\+Release} (Keyboard\+::\+Key code)\label{class_game_adb2ea3b70e0038d2caceedfde3bfc663}
+
+\item 
+\hypertarget{class_game_a917e25c51c6b20c74e9f9a441c72717e}{}void {\bfseries generate\+Map} (vector$<$ Texture $>$\+::iterator Given\+Texture)\label{class_game_a917e25c51c6b20c74e9f9a441c72717e}
+
+\item 
+\hypertarget{class_game_a907fa46ec6aa134985c1845d4cf20de2}{}void {\bfseries save\+Tyre\+Pos\+To\+File} ()\label{class_game_a907fa46ec6aa134985c1845d4cf20de2}
+
+\item 
+\hypertarget{class_game_a16d92220f4808914017486e36c7e44cb}{}void {\bfseries load\+Tyre\+Pos\+From\+File} ()\label{class_game_a16d92220f4808914017486e36c7e44cb}
+
+\item 
+\hypertarget{class_game_aac1c9b79494aa3ec9564134bcbe885da}{}Vector2f {\bfseries Get\+Car\+Pos} ()\label{class_game_aac1c9b79494aa3ec9564134bcbe885da}
+
+\item 
+\hypertarget{class_game_a1ab3e29bdade1f0a90723878a34abef5}{}Vector2f {\bfseries Get\+R\+P\+M\+Counter\+Pos} ()\label{class_game_a1ab3e29bdade1f0a90723878a34abef5}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_ac542da39deb8370524eb7573a3dac252}{}\hyperlink{class_car}{Car} {\bfseries m\+\_\+\+Car}\label{class_game_ac542da39deb8370524eb7573a3dac252}
+
+\item 
+\hypertarget{class_game_a848d449a2e906074d4a28668ad36bdc5}{}\hyperlink{class_h_u_d}{H\+U\+D} {\bfseries m\+\_\+\+Spedo}\label{class_game_a848d449a2e906074d4a28668ad36bdc5}
+
+\item 
+\hypertarget{class_game_aec9e5578d881abadc24ecc8fb2f8ac30}{}vector$<$ \hyperlink{class_tyre}{Tyre} $\ast$ $>$ {\bfseries Tyres}\label{class_game_aec9e5578d881abadc24ecc8fb2f8ac30}
+
+\item 
+\hypertarget{class_game_ad2262bead63e8b67b3e25833ec6622ab}{}\hyperlink{class_tyre}{Tyre} {\bfseries Tyre1}\label{class_game_ad2262bead63e8b67b3e25833ec6622ab}
+
+\item 
+\hypertarget{class_game_a4e563d446466f08bd0ec0efc5dddf910}{}\hyperlink{class_tyre}{Tyre} {\bfseries Tyre2}\label{class_game_a4e563d446466f08bd0ec0efc5dddf910}
+
+\item 
+\hypertarget{class_game_a0cddbe8d2a7eedffaee89b489347942f}{}\hyperlink{class_tyre}{Tyre} {\bfseries Tyre3}\label{class_game_a0cddbe8d2a7eedffaee89b489347942f}
+
+\item 
+\hypertarget{class_game_a6d7faee481b4a3b40a5b0765643c0870}{}\hyperlink{class_texture_loader}{Texture\+Loader} {\bfseries Tex\+Loader}\label{class_game_a6d7faee481b4a3b40a5b0765643c0870}
+
+\item 
+\hypertarget{class_game_a34d3fe9d5ddcb15c3408b212275fe92e}{}Sprite {\bfseries Map\+Sprite}\label{class_game_a34d3fe9d5ddcb15c3408b212275fe92e}
+
+\item 
+\hypertarget{class_game_a3d775b7a861bd47dc7b96310ae8cc798}{}Texture {\bfseries Map\+Texture}\label{class_game_a3d775b7a861bd47dc7b96310ae8cc798}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Game.\+h\item 
+src/Game.\+cpp\end{DoxyCompactItemize}

@@ -50,11 +50,11 @@ int main()
 			}
 			if (event.type == Event::MouseButtonReleased)
 			{
-				if (event.mouseButton.button == Mouse::Left)
+				if (event.mouseButton.button == Mouse::Left) // Allows tyres to be placed by clicking on the map
 				{
 					//game.CreateTyre(window.mapPixelToCoords(Mouse::getPosition(window),gameview));
 					//cout << window.mapPixelToCoords(Mouse::getPosition(window)).x << "    " << window.mapPixelToCoords(Mouse::getPosition(window)).y << endl;
-					cout << Mouse::getPosition().x << "    " << Mouse::getPosition().y << endl;
+					//cout << Mouse::getPosition().x << "    " << Mouse::getPosition().y << endl;
 				}
 			}
 		
@@ -75,14 +75,6 @@ int main()
 		window.setView(gameview);
 		window.clear(Color::Black);
 		window.draw(game);
-		window.draw(game.m_Spedo.StartLine);
-
-		//if (Mouse::isButtonPressed(Mouse::Left))
-		//{
-		//	game.CreateTyre(window.mapPixelToCoords(Mouse::getPosition(window)));
-		//	cout << window.mapPixelToCoords(Mouse::getPosition(window)).x << "    " << window.mapPixelToCoords(Mouse::getPosition(window)).y << endl;
-		//	//window.draw(game);
-		//}
 
 		//Draws minimap
 		window.setView(miniMap);

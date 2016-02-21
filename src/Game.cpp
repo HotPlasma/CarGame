@@ -7,7 +7,7 @@ Game::Game()
 	generateMap(TexLoader.getTextureIterator(2));
 	m_Car.setCarTexture(TexLoader.getTextureIterator(3));
 	m_Spedo.SetRPMTexture(TexLoader.getTextureIterator(0));
-	
+	m_Spedo.setupCheckpoints();
 }
 
 void Game::draw(RenderTarget & target, RenderStates states) const 
@@ -44,6 +44,23 @@ void Game::update(float timestep)
 
 	}
 	m_Spedo.updateTimers();
+
+	// Restarts laptime and sets new best time if player has beaten previous best time
+	if (m_Spedo.StartLine.intersects(m_Car.m_render.getGlobalBounds()))
+	{
+		if (MidPassed == true)
+		{
+			m_Spedo.UpdateBestTime();
+		}
+		m_Spedo.ResetTimer();
+		MidPassed = false;
+	}
+
+	if (m_Spedo.MidLine.intersects(m_Car.m_render.getGlobalBounds()))
+	{
+		MidPassed = true;
+	}
+
 }
 
 void Game::processKeyPress(Keyboard::Key code)
@@ -98,9 +115,7 @@ void Game::processKeyRelease(Keyboard::Key code)
 
 void Game::generateMap(vector<Texture>::iterator GivenTexture)
 {
-	
-	MapTexture = *GivenTexture;
-	MapSprite.setTexture(MapTexture);
+	MapSprite.setTexture(*GivenTexture);
 
 	MapSprite.setPosition(0, -360); // Centers Map
 

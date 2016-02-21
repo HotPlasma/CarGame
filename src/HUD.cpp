@@ -27,17 +27,18 @@ HUD::HUD()
 		cout << "Font could not be found" << endl;
 	}
 
+	BestTime = 10000;
 
 	TimerText.setFont(DigiFont);
 	TimerText.setCharacterSize(35);
 	TimerText.setPosition(100, 100);
 	TimerText.setColor(Color::Red);
 
-	BestTime.setFont(DigiFont);
-	BestTime.setCharacterSize(35);
-	BestTime.setPosition(100, 140);
-	BestTime.setColor(Color::Red);
-	BestTime.setString("Best Time: " + to_string(m_timer.getElapsedTime().asSeconds()));
+	BestTimeText.setFont(DigiFont);
+	BestTimeText.setCharacterSize(35);
+	BestTimeText.setPosition(100, 140);
+	BestTimeText.setColor(Color::Red);
+	BestTimeText.setString("Best Time: 0.0000000");
 }
 
 void HUD::updateNeedle(int rpm)
@@ -54,8 +55,7 @@ void HUD::draw(RenderTarget& target, RenderStates states) const
 	target.draw(m_needle);
 	target.draw(GearText);
 	target.draw(TimerText);
-	target.draw(BestTime);
-	target.draw(StartLine);
+	target.draw(BestTimeText);
 }
 
 void HUD::updateGear(int gear)
@@ -92,25 +92,45 @@ Vector2f HUD::getRPMCounterPos()
 void HUD::updateTimers()
 {
 	TimerText.setString(to_string(m_timer.getElapsedTime().asSeconds()));
+}
 
+void HUD::ResetTimer()
+{
+	m_timer.restart();
+}
+
+void HUD::UpdateBestTime()
+{
+	if (m_timer.getElapsedTime().asSeconds() < BestTime)
+	{
+		BestTime = m_timer.getElapsedTime().asSeconds();
+		BestTimeText.setString("Best Time: " + to_string(BestTime));
+	}
 }
 
 void HUD::setupCheckpoints()
 {
-	/*StartLine.width = 500;
-	StartLine.height = 300;
-	StartLine.left = 800;
-	StartLine.top = 300;
+	StartLine.width = 500;
+	StartLine.height = 500;
+	StartLine.left = 2100 - (StartLine.width / 2);
+	StartLine.top = 130 - (StartLine.height / 2);
 	
-	MidLine.width = 300;
-	MidLine.height = 300;
-	MidLine.left = 800;
-	MidLine.top = 605;*/
+	MidLine.width = 500;
+	MidLine.height = 500;
+	MidLine.left = 2100;
+	MidLine.top = 2400;
 
-	StartLine.setPosition(Vector2f(500, 500));
-	StartLine.setSize(Vector2f(500, 500));
-	StartLine.setOrigin(StartLine.getSize().x / 2.0f, StartLine.getSize().y / 2.0f); // Sets origin to centre
-	StartLine.setFillColor(Color::White); // Green
-	StartLine.setOutlineThickness(1);
-	StartLine.setOutlineColor((Color(0, 0, 0)));
+	//StartLine.setPosition(Vector2f(2100, 130));
+	//StartLine.setSize(Vector2f(500, 500));
+	//StartLine.setOrigin(StartLine.getSize().x / 2.0f, StartLine.getSize().y / 2.0f); // Sets origin to centre
+	//StartLine.setFillColor(Color::White); // Green
+	//StartLine.setOutlineThickness(1);
+	//StartLine.setOutlineColor((Color(0, 0, 0)));
+
+	//MidLine.setPosition(Vector2f(2100, 2400));
+	//MidLine.setSize(Vector2f(500, 500));
+	//MidLine.setOrigin(StartLine.getSize().x / 2.0f, StartLine.getSize().y / 2.0f); // Sets origin to centre
+	//MidLine.setFillColor(Color::White); // Green
+	//MidLine.setOutlineThickness(1);
+	//MidLine.setOutlineColor((Color(0, 0, 0)));
 }
