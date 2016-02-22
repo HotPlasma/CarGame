@@ -267,7 +267,7 @@ void Car::Collide(Tyre* B)
 	myVector HalfExtents(m_render.getLocalBounds().width / 2, m_render.getLocalBounds().height / 2);
 
 	//Rotates tyre around by the rotation of the car
-	LocalTyrePos.set(myVector::RotateVector(LocalTyrePos, -m_render.getRotation()));
+	LocalTyrePos.set(LocalTyrePos.RotateVector(-m_render.getRotation()));
 
 	//Sets up Clamp of car against the LocalTyrePos
 	if (LocalTyrePos.x() >= 0)
@@ -298,7 +298,7 @@ void Car::Collide(Tyre* B)
 	if (Distance <= -0.2) //If collided
 	{
 		myVector CollisonNorm(Distance, 0); //Create a collision normal vector and insert distance
-		CollisonNorm = myVector::RotateVector(CollisonNorm, m_render.getRotation()); //Rotate collision normal by the roatation of the car
+		CollisonNorm = CollisonNorm.RotateVector(m_render.getRotation()); //Rotate collision normal by the roatation of the car
 		myVector NewVel;
 		//New Velocity is equal to -(1+e)*Collision Normal*(Collision Normal.Velocity)
 		NewVel.set(CollisonNorm.multiply(-(1 + 0.2)).multiply(CollisonNorm.dotProduct(m_velocity)));

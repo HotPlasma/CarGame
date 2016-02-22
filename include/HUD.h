@@ -1,3 +1,11 @@
+////////////////////////////////////////////////////////////
+//
+// Car Game - Created by Egor Kharlamov
+// Created for C++ Year 2 Coursework at DMU - Games Programming Course
+//
+// This project is a racing game which contains realistic car physics and polymorphic impulse resolution 
+//
+////////////////////////////////////////////////////////////
 #ifndef HUD_H
 #define HUD_H
 

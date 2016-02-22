@@ -2,7 +2,7 @@
 
 Game::Game()
 {
-	m_Car = Car(myVector(2075, 65), myVector(0, 0), 0.01, myVector(0, 0)); // Creates players car with default paramaters
+	m_Car = Car(myVector(2075, 65), myVector(0, 0), 0.3, myVector(0, 0)); // Creates players car with default paramaters
 	TexLoader.load();
 	generateMap(TexLoader.getTextureIterator(2));
 	m_Car.setCarTexture(TexLoader.getTextureIterator(3));

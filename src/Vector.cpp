@@ -129,13 +129,13 @@ double myVector::y()
 	return m_adVector[1];
 }
 
-myVector myVector::RotateVector(myVector Vector, float Angle)
+myVector myVector::RotateVector(float Angle)
 {
 	Angle = Angle * (3.1415 / 180);
 
 	myVector rotatedVect;
-	rotatedVect.setX((Vector.x() * cosf(Angle)) + (Vector.y() * -sinf(Angle)));
-	rotatedVect.setY((Vector.x() * sinf(Angle)) + (Vector.y() * cosf(Angle)));
+	rotatedVect.setX((m_adVector[0] * cosf(Angle)) + (m_adVector[1] * -sinf(Angle)));
+	rotatedVect.setY((m_adVector[0] * sinf(Angle)) + (m_adVector[1] * cosf(Angle)));
 
 	return rotatedVect;
 }

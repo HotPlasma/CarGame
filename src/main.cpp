@@ -52,7 +52,7 @@ int main()
 			{
 				if (event.mouseButton.button == Mouse::Left) // Allows tyres to be placed by clicking on the map
 				{
-					//game.CreateTyre(window.mapPixelToCoords(Mouse::getPosition(window),gameview));
+					game.CreateTyre(window.mapPixelToCoords(Mouse::getPosition(window),gameview));
 					//cout << window.mapPixelToCoords(Mouse::getPosition(window)).x << "    " << window.mapPixelToCoords(Mouse::getPosition(window)).y << endl;
 					//cout << Mouse::getPosition().x << "    " << Mouse::getPosition().y << endl;
 				}

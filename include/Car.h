@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////
 //
-// Car Game - Created by Jegor Kharlamov
+// Car Game - Created by Egor Kharlamov
 // Created for C++ Year 2 Coursework at DMU - Games Programming Course
 //
 // This project is a racing game which contains realistic car physics and polymorphic impulse resolution 
@@ -160,3 +160,29 @@ public:
 };
 
 #endif
+
+////////////////////////////////////////////////////////////
+/// \class Car
+///
+/// Car is class which holds all infomation about the vehicle the player
+/// drives in the game. To be instantiated it needs to be given a position, inverse mass and
+/// starting velocity.
+/// 
+/// The class also handles the state of the car as in Accelerating, Neutral or Reversing
+/// by checking what gear the car is in. Gear 0 is neutral and gear -1 is reversing while all positive gears are acceleration.
+/// While accelerating the gears are managed in the gear management function which makes sure the gears are incremented realsiticly
+/// when a certain RPM in each gear is reached. This creates a more realistic feeling car.
+/// 
+/// The car features a bicycle method of steering which means that the rotation of the car is based on the position of the wheels.
+/// This system has its limitations but definitely has its limitations aspecially when it comes to side collisions but it helps 
+///
+/// Car is also a collidable, which means that it can collide with any other collidable. It is able to collide with tyres using the
+/// clamp method of circle-OBB collision. 
+///
+/// Usage example:
+/// \code
+/// m_Car = Car(myVector(2075, 65), myVector(0, 0), 0.3, myVector(0, 0));
+/// \endcode
+///
+///
+////////////////////////////////////////////////////////////

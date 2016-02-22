@@ -1,3 +1,11 @@
+////////////////////////////////////////////////////////////
+//
+// Car Game - Created by Egor Kharlamov
+// Created for C++ Year 2 Coursework at DMU - Games Programming Course
+//
+// This project is a racing game which contains realistic car physics and polymorphic impulse resolution 
+//
+////////////////////////////////////////////////////////////
 #ifndef TYRE_H
 #define TYRE_H
 
@@ -71,3 +79,20 @@ public:
 };
 
 #endif
+
+////////////////////////////////////////////////////////////
+/// \class Tyre
+///
+/// Tyre  is class which holds all infomation about the Tyres in the game.
+/// To be instantiated it needs to be given a position and inverse mass.
+///
+/// Tyre is also a collidable, which means that it can collide with any other collidable. It is able to collide with other tyres using the
+/// circle-circle collison method. 
+///
+/// Usage example:
+/// \code
+/// Tyre(myVector(50,40), 0.3))
+/// \endcode
+///
+///
+////////////////////////////////////////////////////////////
