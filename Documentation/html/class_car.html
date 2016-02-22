@@ -93,6 +93,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Car Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_car_8h_source.html">Car.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Car:</div>
 <div class="dyncontent">
@@ -140,7 +142,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a6a4377866be6ad14841bb70f87a68327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the texture to the car sprite from the texture loader.  <a href="#a6a4377866be6ad14841bb70f87a68327">More...</a><br /></td></tr>
 <tr class="separator:a6a4377866be6ad14841bb70f87a68327"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf01c052dd364f40cfbc2881b79b5ea4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car.html#abf01c052dd364f40cfbc2881b79b5ea4">Collide</a> (<a class="el" href="class_tyre.html">Tyre</a> *B)</td></tr>
-<tr class="memdesc:abf01c052dd364f40cfbc2881b79b5ea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic function derived from collidable class which takes any collidable in this case a tyre and allows it to collide with any other collidable.  <a href="#abf01c052dd364f40cfbc2881b79b5ea4">More...</a><br /></td></tr>
+<tr class="memdesc:abf01c052dd364f40cfbc2881b79b5ea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic function derived from collidable class which takes any collidable and allows it to collide with any other collidable. In this case a <a class="el" href="class_car.html">Car</a> and a tyre.  <a href="#abf01c052dd364f40cfbc2881b79b5ea4">More...</a><br /></td></tr>
 <tr class="separator:abf01c052dd364f40cfbc2881b79b5ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa54320ce418c1f377eb595853dd1939c"><td class="memItemLeft" align="right" valign="top">Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car.html#aa54320ce418c1f377eb595853dd1939c">ReturnCarPos</a> ()</td></tr>
 <tr class="memdesc:aa54320ce418c1f377eb595853dd1939c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position of the car as a vector2f.  <a href="#aa54320ce418c1f377eb595853dd1939c">More...</a><br /></td></tr>
@@ -149,9 +151,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ad2dd423735fd869f76c55df162d6eff2 inherit pub_methods_class_collidable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2dd423735fd869f76c55df162d6eff2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Collidable</b> (<a class="el" href="classmy_vector.html">myVector</a> position, <a class="el" href="classmy_vector.html">myVector</a> acceleration, float invMass, <a class="el" href="classmy_vector.html">myVector</a> velocity)</td></tr>
 <tr class="separator:ad2dd423735fd869f76c55df162d6eff2 inherit pub_methods_class_collidable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aaff018202f598eeefd6bc0968d5adb inherit pub_methods_class_collidable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5aaff018202f598eeefd6bc0968d5adb"></a>
-<a class="el" href="classmy_vector.html">myVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getFriction</b> ()</td></tr>
-<tr class="separator:a5aaff018202f598eeefd6bc0968d5adb inherit pub_methods_class_collidable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfe491d3368cfc9c1407b91b4d5d3d77 inherit pub_methods_class_collidable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfe491d3368cfc9c1407b91b4d5d3d77"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Collide</b> (<a class="el" href="class_collidable.html">Collidable</a> *Object2)</td></tr>
 <tr class="separator:abfe491d3368cfc9c1407b91b4d5d3d77 inherit pub_methods_class_collidable"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,17 +209,31 @@ Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr class="memitem:abb12d204a079d68951d396005270c70b inherit pub_attribs_class_collidable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb12d204a079d68951d396005270c70b"></a>
 <a class="el" href="classmy_vector.html">myVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_position</b></td></tr>
 <tr class="separator:abb12d204a079d68951d396005270c70b inherit pub_attribs_class_collidable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacad0202ea0d4f51a6875bce682ff3eb inherit pub_attribs_class_collidable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aacad0202ea0d4f51a6875bce682ff3eb"></a>
-<a class="el" href="classmy_vector.html">myVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_acceleration</b></td></tr>
-<tr class="separator:aacad0202ea0d4f51a6875bce682ff3eb inherit pub_attribs_class_collidable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a729958861685b10ff9718a24fca09c8e inherit pub_attribs_class_collidable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a729958861685b10ff9718a24fca09c8e"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m_finvMass</b></td></tr>
-<tr class="separator:a729958861685b10ff9718a24fca09c8e inherit pub_attribs_class_collidable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfeaec03dc9c1c5791b7bc94cff04c44 inherit pub_attribs_class_collidable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfeaec03dc9c1c5791b7bc94cff04c44"></a>
 <a class="el" href="classmy_vector.html">myVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_velocity</b></td></tr>
 <tr class="separator:adfeaec03dc9c1c5791b7bc94cff04c44 inherit pub_attribs_class_collidable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_class_collidable"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_collidable')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_collidable.html">Collidable</a></td></tr>
+<tr class="memitem:a5aaff018202f598eeefd6bc0968d5adb inherit pro_methods_class_collidable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5aaff018202f598eeefd6bc0968d5adb"></a>
+<a class="el" href="classmy_vector.html">myVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getFriction</b> ()</td></tr>
+<tr class="separator:a5aaff018202f598eeefd6bc0968d5adb inherit pro_methods_class_collidable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_collidable"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_collidable')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_collidable.html">Collidable</a></td></tr>
+<tr class="memitem:aacad0202ea0d4f51a6875bce682ff3eb inherit pro_attribs_class_collidable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aacad0202ea0d4f51a6875bce682ff3eb"></a>
+<a class="el" href="classmy_vector.html">myVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_acceleration</b></td></tr>
+<tr class="separator:aacad0202ea0d4f51a6875bce682ff3eb inherit pro_attribs_class_collidable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a729958861685b10ff9718a24fca09c8e inherit pro_attribs_class_collidable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a729958861685b10ff9718a24fca09c8e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>m_finvMass</b></td></tr>
+<tr class="separator:a729958861685b10ff9718a24fca09c8e inherit pro_attribs_class_collidable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_car.html">Car</a> is class which holds all infomation about the vehicle the player drives in the game. To be instantiated it needs to be given a position, inverse mass and starting velocity.</p>
+<p>The class also handles the state of the car as in Accelerating, Neutral or Reversing by checking what gear the car is in. Gear 0 is neutral and gear -1 is reversing while all positive gears are acceleration. While accelerating the gears are managed in the gear management function which makes sure the gears are incremented realsiticly when a certain RPM in each gear is reached. This creates a more realistic feeling car.</p>
+<p>The car features a bicycle method of steering which means that the rotation of the car is based on the position of the wheels. This system has its limitations but definitely has its limitations aspecially when it comes to side collisions but it helps</p>
+<p><a class="el" href="class_car.html">Car</a> is also a collidable, which means that it can collide with any other collidable. It is able to collide with tyres using the clamp method of circle-OBB collision.</p>
+<p>Usage example: </p><div class="fragment"><div class="line">m_Car = <a class="code" href="class_car.html#a1c803f7c5038d3e31b368b0d0a35493c">Car</a>(<a class="code" href="classmy_vector.html">myVector</a>(2075, 65), <a class="code" href="classmy_vector.html">myVector</a>(0, 0), 0.3, <a class="code" href="classmy_vector.html">myVector</a>(0, 0));</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a1c803f7c5038d3e31b368b0d0a35493c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -347,7 +360,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>m_finvMass</b></td><
       </table>
 </div><div class="memdoc">
 
-<p>Polymorphic function derived from collidable class which takes any collidable in this case a tyre and allows it to collide with any other collidable. </p>
+<p>Polymorphic function derived from collidable class which takes any collidable and allows it to collide with any other collidable. In this case a <a class="el" href="class_car.html">Car</a> and a tyre. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">B</td><td>A tyre collidable to be collided with </td></tr>
@@ -500,7 +513,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>m_finvMass</b></td><
 <p>Sets the texture to the car sprite from the texture loader. </p>
 <p>Iterator is dereferenced to get texture </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">GivenTexture</td><td>A iterator of textures in a vector game time </td></tr>
+    <tr><td class="paramname">GivenTexture</td><td>A iterator of textures in a vector </td></tr>
   </table>
   </dd>
 </dl>

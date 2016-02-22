@@ -90,39 +90,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Tyre.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TYRE_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TYRE_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Collidable.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_tyre.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_tyre.html">Tyre</a> : <span class="keyword">public</span> <a class="code" href="class_collidable.html">Collidable</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_tyre.html">Tyre</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_tyre.html">Tyre</a>(<a class="code" href="classmy_vector.html">myVector</a> position, <span class="keywordtype">float</span> invMass);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//CircleShape TyreShape;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Sprite TyreSprite;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">float</span> Radius;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> update(<span class="keywordtype">float</span> timestep);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> draw(RenderTarget &amp; target, RenderStates states) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> setTyreTexture(vector&lt;Texture&gt;::iterator GivenTexture);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> Collide(<a class="code" href="class_tyre.html">Tyre</a>* B);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    Sprite getTyreSprite();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Car Game - Created by Egor Kharlamov</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Created for C++ Year 2 Coursework at DMU - Games Programming Course</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// This project is a racing game which contains realistic car physics and polymorphic impulse resolution </span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span><span class="preprocessor">#ifndef TYRE_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define TYRE_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;Collidable.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_tyre.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_tyre.html">Tyre</a> : <span class="keyword">public</span> <a class="code" href="class_collidable.html">Collidable</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_tyre.html">Tyre</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_tyre.html">Tyre</a>(<a class="code" href="classmy_vector.html">myVector</a> position, <span class="keywordtype">float</span> invMass);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// Member data</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_tyre.html#a068f6dcd12733c3df6d760053daf08ac">   42</a></span>&#160;<span class="comment"></span>    Sprite <a class="code" href="class_tyre.html#a068f6dcd12733c3df6d760053daf08ac">TyreSprite</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_tyre.html#a1c0fd8531b72c94915867cb90dd175c9">   44</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_tyre.html#a1c0fd8531b72c94915867cb90dd175c9">Radius</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> update(<span class="keywordtype">float</span> timestep);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> draw(RenderTarget &amp; target, RenderStates states) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> setTyreTexture(vector&lt;Texture&gt;::iterator GivenTexture);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> Collide(<a class="code" href="class_tyre.html">Tyre</a>* B);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">////////////////////////////////////////////////////////////</span></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
-<div class="ttc" id="classmy_vector_html"><div class="ttname"><a href="classmy_vector.html">myVector</a></div><div class="ttdef"><b>Definition:</b> Vector.h:10</div></div>
-<div class="ttc" id="class_collidable_html"><div class="ttname"><a href="class_collidable.html">Collidable</a></div><div class="ttdef"><b>Definition:</b> Collidable.h:9</div></div>
-<div class="ttc" id="class_tyre_html"><div class="ttname"><a href="class_tyre.html">Tyre</a></div><div class="ttdef"><b>Definition:</b> Tyre.h:10</div></div>
+<div class="ttc" id="classmy_vector_html"><div class="ttname"><a href="classmy_vector.html">myVector</a></div><div class="ttdef"><b>Definition:</b> Vector.h:18</div></div>
+<div class="ttc" id="class_collidable_html"><div class="ttname"><a href="class_collidable.html">Collidable</a></div><div class="ttdef"><b>Definition:</b> Collidable.h:17</div></div>
+<div class="ttc" id="class_tyre_html_a1c0fd8531b72c94915867cb90dd175c9"><div class="ttname"><a href="class_tyre.html#a1c0fd8531b72c94915867cb90dd175c9">Tyre::Radius</a></div><div class="ttdeci">float Radius</div><div class="ttdoc">Float which represents the radius of the tyre. Used for collisions. </div><div class="ttdef"><b>Definition:</b> Tyre.h:44</div></div>
+<div class="ttc" id="class_tyre_html"><div class="ttname"><a href="class_tyre.html">Tyre</a></div><div class="ttdef"><b>Definition:</b> Tyre.h:18</div></div>
+<div class="ttc" id="class_tyre_html_a068f6dcd12733c3df6d760053daf08ac"><div class="ttname"><a href="class_tyre.html#a068f6dcd12733c3df6d760053daf08ac">Tyre::TyreSprite</a></div><div class="ttdeci">Sprite TyreSprite</div><div class="ttdoc">Sprite which represents the car. </div><div class="ttdef"><b>Definition:</b> Tyre.h:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

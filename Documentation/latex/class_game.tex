@@ -1,5 +1,9 @@
 \hypertarget{class_game}{}\section{Game Class Reference}
 \label{class_game}\index{Game@{Game}}
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
 Inheritance diagram for Game\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,75 +13,249 @@ Inheritance diagram for Game\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_game_a79853b667c44be836272528805943168}{}void {\bfseries Create\+Player\+Car} ()\label{class_game_a79853b667c44be836272528805943168}
-
-\item 
-\hypertarget{class_game_adce15c5fa9ad798315a1a7e61c350636}{}void {\bfseries Create\+Obstacles} ()\label{class_game_adce15c5fa9ad798315a1a7e61c350636}
-
-\item 
-\hypertarget{class_game_a27ddb8fcd3bb5a510bc33dcc137bdc19}{}void {\bfseries Create\+Track} ()\label{class_game_a27ddb8fcd3bb5a510bc33dcc137bdc19}
-
-\item 
-\hypertarget{class_game_adf56462c5f8473018fad9b25cc5af607}{}void {\bfseries Create\+Tyre} (Vector2f Position)\label{class_game_adf56462c5f8473018fad9b25cc5af607}
-
-\item 
-\hypertarget{class_game_a260c4d5123eb3a51cbd0bb685546cef4}{}void {\bfseries draw} (Render\+Target \&target, Render\+States states) const \label{class_game_a260c4d5123eb3a51cbd0bb685546cef4}
-
-\item 
-\hypertarget{class_game_acc8519c7ced1cf9eb9bbb3a2f325f6a0}{}void {\bfseries update} (float timestep)\label{class_game_acc8519c7ced1cf9eb9bbb3a2f325f6a0}
-
-\item 
-\hypertarget{class_game_ad3053e3b15bbcb049dc040801d58be7c}{}void {\bfseries process\+Key\+Press} (Keyboard\+::\+Key code)\label{class_game_ad3053e3b15bbcb049dc040801d58be7c}
-
-\item 
-\hypertarget{class_game_adb2ea3b70e0038d2caceedfde3bfc663}{}void {\bfseries process\+Key\+Release} (Keyboard\+::\+Key code)\label{class_game_adb2ea3b70e0038d2caceedfde3bfc663}
-
-\item 
-\hypertarget{class_game_a917e25c51c6b20c74e9f9a441c72717e}{}void {\bfseries generate\+Map} (vector$<$ Texture $>$\+::iterator Given\+Texture)\label{class_game_a917e25c51c6b20c74e9f9a441c72717e}
-
-\item 
-\hypertarget{class_game_a907fa46ec6aa134985c1845d4cf20de2}{}void {\bfseries save\+Tyre\+Pos\+To\+File} ()\label{class_game_a907fa46ec6aa134985c1845d4cf20de2}
-
-\item 
-\hypertarget{class_game_a16d92220f4808914017486e36c7e44cb}{}void {\bfseries load\+Tyre\+Pos\+From\+File} ()\label{class_game_a16d92220f4808914017486e36c7e44cb}
-
-\item 
-\hypertarget{class_game_aac1c9b79494aa3ec9564134bcbe885da}{}Vector2f {\bfseries Get\+Car\+Pos} ()\label{class_game_aac1c9b79494aa3ec9564134bcbe885da}
-
-\item 
-\hypertarget{class_game_a1ab3e29bdade1f0a90723878a34abef5}{}Vector2f {\bfseries Get\+R\+P\+M\+Counter\+Pos} ()\label{class_game_a1ab3e29bdade1f0a90723878a34abef5}
-
-\end{DoxyCompactItemize}
+\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a79853b667c44be836272528805943168}{Create\+Player\+Car} ()
+\begin{DoxyCompactList}\small\item\em Creates a \hyperlink{class_car}{Car}. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_adf56462c5f8473018fad9b25cc5af607}{Create\+Tyre} (Vector2f Position)
+\begin{DoxyCompactList}\small\item\em Creates a \hyperlink{class_car}{Car}. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a260c4d5123eb3a51cbd0bb685546cef4}{draw} (Render\+Target \&target, Render\+States states) const 
+\begin{DoxyCompactList}\small\item\em Draws all drawables to the screen when game is drawn in main. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_acc8519c7ced1cf9eb9bbb3a2f325f6a0}{update} (float timestep)
+\begin{DoxyCompactList}\small\item\em Updates the variables that need to be updated every frame. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_ad3053e3b15bbcb049dc040801d58be7c}{process\+Key\+Press} (Keyboard\+::\+Key code)
+\begin{DoxyCompactList}\small\item\em Function that takes key presses from main and processes them. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_adb2ea3b70e0038d2caceedfde3bfc663}{process\+Key\+Release} (Keyboard\+::\+Key code)
+\begin{DoxyCompactList}\small\item\em Function that takes key releases from main and processes them. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a917e25c51c6b20c74e9f9a441c72717e}{generate\+Map} (vector$<$ Texture $>$\+::iterator Given\+Texture)
+\begin{DoxyCompactList}\small\item\em Sets the texture to the Map sprite from the texture loader. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a907fa46ec6aa134985c1845d4cf20de2}{save\+Tyre\+Pos\+To\+File} ()
+\begin{DoxyCompactList}\small\item\em Saves the position of tyres into a .txt file so I can generate obsticles around any map. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a16d92220f4808914017486e36c7e44cb}{load\+Tyre\+Pos\+From\+File} ()
+\begin{DoxyCompactList}\small\item\em Loads all the tyres from a .txt. \end{DoxyCompactList}\item 
+Vector2f \hyperlink{class_game_aac1c9b79494aa3ec9564134bcbe885da}{Get\+Car\+Pos} ()
+\begin{DoxyCompactList}\small\item\em Gets the cars position as a Vector2f. \end{DoxyCompactList}\item 
+Vector2f \hyperlink{class_game_a1ab3e29bdade1f0a90723878a34abef5}{Get\+R\+P\+M\+Counter\+Pos} ()
+\begin{DoxyCompactList}\small\item\em Gets the R\+P\+M counters position as a Vector2f. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_game_ac542da39deb8370524eb7573a3dac252}{}\hyperlink{class_car}{Car} {\bfseries m\+\_\+\+Car}\label{class_game_ac542da39deb8370524eb7573a3dac252}
+\hypertarget{class_game_a848d449a2e906074d4a28668ad36bdc5}{}\hyperlink{class_h_u_d}{H\+U\+D} \hyperlink{class_game_a848d449a2e906074d4a28668ad36bdc5}{m\+\_\+\+Spedo}\label{class_game_a848d449a2e906074d4a28668ad36bdc5}
 
-\item 
-\hypertarget{class_game_a848d449a2e906074d4a28668ad36bdc5}{}\hyperlink{class_h_u_d}{H\+U\+D} {\bfseries m\+\_\+\+Spedo}\label{class_game_a848d449a2e906074d4a28668ad36bdc5}
+\begin{DoxyCompactList}\small\item\em Instance of the \hyperlink{class_h_u_d}{H\+U\+D} used for the U\+I. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-\hypertarget{class_game_aec9e5578d881abadc24ecc8fb2f8ac30}{}vector$<$ \hyperlink{class_tyre}{Tyre} $\ast$ $>$ {\bfseries Tyres}\label{class_game_aec9e5578d881abadc24ecc8fb2f8ac30}
 
-\item 
-\hypertarget{class_game_ad2262bead63e8b67b3e25833ec6622ab}{}\hyperlink{class_tyre}{Tyre} {\bfseries Tyre1}\label{class_game_ad2262bead63e8b67b3e25833ec6622ab}
+\subsection{Detailed Description}
+\hyperlink{class_game}{Game} is absolutely essential to the game. It pulls together all of the other classes and makes them function with eachother in order to maken this game playable.
 
-\item 
-\hypertarget{class_game_a4e563d446466f08bd0ec0efc5dddf910}{}\hyperlink{class_tyre}{Tyre} {\bfseries Tyre2}\label{class_game_a4e563d446466f08bd0ec0efc5dddf910}
+\hyperlink{class_game}{Game} is in charge of assigning textures and drawing everything to the screen and deciding on when a player is accelerating or breaking. It also ensures that all the gears and R\+P\+M values change in order to create realistic driving and movement.
 
-\item 
-\hypertarget{class_game_a0cddbe8d2a7eedffaee89b489347942f}{}\hyperlink{class_tyre}{Tyre} {\bfseries Tyre3}\label{class_game_a0cddbe8d2a7eedffaee89b489347942f}
+\hyperlink{class_game}{Game} proccesses all the keyboard controls and makes sure the game responds to player input. On top of this \hyperlink{class_game}{Game} ensures collisions are checked by everything and tells what functions need to be run in order to resolve the collisions.
 
-\item 
-\hypertarget{class_game_a6d7faee481b4a3b40a5b0765643c0870}{}\hyperlink{class_texture_loader}{Texture\+Loader} {\bfseries Tex\+Loader}\label{class_game_a6d7faee481b4a3b40a5b0765643c0870}
+\hyperlink{class_game}{Game} is in charge of loading in the map from the texture loader for the player to race on.
 
-\item 
-\hypertarget{class_game_a34d3fe9d5ddcb15c3408b212275fe92e}{}Sprite {\bfseries Map\+Sprite}\label{class_game_a34d3fe9d5ddcb15c3408b212275fe92e}
+\hyperlink{class_game}{Game} also handles I/\+O in the form of reading tyre positions from a file and creating and drawing them to the screen. 
 
-\item 
-\hypertarget{class_game_a3d775b7a861bd47dc7b96310ae8cc798}{}Texture {\bfseries Map\+Texture}\label{class_game_a3d775b7a861bd47dc7b96310ae8cc798}
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}{}\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\subsubsection[{Game()}]{\setlength{\rightskip}{0pt plus 5cm}Game\+::\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_ad59df6562a58a614fda24622d3715b65}
 
-\end{DoxyCompactItemize}
+
+Default constructor. 
+
+Creates a \hyperlink{class_game}{Game}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_a79853b667c44be836272528805943168}{}\index{Game@{Game}!Create\+Player\+Car@{Create\+Player\+Car}}
+\index{Create\+Player\+Car@{Create\+Player\+Car}!Game@{Game}}
+\subsubsection[{Create\+Player\+Car()}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::\+Create\+Player\+Car (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_a79853b667c44be836272528805943168}
+
+
+Creates a \hyperlink{class_car}{Car}. 
+
+\begin{DoxySeeAlso}{See also}
+m\+\_\+\+Car 
+\end{DoxySeeAlso}
+\hypertarget{class_game_adf56462c5f8473018fad9b25cc5af607}{}\index{Game@{Game}!Create\+Tyre@{Create\+Tyre}}
+\index{Create\+Tyre@{Create\+Tyre}!Game@{Game}}
+\subsubsection[{Create\+Tyre(\+Vector2f Position)}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::\+Create\+Tyre (
+\begin{DoxyParamCaption}
+\item[{Vector2f}]{Position}
+\end{DoxyParamCaption}
+)}\label{class_game_adf56462c5f8473018fad9b25cc5af607}
+
+
+Creates a \hyperlink{class_car}{Car}. 
+
+\begin{DoxySeeAlso}{See also}
+m\+\_\+\+Car Creates a tyre in a given position
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em Position} & The position the tyre will be created in\\
+\hline
+\end{DoxyParams}
+Used to create tyres by clicking. I use this generate my map. \hyperlink{class_tyre}{Tyre} positions are added to a .txt file and are loaded in.
+
+\begin{DoxySeeAlso}{See also}
+Tyres 
+
+Save\+Tyre\+Pos\+To\+File() 
+
+\hyperlink{class_game_a16d92220f4808914017486e36c7e44cb}{load\+Tyre\+Pos\+From\+File()} 
+\end{DoxySeeAlso}
+\hypertarget{class_game_a260c4d5123eb3a51cbd0bb685546cef4}{}\index{Game@{Game}!draw@{draw}}
+\index{draw@{draw}!Game@{Game}}
+\subsubsection[{draw(\+Render\+Target \&target, Render\+States states) const }]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::draw (
+\begin{DoxyParamCaption}
+\item[{Render\+Target \&}]{target, }
+\item[{Render\+States}]{states}
+\end{DoxyParamCaption}
+) const}\label{class_game_a260c4d5123eb3a51cbd0bb685546cef4}
+
+
+Draws all drawables to the screen when game is drawn in main. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Drawable to be drawn \\
+\hline
+{\em states} & States to be drawn \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_a917e25c51c6b20c74e9f9a441c72717e}{}\index{Game@{Game}!generate\+Map@{generate\+Map}}
+\index{generate\+Map@{generate\+Map}!Game@{Game}}
+\subsubsection[{generate\+Map(vector$<$ Texture $>$\+::iterator Given\+Texture)}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::generate\+Map (
+\begin{DoxyParamCaption}
+\item[{vector$<$ Texture $>$\+::iterator}]{Given\+Texture}
+\end{DoxyParamCaption}
+)}\label{class_game_a917e25c51c6b20c74e9f9a441c72717e}
+
+
+Sets the texture to the Map sprite from the texture loader. 
+
+Iterator is dereferenced to get texture 
+\begin{DoxyParams}{Parameters}
+{\em Given\+Texture} & A iterator of textures in a vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_aac1c9b79494aa3ec9564134bcbe885da}{}\index{Game@{Game}!Get\+Car\+Pos@{Get\+Car\+Pos}}
+\index{Get\+Car\+Pos@{Get\+Car\+Pos}!Game@{Game}}
+\subsubsection[{Get\+Car\+Pos()}]{\setlength{\rightskip}{0pt plus 5cm}Vector2f Game\+::\+Get\+Car\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_aac1c9b79494aa3ec9564134bcbe885da}
+
+
+Gets the cars position as a Vector2f. 
+
+\begin{DoxyReturn}{Returns}
+The position of the car as Vector2f 
+\end{DoxyReturn}
+\hypertarget{class_game_a1ab3e29bdade1f0a90723878a34abef5}{}\index{Game@{Game}!Get\+R\+P\+M\+Counter\+Pos@{Get\+R\+P\+M\+Counter\+Pos}}
+\index{Get\+R\+P\+M\+Counter\+Pos@{Get\+R\+P\+M\+Counter\+Pos}!Game@{Game}}
+\subsubsection[{Get\+R\+P\+M\+Counter\+Pos()}]{\setlength{\rightskip}{0pt plus 5cm}Vector2f Game\+::\+Get\+R\+P\+M\+Counter\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_a1ab3e29bdade1f0a90723878a34abef5}
+
+
+Gets the R\+P\+M counters position as a Vector2f. 
+
+\begin{DoxyReturn}{Returns}
+The position of the R\+P\+M counter as Vector2f 
+\end{DoxyReturn}
+\hypertarget{class_game_a16d92220f4808914017486e36c7e44cb}{}\index{Game@{Game}!load\+Tyre\+Pos\+From\+File@{load\+Tyre\+Pos\+From\+File}}
+\index{load\+Tyre\+Pos\+From\+File@{load\+Tyre\+Pos\+From\+File}!Game@{Game}}
+\subsubsection[{load\+Tyre\+Pos\+From\+File()}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::load\+Tyre\+Pos\+From\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_a16d92220f4808914017486e36c7e44cb}
+
+
+Loads all the tyres from a .txt. 
+
+Allows me to create boundaries for any map of any shape then save them to be loaded \begin{DoxySeeAlso}{See also}
+Tyres 
+
+\hyperlink{class_game_adf56462c5f8473018fad9b25cc5af607}{Create\+Tyre} 
+\end{DoxySeeAlso}
+\hypertarget{class_game_ad3053e3b15bbcb049dc040801d58be7c}{}\index{Game@{Game}!process\+Key\+Press@{process\+Key\+Press}}
+\index{process\+Key\+Press@{process\+Key\+Press}!Game@{Game}}
+\subsubsection[{process\+Key\+Press(\+Keyboard\+::\+Key code)}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::process\+Key\+Press (
+\begin{DoxyParamCaption}
+\item[{Keyboard\+::\+Key}]{code}
+\end{DoxyParamCaption}
+)}\label{class_game_ad3053e3b15bbcb049dc040801d58be7c}
+
+
+Function that takes key presses from main and processes them. 
+
+Used for telling the car when to accelerate, turn, ect 
+\begin{DoxyParams}{Parameters}
+{\em code} & They key that was pressed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_adb2ea3b70e0038d2caceedfde3bfc663}{}\index{Game@{Game}!process\+Key\+Release@{process\+Key\+Release}}
+\index{process\+Key\+Release@{process\+Key\+Release}!Game@{Game}}
+\subsubsection[{process\+Key\+Release(\+Keyboard\+::\+Key code)}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::process\+Key\+Release (
+\begin{DoxyParamCaption}
+\item[{Keyboard\+::\+Key}]{code}
+\end{DoxyParamCaption}
+)}\label{class_game_adb2ea3b70e0038d2caceedfde3bfc663}
+
+
+Function that takes key releases from main and processes them. 
+
+Used for telling the car when to stop accelerating, turning, ect 
+\begin{DoxyParams}{Parameters}
+{\em code} & They key that was released \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_a907fa46ec6aa134985c1845d4cf20de2}{}\index{Game@{Game}!save\+Tyre\+Pos\+To\+File@{save\+Tyre\+Pos\+To\+File}}
+\index{save\+Tyre\+Pos\+To\+File@{save\+Tyre\+Pos\+To\+File}!Game@{Game}}
+\subsubsection[{save\+Tyre\+Pos\+To\+File()}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::save\+Tyre\+Pos\+To\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_a907fa46ec6aa134985c1845d4cf20de2}
+
+
+Saves the position of tyres into a .txt file so I can generate obsticles around any map. 
+
+\begin{DoxySeeAlso}{See also}
+Tyres 
+
+\hyperlink{class_game_adf56462c5f8473018fad9b25cc5af607}{Create\+Tyre} 
+\end{DoxySeeAlso}
+\hypertarget{class_game_acc8519c7ced1cf9eb9bbb3a2f325f6a0}{}\index{Game@{Game}!update@{update}}
+\index{update@{update}!Game@{Game}}
+\subsubsection[{update(float timestep)}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{timestep}
+\end{DoxyParamCaption}
+)}\label{class_game_acc8519c7ced1cf9eb9bbb3a2f325f6a0}
+
+
+Updates the variables that need to be updated every frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timestep} & Float game time \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

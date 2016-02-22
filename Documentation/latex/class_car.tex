@@ -1,5 +1,9 @@
 \hypertarget{class_car}{}\section{Car Class Reference}
 \label{class_car}\index{Car@{Car}}
+
+
+{\ttfamily \#include $<$Car.\+h$>$}
+
 Inheritance diagram for Car\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -33,7 +37,7 @@ void \hyperlink{class_car_afe9470e7880c07e082633d900328b312}{update} (float time
 void \hyperlink{class_car_a6a4377866be6ad14841bb70f87a68327}{set\+Car\+Texture} (vector$<$ Texture $>$\+::iterator Given\+Texture)
 \begin{DoxyCompactList}\small\item\em Sets the texture to the car sprite from the texture loader. \end{DoxyCompactList}\item 
 void \hyperlink{class_car_abf01c052dd364f40cfbc2881b79b5ea4}{Collide} (\hyperlink{class_tyre}{Tyre} $\ast$B)
-\begin{DoxyCompactList}\small\item\em Polymorphic function derived from collidable class which takes any collidable in this case a tyre and allows it to collide with any other collidable. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Polymorphic function derived from collidable class which takes any collidable and allows it to collide with any other collidable. In this case a \hyperlink{class_car}{Car} and a tyre. \end{DoxyCompactList}\item 
 Vector2f \hyperlink{class_car_aa54320ce418c1f377eb595853dd1939c}{Return\+Car\+Pos} ()
 \begin{DoxyCompactList}\small\item\em Returns the position of the car as a vector2f. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
@@ -75,7 +79,23 @@ Vector2f \hyperlink{class_car_aa54320ce418c1f377eb595853dd1939c}{Return\+Car\+Po
 \hypertarget{class_car_aeaaafebefc59dfd9d3976b5bf3ac37e2}{}Sprite \hyperlink{class_car_aeaaafebefc59dfd9d3976b5bf3ac37e2}{m\+\_\+render}\label{class_car_aeaaafebefc59dfd9d3976b5bf3ac37e2}
 
 \begin{DoxyCompactList}\small\item\em Sprite which represents the car. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+\hyperlink{class_car}{Car} is class which holds all infomation about the vehicle the player drives in the game. To be instantiated it needs to be given a position, inverse mass and starting velocity.
+
+The class also handles the state of the car as in Accelerating, Neutral or Reversing by checking what gear the car is in. Gear 0 is neutral and gear -\/1 is reversing while all positive gears are acceleration. While accelerating the gears are managed in the gear management function which makes sure the gears are incremented realsiticly when a certain R\+P\+M in each gear is reached. This creates a more realistic feeling car.
+
+The car features a bicycle method of steering which means that the rotation of the car is based on the position of the wheels. This system has its limitations but definitely has its limitations aspecially when it comes to side collisions but it helps
+
+\hyperlink{class_car}{Car} is also a collidable, which means that it can collide with any other collidable. It is able to collide with tyres using the clamp method of circle-\/\+O\+B\+B collision.
+
+Usage example\+: 
+\begin{DoxyCode}
+m\_Car = \hyperlink{class_car_a1c803f7c5038d3e31b368b0d0a35493c}{Car}(\hyperlink{classmy_vector}{myVector}(2075, 65), \hyperlink{classmy_vector}{myVector}(0, 0), 0.3, \hyperlink{classmy_vector}{myVector}(0, 0));
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_car_a1c803f7c5038d3e31b368b0d0a35493c}{}\index{Car@{Car}!Car@{Car}}
@@ -158,7 +178,7 @@ Sets the car\textquotesingle{}s position to a given \hyperlink{classmy_vector}{m
 )}\label{class_car_abf01c052dd364f40cfbc2881b79b5ea4}
 
 
-Polymorphic function derived from collidable class which takes any collidable in this case a tyre and allows it to collide with any other collidable. 
+Polymorphic function derived from collidable class which takes any collidable and allows it to collide with any other collidable. In this case a \hyperlink{class_car}{Car} and a tyre. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -270,7 +290,7 @@ Sets the texture to the car sprite from the texture loader.
 
 Iterator is dereferenced to get texture 
 \begin{DoxyParams}{Parameters}
-{\em Given\+Texture} & A iterator of textures in a vector game time \\
+{\em Given\+Texture} & A iterator of textures in a vector \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_car_afe9470e7880c07e082633d900328b312}{}\index{Car@{Car}!update@{update}}

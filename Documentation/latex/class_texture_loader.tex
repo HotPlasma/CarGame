@@ -1,17 +1,104 @@
 \hypertarget{class_texture_loader}{}\section{Texture\+Loader Class Reference}
 \label{class_texture_loader}\index{Texture\+Loader@{Texture\+Loader}}
+
+
+{\ttfamily \#include $<$Texture\+Loader.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_texture_loader_a8c6ef2773da422d2b40a98e839c0ccf8}{}void {\bfseries set\+Base\+Directory} (string dir)\label{class_texture_loader_a8c6ef2773da422d2b40a98e839c0ccf8}
+\hyperlink{class_texture_loader_aafa6ca3bdbee3874a73aafae39d5c804}{Texture\+Loader} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_texture_loader_a8c6ef2773da422d2b40a98e839c0ccf8}{set\+Base\+Directory} (string dir)
+\begin{DoxyCompactList}\small\item\em Allows the base directory which the textures are loaded from to be changed. \end{DoxyCompactList}\item 
+void \hyperlink{class_texture_loader_a887d3fd9f794498a8273f65d994e9250}{load} ()
+\begin{DoxyCompactList}\small\item\em Function where all necessary textures should be loaded in. \end{DoxyCompactList}\item 
+vector$<$ Texture $>$\+::iterator \hyperlink{class_texture_loader_aa579911f752f74d993459639b326ed41}{get\+Texture\+Iterator} (int index)
+\begin{DoxyCompactList}\small\item\em Allows textures from the Texture Loader to be used for sprite in other classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-\hypertarget{class_texture_loader_a887d3fd9f794498a8273f65d994e9250}{}void {\bfseries load} ()\label{class_texture_loader_a887d3fd9f794498a8273f65d994e9250}
 
-\item 
-\hypertarget{class_texture_loader_aa579911f752f74d993459639b326ed41}{}vector$<$ Texture $>$\+::iterator {\bfseries get\+Texture\+Iterator} (int index)\label{class_texture_loader_aa579911f752f74d993459639b326ed41}
+\subsection{Detailed Description}
+The Texture Loader makes loading in textures far more efficient as a new texture doesn\textquotesingle{}t need to be loaded in everytime a new instance of something is created.
 
-\end{DoxyCompactItemize}
+All textures need to be loaded in once into the textures vector and then they can all be accessed by any class thats needs them by getting the texture Iterator
+
+Usage example\+: 
+\begin{DoxyCode}
+ \textcolor{keywordtype}{void} \hyperlink{class_car_a6a4377866be6ad14841bb70f87a68327}{Car::setCarTexture}(vector<Texture>::iterator GivenTexture)
+\{
+    m\_render.setTexture(*GivenTexture);
+\}
+\end{DoxyCode}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_texture_loader_aafa6ca3bdbee3874a73aafae39d5c804}{}\index{Texture\+Loader@{Texture\+Loader}!Texture\+Loader@{Texture\+Loader}}
+\index{Texture\+Loader@{Texture\+Loader}!Texture\+Loader@{Texture\+Loader}}
+\subsubsection[{Texture\+Loader()}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+Loader\+::\+Texture\+Loader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_texture_loader_aafa6ca3bdbee3874a73aafae39d5c804}
+
+
+Default constructor. 
+
+Initialises the Texture Loader 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_texture_loader_aa579911f752f74d993459639b326ed41}{}\index{Texture\+Loader@{Texture\+Loader}!get\+Texture\+Iterator@{get\+Texture\+Iterator}}
+\index{get\+Texture\+Iterator@{get\+Texture\+Iterator}!Texture\+Loader@{Texture\+Loader}}
+\subsubsection[{get\+Texture\+Iterator(int index)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ Texture $>$\+::iterator Texture\+Loader\+::get\+Texture\+Iterator (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_texture_loader_aa579911f752f74d993459639b326ed41}
+
+
+Allows textures from the Texture Loader to be used for sprite in other classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Which texture is wanted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The texture from the index 
+\end{DoxyReturn}
+\hypertarget{class_texture_loader_a887d3fd9f794498a8273f65d994e9250}{}\index{Texture\+Loader@{Texture\+Loader}!load@{load}}
+\index{load@{load}!Texture\+Loader@{Texture\+Loader}}
+\subsubsection[{load()}]{\setlength{\rightskip}{0pt plus 5cm}void Texture\+Loader\+::load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_texture_loader_a887d3fd9f794498a8273f65d994e9250}
+
+
+Function where all necessary textures should be loaded in. 
+
+\begin{DoxySeeAlso}{See also}
+Holder 
+
+base\+Directory 
+
+textures 
+\end{DoxySeeAlso}
+\hypertarget{class_texture_loader_a8c6ef2773da422d2b40a98e839c0ccf8}{}\index{Texture\+Loader@{Texture\+Loader}!set\+Base\+Directory@{set\+Base\+Directory}}
+\index{set\+Base\+Directory@{set\+Base\+Directory}!Texture\+Loader@{Texture\+Loader}}
+\subsubsection[{set\+Base\+Directory(string dir)}]{\setlength{\rightskip}{0pt plus 5cm}void Texture\+Loader\+::set\+Base\+Directory (
+\begin{DoxyParamCaption}
+\item[{string}]{dir}
+\end{DoxyParamCaption}
+)}\label{class_texture_loader_a8c6ef2773da422d2b40a98e839c0ccf8}
+
+
+Allows the base directory which the textures are loaded from to be changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & The new base directory \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

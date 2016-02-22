@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['setcartexture',['setCarTexture',['../class_car.html#a6a4377866be6ad14841bb70f87a68327',1,'Car']]],
-  ['speedometer',['Speedometer',['../class_speedometer.html',1,'']]]
+  ['processkeypress',['processKeyPress',['../class_game.html#ad3053e3b15bbcb049dc040801d58be7c',1,'Game']]],
+  ['processkeyrelease',['processKeyRelease',['../class_game.html#adb2ea3b70e0038d2caceedfde3bfc663',1,'Game']]]
 ];

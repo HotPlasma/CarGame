@@ -66,7 +66,10 @@ void Game::processKeyPress(Keyboard::Key code)
 {
 	if (code == Keyboard::W || code == Keyboard::Up) // If 'W' or 'Up' pressed then accelerate
 	{
-		m_Car.m_iGear = 1;
+		if (m_Car.m_iGear <= 0)
+		{
+			m_Car.m_iGear = 1;
+		}
 	}
 
 	if (code == Keyboard::D || code == Keyboard::Right) // If 'D' or 'Right' pressed then rotate clockwise

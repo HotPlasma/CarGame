@@ -107,51 +107,63 @@ void Car::Turn() //Turns vehicle left or right depending on key pressed
 
 void Car::GearsManagement(float timestep)
 {
-	//Gears change RPM based on acceleration rates in m_aiAccelRates array
+	// Changes gears and RPM so simulate realistic car acceleration
 
-	if (m_iGear > 0) // If not neutral
+	if (m_iGear > 0) // If accelerating
 	{
-		if (m_iGear < 5) // ...and not in highest gear
+
+		m_iRPM += timestep * m_aiAccelRates[m_iGear - 1]; // RPM increases by timestep multiplied by the accelerlation rates for each gear
+
+		if (m_iGear == 1)
 		{
-			// Simple Euler integration of RPM value
-			m_iRPM += timestep * m_aiAccelRates[m_iGear - 1];
-			// Check if should change up
-			if (m_iRPM > 6500)
+			if (m_iRPM > 6000) // First gear changes to second at 6000 RPM
 			{
 				m_iGear++;
 				m_iRPM = 3500;
 			}
 		}
-		else if (m_iRPM < 8500)
+		if (m_iGear == 2) // Second gear changes to third at 6500 RPM
 		{
-			// Simple Euler integration of RPM value
-			m_iRPM += timestep * m_aiAccelRates[m_iGear - 1];
-		}
-	}
-
-	else
-
-	{
-		if (m_iGear > 1)
-		{
-			// Simple Euler integration of RPM value
-			m_iRPM -= timestep * m_aiAccelRates[3];
-			// Check if we should change down
-			if (m_iRPM < 2500)
+			if (m_iRPM > 6500)
 			{
-				m_iGear--;
-				m_iRPM = 3750;
+				m_iGear++;
+				m_iRPM = 4000;
 			}
 		}
-		else
+		if (m_iGear == 3) // Third gear changes to fourth at 6500 RPM
 		{
-			if (m_iRPM > 1800)
+			if (m_iRPM > 6500)
 			{
-				// Simple Euler integration of RPM value
+				m_iGear++;
+				m_iRPM = 4500;
+			}
+		}
+		if (m_iGear == 4) // fourth gear changes to fifth at 6500 RPM
+		{
+			if (m_iRPM > 6500)
+			{
+				m_iGear++;
+				m_iRPM = 6000;
+			}
+		}
+		if (m_iGear == 5)
+		{
+			if (m_iRPM > 8500) // Fifth gear is limited to 8500 RPM
+			{
+				m_iRPM = 8500;
+			}
+		}
+	}
+	else // If not accelerating and not moving slow down car
+	{
+		if (m_iRPM > 1800)
+			{
+				
 				m_iRPM -= timestep * m_aiAccelRates[3];
 			}
-		}
 	}
+
+
 }
 
 void Car::update(float timestep)
@@ -297,6 +309,7 @@ void Car::Collide(Tyre* B)
 
 	if (Distance <= -0.2) //If collided
 	{
+		m_iRPM = 1800;
 		myVector CollisonNorm(Distance, 0); //Create a collision normal vector and insert distance
 		CollisonNorm = CollisonNorm.RotateVector(m_render.getRotation()); //Rotate collision normal by the roatation of the car
 		myVector NewVel;

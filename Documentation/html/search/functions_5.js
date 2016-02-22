@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['returncarpos',['ReturnCarPos',['../class_car.html#aa54320ce418c1f377eb595853dd1939c',1,'Car']]],
-  ['reversingaccel',['ReversingAccel',['../class_car.html#afb8da2fa315e9bb953ec87fb23ddd653',1,'Car']]]
+  ['load',['load',['../class_texture_loader.html#a887d3fd9f794498a8273f65d994e9250',1,'TextureLoader']]],
+  ['loadtyreposfromfile',['loadTyrePosFromFile',['../class_game.html#a16d92220f4808914017486e36c7e44cb',1,'Game']]]
 ];

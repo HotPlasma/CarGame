@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['turn',['Turn',['../class_car.html#ad3c6ba8be8f38d8a4fac3c11d2c851d5',1,'Car']]]
+  ['neutral',['Neutral',['../class_car.html#aa8a2aacbb529a44221893b4e2877b03b',1,'Car']]],
+  ['normalise',['normalise',['../classmy_vector.html#aad23cd26628305a6a0b470a3650c326b',1,'myVector']]]
 ];

@@ -92,19 +92,122 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">TextureLoader Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_texture_loader_8h_source.html">TextureLoader.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8c6ef2773da422d2b40a98e839c0ccf8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c6ef2773da422d2b40a98e839c0ccf8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBaseDirectory</b> (string dir)</td></tr>
+<tr class="memitem:aafa6ca3bdbee3874a73aafae39d5c804"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_loader.html#aafa6ca3bdbee3874a73aafae39d5c804">TextureLoader</a> ()</td></tr>
+<tr class="memdesc:aafa6ca3bdbee3874a73aafae39d5c804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#aafa6ca3bdbee3874a73aafae39d5c804">More...</a><br /></td></tr>
+<tr class="separator:aafa6ca3bdbee3874a73aafae39d5c804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c6ef2773da422d2b40a98e839c0ccf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_loader.html#a8c6ef2773da422d2b40a98e839c0ccf8">setBaseDirectory</a> (string dir)</td></tr>
+<tr class="memdesc:a8c6ef2773da422d2b40a98e839c0ccf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows the base directory which the textures are loaded from to be changed.  <a href="#a8c6ef2773da422d2b40a98e839c0ccf8">More...</a><br /></td></tr>
 <tr class="separator:a8c6ef2773da422d2b40a98e839c0ccf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a887d3fd9f794498a8273f65d994e9250"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a887d3fd9f794498a8273f65d994e9250"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> ()</td></tr>
+<tr class="memitem:a887d3fd9f794498a8273f65d994e9250"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_loader.html#a887d3fd9f794498a8273f65d994e9250">load</a> ()</td></tr>
+<tr class="memdesc:a887d3fd9f794498a8273f65d994e9250"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function where all necessary textures should be loaded in.  <a href="#a887d3fd9f794498a8273f65d994e9250">More...</a><br /></td></tr>
 <tr class="separator:a887d3fd9f794498a8273f65d994e9250"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa579911f752f74d993459639b326ed41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa579911f752f74d993459639b326ed41"></a>
-vector&lt; Texture &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>getTextureIterator</b> (int index)</td></tr>
+<tr class="memitem:aa579911f752f74d993459639b326ed41"><td class="memItemLeft" align="right" valign="top">vector&lt; Texture &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_loader.html#aa579911f752f74d993459639b326ed41">getTextureIterator</a> (int index)</td></tr>
+<tr class="memdesc:aa579911f752f74d993459639b326ed41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows textures from the Texture Loader to be used for sprite in other classes.  <a href="#aa579911f752f74d993459639b326ed41">More...</a><br /></td></tr>
 <tr class="separator:aa579911f752f74d993459639b326ed41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The Texture Loader makes loading in textures far more efficient as a new texture doesn't need to be loaded in everytime a new instance of something is created.</p>
+<p>All textures need to be loaded in once into the textures vector and then they can all be accessed by any class thats needs them by getting the texture Iterator</p>
+<p>Usage example: </p><div class="fragment"><div class="line"> <span class="keywordtype">void</span> <a class="code" href="class_car.html#a6a4377866be6ad14841bb70f87a68327">Car::setCarTexture</a>(vector&lt;Texture&gt;::iterator GivenTexture)</div>
+<div class="line">{</div>
+<div class="line">    m_render.setTexture(*GivenTexture);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aafa6ca3bdbee3874a73aafae39d5c804"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextureLoader::TextureLoader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+<p>Initialises the Texture Loader </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aa579911f752f74d993459639b326ed41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; Texture &gt;::iterator TextureLoader::getTextureIterator </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows textures from the Texture Loader to be used for sprite in other classes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Which texture is wanted</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The texture from the index </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a887d3fd9f794498a8273f65d994e9250"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TextureLoader::load </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function where all necessary textures should be loaded in. </p>
+<dl class="section see"><dt>See also</dt><dd>Holder </dd>
+<dd>
+baseDirectory </dd>
+<dd>
+textures </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8c6ef2773da422d2b40a98e839c0ccf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TextureLoader::setBaseDirectory </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows the base directory which the textures are loaded from to be changed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>The new base directory </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="_texture_loader_8h_source.html">TextureLoader.h</a></li>
 <li>src/TextureLoader.cpp</li>

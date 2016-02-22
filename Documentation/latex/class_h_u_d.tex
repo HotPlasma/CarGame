@@ -1,5 +1,9 @@
 \hypertarget{class_h_u_d}{}\section{H\+U\+D Class Reference}
 \label{class_h_u_d}\index{H\+U\+D@{H\+U\+D}}
+
+
+{\ttfamily \#include $<$H\+U\+D.\+h$>$}
+
 Inheritance diagram for H\+U\+D\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,42 +13,209 @@ Inheritance diagram for H\+U\+D\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_h_u_d_a16086edcd0d5d6e62bd4d911dd0145e5}{}void {\bfseries draw} (Render\+Target \&target, Render\+States states) const \label{class_h_u_d_a16086edcd0d5d6e62bd4d911dd0145e5}
-
-\item 
-\hypertarget{class_h_u_d_a96d4d120cedd21c3153d3c1fc45f5ef6}{}void {\bfseries update\+Needle} (int rpm)\label{class_h_u_d_a96d4d120cedd21c3153d3c1fc45f5ef6}
-
-\item 
-\hypertarget{class_h_u_d_a0dc3e03d60ae3626345d9dc7e8287ff5}{}void {\bfseries update\+Gear} (int gear)\label{class_h_u_d_a0dc3e03d60ae3626345d9dc7e8287ff5}
-
-\item 
-\hypertarget{class_h_u_d_adaa1781bccee569c107a667b095752de}{}Vector2f {\bfseries get\+R\+P\+M\+Counter\+Pos} ()\label{class_h_u_d_adaa1781bccee569c107a667b095752de}
-
-\item 
-\hypertarget{class_h_u_d_ab8ff106a8d659c4fc96ae8fae8771388}{}void {\bfseries Set\+R\+P\+M\+Texture} (vector$<$ Texture $>$\+::iterator Given\+Texture)\label{class_h_u_d_ab8ff106a8d659c4fc96ae8fae8771388}
-
-\item 
-\hypertarget{class_h_u_d_a18bacebe294e788fd5ed81df01231915}{}void {\bfseries update\+Timers} ()\label{class_h_u_d_a18bacebe294e788fd5ed81df01231915}
-
-\item 
-\hypertarget{class_h_u_d_afafdadaf2c5c10c0e86f9fa8663069f8}{}void {\bfseries Reset\+Timer} ()\label{class_h_u_d_afafdadaf2c5c10c0e86f9fa8663069f8}
-
-\item 
-\hypertarget{class_h_u_d_a9fdbf33bc666f4f352dbb648bd0eb157}{}void {\bfseries Update\+Best\+Time} ()\label{class_h_u_d_a9fdbf33bc666f4f352dbb648bd0eb157}
-
-\item 
-\hypertarget{class_h_u_d_abb00889ad68e7a11ff243016f729ac97}{}void {\bfseries setup\+Checkpoints} ()\label{class_h_u_d_abb00889ad68e7a11ff243016f729ac97}
-
-\end{DoxyCompactItemize}
+\hyperlink{class_h_u_d_a568b8ee1591f9ba3ed36ae05966f6b56}{H\+U\+D} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_h_u_d_a16086edcd0d5d6e62bd4d911dd0145e5}{draw} (Render\+Target \&target, Render\+States states) const 
+\begin{DoxyCompactList}\small\item\em Allows car and wheels to be drawn to the screen. \end{DoxyCompactList}\item 
+void \hyperlink{class_h_u_d_a96d4d120cedd21c3153d3c1fc45f5ef6}{update\+Needle} (int rpm)
+\begin{DoxyCompactList}\small\item\em Keeps the needle pointing at the correct reading on the R\+P\+M counter. \end{DoxyCompactList}\item 
+void \hyperlink{class_h_u_d_a0dc3e03d60ae3626345d9dc7e8287ff5}{update\+Gear} (int gear)
+\begin{DoxyCompactList}\small\item\em Keeps the Gear text updated depending on the gear the car is in. \end{DoxyCompactList}\item 
+Vector2f \hyperlink{class_h_u_d_adaa1781bccee569c107a667b095752de}{get\+R\+P\+M\+Counter\+Pos} ()
+\begin{DoxyCompactList}\small\item\em Gets the position of the R\+P\+M counter. \end{DoxyCompactList}\item 
+void \hyperlink{class_h_u_d_ab8ff106a8d659c4fc96ae8fae8771388}{Set\+R\+P\+M\+Texture} (vector$<$ Texture $>$\+::iterator Given\+Texture)
+\begin{DoxyCompactList}\small\item\em Sets the texture to the R\+P\+M sprite from the texture loader. \end{DoxyCompactList}\item 
+void \hyperlink{class_h_u_d_a18bacebe294e788fd5ed81df01231915}{update\+Timers} ()
+\begin{DoxyCompactList}\small\item\em Keeps the time text updated. Needs to be run every frame from game. \end{DoxyCompactList}\item 
+void \hyperlink{class_h_u_d_afafdadaf2c5c10c0e86f9fa8663069f8}{Reset\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Resets the m\+\_\+timer. \end{DoxyCompactList}\item 
+void \hyperlink{class_h_u_d_a9fdbf33bc666f4f352dbb648bd0eb157}{Update\+Best\+Time} ()
+\begin{DoxyCompactList}\small\item\em Updates the best time with the time in m\+\_\+timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_h_u_d_a7bb7d2643771405999f4d303441b14cb}{}Float\+Rect {\bfseries Start\+Line}\label{class_h_u_d_a7bb7d2643771405999f4d303441b14cb}
+\hypertarget{class_h_u_d_a7bb7d2643771405999f4d303441b14cb}{}Float\+Rect \hyperlink{class_h_u_d_a7bb7d2643771405999f4d303441b14cb}{Start\+Line}\label{class_h_u_d_a7bb7d2643771405999f4d303441b14cb}
 
-\item 
-\hypertarget{class_h_u_d_a5fe514e987ad2dfac4ba3bf44b77244c}{}Float\+Rect {\bfseries Mid\+Line}\label{class_h_u_d_a5fe514e987ad2dfac4ba3bf44b77244c}
+\begin{DoxyCompactList}\small\item\em Float Rect used to mark the start line during the race. \end{DoxyCompactList}\item 
+\hypertarget{class_h_u_d_a5fe514e987ad2dfac4ba3bf44b77244c}{}Float\+Rect \hyperlink{class_h_u_d_a5fe514e987ad2dfac4ba3bf44b77244c}{Mid\+Line}\label{class_h_u_d_a5fe514e987ad2dfac4ba3bf44b77244c}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Float Rect used to make the mid line during the race. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_h_u_d}{H\+U\+D} (Heads Up Display) is a class which manages all the infomation the player needs to know in order to play the game. It creates the R\+P\+M counter, gear counter and lap and best time counter.
+
+\hyperlink{class_h_u_d}{H\+U\+D} also ensures the gear values and needle position are correct and to the actions of the car.
+
+\hyperlink{class_h_u_d}{H\+U\+D} also manages the checkpoints for the lap times. The checkpoints are float rects which can be collided with in the \hyperlink{class_game}{Game} class which would then in turn give the infomation to update the timer or best time
+
+Usage example\+: 
+\begin{DoxyCode}
+\hyperlink{class_h_u_d_a568b8ee1591f9ba3ed36ae05966f6b56}{HUD}();
+\end{DoxyCode}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_h_u_d_a568b8ee1591f9ba3ed36ae05966f6b56}{}\index{H\+U\+D@{H\+U\+D}!H\+U\+D@{H\+U\+D}}
+\index{H\+U\+D@{H\+U\+D}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{H\+U\+D()}]{\setlength{\rightskip}{0pt plus 5cm}H\+U\+D\+::\+H\+U\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_a568b8ee1591f9ba3ed36ae05966f6b56}
+
+
+Default constructor. 
+
+Initialises a \hyperlink{class_h_u_d}{H\+U\+D}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_h_u_d_a16086edcd0d5d6e62bd4d911dd0145e5}{}\index{H\+U\+D@{H\+U\+D}!draw@{draw}}
+\index{draw@{draw}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{draw(\+Render\+Target \&target, Render\+States states) const }]{\setlength{\rightskip}{0pt plus 5cm}void H\+U\+D\+::draw (
+\begin{DoxyParamCaption}
+\item[{Render\+Target \&}]{target, }
+\item[{Render\+States}]{states}
+\end{DoxyParamCaption}
+) const}\label{class_h_u_d_a16086edcd0d5d6e62bd4d911dd0145e5}
+
+
+Allows car and wheels to be drawn to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Drawable to be drawn \\
+\hline
+{\em states} & States to be drawn \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_h_u_d_adaa1781bccee569c107a667b095752de}{}\index{H\+U\+D@{H\+U\+D}!get\+R\+P\+M\+Counter\+Pos@{get\+R\+P\+M\+Counter\+Pos}}
+\index{get\+R\+P\+M\+Counter\+Pos@{get\+R\+P\+M\+Counter\+Pos}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{get\+R\+P\+M\+Counter\+Pos()}]{\setlength{\rightskip}{0pt plus 5cm}Vector2f H\+U\+D\+::get\+R\+P\+M\+Counter\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_adaa1781bccee569c107a667b095752de}
+
+
+Gets the position of the R\+P\+M counter. 
+
+\begin{DoxyReturn}{Returns}
+A Vector2f of the position of the R\+P\+M counter
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+R\+P\+M\+Sprite 
+\end{DoxySeeAlso}
+\hypertarget{class_h_u_d_afafdadaf2c5c10c0e86f9fa8663069f8}{}\index{H\+U\+D@{H\+U\+D}!Reset\+Timer@{Reset\+Timer}}
+\index{Reset\+Timer@{Reset\+Timer}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{Reset\+Timer()}]{\setlength{\rightskip}{0pt plus 5cm}void H\+U\+D\+::\+Reset\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_afafdadaf2c5c10c0e86f9fa8663069f8}
+
+
+Resets the m\+\_\+timer. 
+
+\begin{DoxySeeAlso}{See also}
+Timer\+Text 
+
+m\+\_\+timer 
+\end{DoxySeeAlso}
+\hypertarget{class_h_u_d_ab8ff106a8d659c4fc96ae8fae8771388}{}\index{H\+U\+D@{H\+U\+D}!Set\+R\+P\+M\+Texture@{Set\+R\+P\+M\+Texture}}
+\index{Set\+R\+P\+M\+Texture@{Set\+R\+P\+M\+Texture}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{Set\+R\+P\+M\+Texture(vector$<$ Texture $>$\+::iterator Given\+Texture)}]{\setlength{\rightskip}{0pt plus 5cm}void H\+U\+D\+::\+Set\+R\+P\+M\+Texture (
+\begin{DoxyParamCaption}
+\item[{vector$<$ Texture $>$\+::iterator}]{Given\+Texture}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_ab8ff106a8d659c4fc96ae8fae8771388}
+
+
+Sets the texture to the R\+P\+M sprite from the texture loader. 
+
+Iterator is dereferenced to get texture
+
+
+\begin{DoxyParams}{Parameters}
+{\em Given\+Texture} & A iterator of textures in a vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_h_u_d_a9fdbf33bc666f4f352dbb648bd0eb157}{}\index{H\+U\+D@{H\+U\+D}!Update\+Best\+Time@{Update\+Best\+Time}}
+\index{Update\+Best\+Time@{Update\+Best\+Time}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{Update\+Best\+Time()}]{\setlength{\rightskip}{0pt plus 5cm}void H\+U\+D\+::\+Update\+Best\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_a9fdbf33bc666f4f352dbb648bd0eb157}
+
+
+Updates the best time with the time in m\+\_\+timer. 
+
+Should only be run if best time was beaten
+
+\begin{DoxySeeAlso}{See also}
+Timer\+Text 
+
+m\+\_\+timer 
+
+Best\+Time 
+
+Best\+Time\+Text 
+\end{DoxySeeAlso}
+\hypertarget{class_h_u_d_a0dc3e03d60ae3626345d9dc7e8287ff5}{}\index{H\+U\+D@{H\+U\+D}!update\+Gear@{update\+Gear}}
+\index{update\+Gear@{update\+Gear}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{update\+Gear(int gear)}]{\setlength{\rightskip}{0pt plus 5cm}void H\+U\+D\+::update\+Gear (
+\begin{DoxyParamCaption}
+\item[{int}]{gear}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_a0dc3e03d60ae3626345d9dc7e8287ff5}
+
+
+Keeps the Gear text updated depending on the gear the car is in. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gear} & Used to set the text of Gear\+Text\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Gear\+Text 
+\end{DoxySeeAlso}
+\hypertarget{class_h_u_d_a96d4d120cedd21c3153d3c1fc45f5ef6}{}\index{H\+U\+D@{H\+U\+D}!update\+Needle@{update\+Needle}}
+\index{update\+Needle@{update\+Needle}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{update\+Needle(int rpm)}]{\setlength{\rightskip}{0pt plus 5cm}void H\+U\+D\+::update\+Needle (
+\begin{DoxyParamCaption}
+\item[{int}]{rpm}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_a96d4d120cedd21c3153d3c1fc45f5ef6}
+
+
+Keeps the needle pointing at the correct reading on the R\+P\+M counter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rpm} & The R\+P\+M the needles position will be based on\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+m\+\_\+needle 
+\end{DoxySeeAlso}
+\hypertarget{class_h_u_d_a18bacebe294e788fd5ed81df01231915}{}\index{H\+U\+D@{H\+U\+D}!update\+Timers@{update\+Timers}}
+\index{update\+Timers@{update\+Timers}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{update\+Timers()}]{\setlength{\rightskip}{0pt plus 5cm}void H\+U\+D\+::update\+Timers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_a18bacebe294e788fd5ed81df01231915}
+
+
+Keeps the time text updated. Needs to be run every frame from game. 
+
+\begin{DoxySeeAlso}{See also}
+Timer\+Text 
+
+m\+\_\+timer 
+\end{DoxySeeAlso}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

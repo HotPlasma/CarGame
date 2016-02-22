@@ -48,7 +48,7 @@ HUD::HUD()
 	MidLine.width = 500;
 	MidLine.height = 500;
 	MidLine.left = 2100;
-	MidLine.top = 2400;
+	MidLine.top = 2300;
 }
 
 void HUD::updateNeedle(int rpm)

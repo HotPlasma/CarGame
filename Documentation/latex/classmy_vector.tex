@@ -1,69 +1,436 @@
 \hypertarget{classmy_vector}{}\section{my\+Vector Class Reference}
 \label{classmy_vector}\index{my\+Vector@{my\+Vector}}
+
+
+{\ttfamily \#include $<$Vector.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classmy_vector_a3c242231d09872ff18adcff8c5199dbd}{}{\bfseries my\+Vector} (double A, double B)\label{classmy_vector_a3c242231d09872ff18adcff8c5199dbd}
-
-\item 
-\hypertarget{classmy_vector_a14e8c2e0a550947a93cf178d50525a30}{}void {\bfseries set} (\hyperlink{classmy_vector}{my\+Vector} Setter)\label{classmy_vector_a14e8c2e0a550947a93cf178d50525a30}
-
-\item 
+\hyperlink{classmy_vector_ae1bc15cce3be9c327b52f02da1c24503}{my\+Vector} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classmy_vector_a3c242231d09872ff18adcff8c5199dbd}{my\+Vector} (double A, double B)
+\begin{DoxyCompactList}\small\item\em Construct the \hyperlink{classmy_vector}{my\+Vector} from its coordinates. \end{DoxyCompactList}\item 
+void \hyperlink{classmy_vector_a14e8c2e0a550947a93cf178d50525a30}{set} (\hyperlink{classmy_vector}{my\+Vector} Setter)
+\begin{DoxyCompactList}\small\item\em Set a vector to be another \hyperlink{classmy_vector}{my\+Vector}. \end{DoxyCompactList}\item 
 \hypertarget{classmy_vector_a15d24fec4efc0a50a2648a7a54e79b4f}{}\hyperlink{classmy_vector}{my\+Vector} {\bfseries set} (const double A, const double B) const \label{classmy_vector_a15d24fec4efc0a50a2648a7a54e79b4f}
 
 \item 
-\hypertarget{classmy_vector_af5d310b4175917d94960f8d8a915583d}{}void {\bfseries set\+X} (const double A)\label{classmy_vector_af5d310b4175917d94960f8d8a915583d}
-
-\item 
-\hypertarget{classmy_vector_a67046769203977128c5869519a96981c}{}void {\bfseries set\+Y} (const double B)\label{classmy_vector_a67046769203977128c5869519a96981c}
-
-\item 
-\hypertarget{classmy_vector_ab6e4440c74a6cd118faa925a8fddedc9}{}\hyperlink{classmy_vector}{my\+Vector} {\bfseries add} (const \hyperlink{classmy_vector}{my\+Vector} other) const \label{classmy_vector_ab6e4440c74a6cd118faa925a8fddedc9}
-
-\item 
-\hypertarget{classmy_vector_a43d29af4b84766a8b27c0a6e50067ead}{}\hyperlink{classmy_vector}{my\+Vector} {\bfseries subtract} (const \hyperlink{classmy_vector}{my\+Vector} other) const \label{classmy_vector_a43d29af4b84766a8b27c0a6e50067ead}
-
-\item 
-\hypertarget{classmy_vector_a34a7a3b4eeda62cf4e8dfa5e3e79fcaa}{}\hyperlink{classmy_vector}{my\+Vector} {\bfseries multiply} (const \hyperlink{classmy_vector}{my\+Vector} other) const \label{classmy_vector_a34a7a3b4eeda62cf4e8dfa5e3e79fcaa}
-
-\item 
-\hypertarget{classmy_vector_a9465f76761927752eea5a66664443500}{}\hyperlink{classmy_vector}{my\+Vector} {\bfseries multiply} (const float scalar) const \label{classmy_vector_a9465f76761927752eea5a66664443500}
-
-\item 
-\hypertarget{classmy_vector_a69838d6c85759fa2a2c82ea42f13b989}{}float {\bfseries magnitude} () const \label{classmy_vector_a69838d6c85759fa2a2c82ea42f13b989}
-
-\item 
-\hypertarget{classmy_vector_af43d29d51639072515cad23ef7415786}{}double {\bfseries dot\+Product} (const \hyperlink{classmy_vector}{my\+Vector} other) const \label{classmy_vector_af43d29d51639072515cad23ef7415786}
-
-\item 
-\hypertarget{classmy_vector_af05be0fcb82238606e624b97eef10990}{}\hyperlink{classmy_vector}{my\+Vector} {\bfseries cross\+Product} (const \hyperlink{classmy_vector}{my\+Vector} other) const \label{classmy_vector_af05be0fcb82238606e624b97eef10990}
-
-\item 
-\hypertarget{classmy_vector_a240764ad5e79de7a6ce9e950bc531682}{}double {\bfseries x} ()\label{classmy_vector_a240764ad5e79de7a6ce9e950bc531682}
-
-\item 
-\hypertarget{classmy_vector_a940c23ee317384a6fd3b4588986ad3cb}{}double {\bfseries y} ()\label{classmy_vector_a940c23ee317384a6fd3b4588986ad3cb}
-
-\item 
-\hypertarget{classmy_vector_a2a99754a40661435447dd17138e8f63a}{}Vector2f {\bfseries Convert2f} ()\label{classmy_vector_a2a99754a40661435447dd17138e8f63a}
-
-\item 
-\hypertarget{classmy_vector_a6d039a25169b58a8164f8f979d8b315b}{}\hyperlink{classmy_vector}{my\+Vector} {\bfseries Make\+Negetive} ()\label{classmy_vector_a6d039a25169b58a8164f8f979d8b315b}
-
-\end{DoxyCompactItemize}
+void \hyperlink{classmy_vector_af5d310b4175917d94960f8d8a915583d}{set\+X} (const double A)
+\begin{DoxyCompactList}\small\item\em Set only the X coordinate from the \hyperlink{classmy_vector}{my\+Vector}. \end{DoxyCompactList}\item 
+void \hyperlink{classmy_vector_a67046769203977128c5869519a96981c}{set\+Y} (const double B)
+\begin{DoxyCompactList}\small\item\em Set only the Y coordinate from the \hyperlink{classmy_vector}{my\+Vector}. \end{DoxyCompactList}\item 
+\hyperlink{classmy_vector}{my\+Vector} \hyperlink{classmy_vector_ab6e4440c74a6cd118faa925a8fddedc9}{add} (const \hyperlink{classmy_vector}{my\+Vector} other) const 
+\begin{DoxyCompactList}\small\item\em Adds to my\+Vectors together. \end{DoxyCompactList}\item 
+\hyperlink{classmy_vector}{my\+Vector} \hyperlink{classmy_vector_a43d29af4b84766a8b27c0a6e50067ead}{subtract} (const \hyperlink{classmy_vector}{my\+Vector} other) const 
+\begin{DoxyCompactList}\small\item\em Subtract given \hyperlink{classmy_vector}{my\+Vector} from another \hyperlink{classmy_vector}{my\+Vector}. \end{DoxyCompactList}\item 
+\hyperlink{classmy_vector}{my\+Vector} \hyperlink{classmy_vector_a34a7a3b4eeda62cf4e8dfa5e3e79fcaa}{multiply} (const \hyperlink{classmy_vector}{my\+Vector} other) const 
+\begin{DoxyCompactList}\small\item\em Multiplies given Vector by other Vector. \end{DoxyCompactList}\item 
+\hyperlink{classmy_vector}{my\+Vector} \hyperlink{classmy_vector_a9465f76761927752eea5a66664443500}{multiply} (const float scalar) const 
+\begin{DoxyCompactList}\small\item\em Multiplies given Vector by a scalar. \end{DoxyCompactList}\item 
+float \hyperlink{classmy_vector_a69838d6c85759fa2a2c82ea42f13b989}{magnitude} () const 
+\begin{DoxyCompactList}\small\item\em Gets the magnitude of a \hyperlink{classmy_vector}{my\+Vector}. \end{DoxyCompactList}\item 
+double \hyperlink{classmy_vector_af43d29d51639072515cad23ef7415786}{dot\+Product} (const \hyperlink{classmy_vector}{my\+Vector} other) const 
+\begin{DoxyCompactList}\small\item\em Calculates the dot product of two my\+Vectors. \end{DoxyCompactList}\item 
+\hyperlink{classmy_vector}{my\+Vector} \hyperlink{classmy_vector_af05be0fcb82238606e624b97eef10990}{cross\+Product} (const \hyperlink{classmy_vector}{my\+Vector} other) const 
+\begin{DoxyCompactList}\small\item\em Calculates the cross product of two my\+Vectors. \end{DoxyCompactList}\item 
+\hyperlink{classmy_vector}{my\+Vector} \hyperlink{classmy_vector_a417556fbd4eda0e98ae1b76973bb75b4}{Rotate\+Vector} (float Angle)
+\begin{DoxyCompactList}\small\item\em Rotates a given My\+Vector by an angle. \end{DoxyCompactList}\item 
+double \hyperlink{classmy_vector_a240764ad5e79de7a6ce9e950bc531682}{x} ()
+\begin{DoxyCompactList}\small\item\em Static function which normalises a given \hyperlink{classmy_vector}{my\+Vector}. \end{DoxyCompactList}\item 
+double \hyperlink{classmy_vector_a940c23ee317384a6fd3b4588986ad3cb}{y} ()
+\begin{DoxyCompactList}\small\item\em A getter for the Y coordinate of a \hyperlink{classmy_vector}{my\+Vector}. \end{DoxyCompactList}\item 
+Vector2f \hyperlink{classmy_vector_a2a99754a40661435447dd17138e8f63a}{Convert2f} ()
+\begin{DoxyCompactList}\small\item\em Converts a \hyperlink{classmy_vector}{my\+Vector} to a Vector2f. \end{DoxyCompactList}\item 
+\hyperlink{classmy_vector}{my\+Vector} \hyperlink{classmy_vector_a6d039a25169b58a8164f8f979d8b315b}{Make\+Negetive} ()
+\begin{DoxyCompactList}\small\item\em Reverses the my\+Vectors polarity. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classmy_vector_a637dbf4f6f8ace8798907508cc7dc694}{}static \hyperlink{classmy_vector}{my\+Vector} {\bfseries Rotate\+Vector} (\hyperlink{classmy_vector}{my\+Vector} Vector, float Angle)\label{classmy_vector_a637dbf4f6f8ace8798907508cc7dc694}
+static \hyperlink{classmy_vector}{my\+Vector} \hyperlink{classmy_vector_aad23cd26628305a6a0b470a3650c326b}{normalise} (\hyperlink{classmy_vector}{my\+Vector} vector)
+\begin{DoxyCompactList}\small\item\em Static function which normalises a given \hyperlink{classmy_vector}{my\+Vector}. \end{DoxyCompactList}\item 
+static \hyperlink{classmy_vector}{my\+Vector} \hyperlink{classmy_vector_a19b37337f80ec19c1c70cd4e5d8ade14}{Convert\+To\+My\+Vector} (Vector2f vector)
+\begin{DoxyCompactList}\small\item\em Static function which converts a vector2f into a \hyperlink{classmy_vector}{my\+Vector}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-\hypertarget{classmy_vector_aad23cd26628305a6a0b470a3650c326b}{}static \hyperlink{classmy_vector}{my\+Vector} {\bfseries normalise} (\hyperlink{classmy_vector}{my\+Vector} vector)\label{classmy_vector_aad23cd26628305a6a0b470a3650c326b}
 
-\item 
-\hypertarget{classmy_vector_a19b37337f80ec19c1c70cd4e5d8ade14}{}static \hyperlink{classmy_vector}{my\+Vector} {\bfseries Convert\+To\+My\+Vector} (Vector2f vector)\label{classmy_vector_a19b37337f80ec19c1c70cd4e5d8ade14}
+\subsection{Detailed Description}
+A mathematical class that expands on sf\+::\+Vector2f by adding the vector operations they lack such as dot product and rotation. They can also easily be converted to sf\+::\+Vector2f or my\+Vectors so they are very easy to use in conjunction with sfml.
 
-\end{DoxyCompactItemize}
+Usage example\+: 
+\begin{DoxyCode}
+\hyperlink{classmy_vector}{myVector} MyVectorA(0.5,25);
+\end{DoxyCode}
+ 
 
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmy_vector_ae1bc15cce3be9c327b52f02da1c24503}{}\index{my\+Vector@{my\+Vector}!my\+Vector@{my\+Vector}}
+\index{my\+Vector@{my\+Vector}!my\+Vector@{my\+Vector}}
+\subsubsection[{my\+Vector()}]{\setlength{\rightskip}{0pt plus 5cm}my\+Vector\+::my\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classmy_vector_ae1bc15cce3be9c327b52f02da1c24503}
+
+
+Default constructor. 
+
+Creates a \hyperlink{classmy_vector}{my\+Vector}. Default values are (0,0) \hypertarget{classmy_vector_a3c242231d09872ff18adcff8c5199dbd}{}\index{my\+Vector@{my\+Vector}!my\+Vector@{my\+Vector}}
+\index{my\+Vector@{my\+Vector}!my\+Vector@{my\+Vector}}
+\subsubsection[{my\+Vector(double A, double B)}]{\setlength{\rightskip}{0pt plus 5cm}my\+Vector\+::my\+Vector (
+\begin{DoxyParamCaption}
+\item[{double}]{A, }
+\item[{double}]{B}
+\end{DoxyParamCaption}
+)}\label{classmy_vector_a3c242231d09872ff18adcff8c5199dbd}
+
+
+Construct the \hyperlink{classmy_vector}{my\+Vector} from its coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & X coordinate \\
+\hline
+{\em B} & Y coordinate \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmy_vector_ab6e4440c74a6cd118faa925a8fddedc9}{}\index{my\+Vector@{my\+Vector}!add@{add}}
+\index{add@{add}!my\+Vector@{my\+Vector}}
+\subsubsection[{add(const my\+Vector other) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+Vector} my\+Vector\+::add (
+\begin{DoxyParamCaption}
+\item[{const {\bf my\+Vector}}]{other}
+\end{DoxyParamCaption}
+) const}\label{classmy_vector_ab6e4440c74a6cd118faa925a8fddedc9}
+
+
+Adds to my\+Vectors together. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Vector to be added\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result from addition
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+myVectorA.add(myVectorB);
+\end{DoxyCode}
+ \hypertarget{classmy_vector_a2a99754a40661435447dd17138e8f63a}{}\index{my\+Vector@{my\+Vector}!Convert2f@{Convert2f}}
+\index{Convert2f@{Convert2f}!my\+Vector@{my\+Vector}}
+\subsubsection[{Convert2f()}]{\setlength{\rightskip}{0pt plus 5cm}Vector2f my\+Vector\+::\+Convert2f (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classmy_vector_a2a99754a40661435447dd17138e8f63a}
+
+
+Converts a \hyperlink{classmy_vector}{my\+Vector} to a Vector2f. 
+
+\begin{DoxyReturn}{Returns}
+Vector2f with the same X,Y values as the given \hyperlink{classmy_vector}{my\+Vector}
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+ConVector2f = myVectorA.Convert2f;
+\end{DoxyCode}
+ \hypertarget{classmy_vector_a19b37337f80ec19c1c70cd4e5d8ade14}{}\index{my\+Vector@{my\+Vector}!Convert\+To\+My\+Vector@{Convert\+To\+My\+Vector}}
+\index{Convert\+To\+My\+Vector@{Convert\+To\+My\+Vector}!my\+Vector@{my\+Vector}}
+\subsubsection[{Convert\+To\+My\+Vector(\+Vector2f vector)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+Vector} my\+Vector\+::\+Convert\+To\+My\+Vector (
+\begin{DoxyParamCaption}
+\item[{Vector2f}]{vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classmy_vector_a19b37337f80ec19c1c70cd4e5d8ade14}
+
+
+Static function which converts a vector2f into a \hyperlink{classmy_vector}{my\+Vector}. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classmy_vector}{my\+Vector} with the same X,Y values as the given Vector2f
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+myVectorA = \hyperlink{classmy_vector_a19b37337f80ec19c1c70cd4e5d8ade14}{myVector::ConvertToMyVector}(Vector2fA);
+\end{DoxyCode}
+ \hypertarget{classmy_vector_af05be0fcb82238606e624b97eef10990}{}\index{my\+Vector@{my\+Vector}!cross\+Product@{cross\+Product}}
+\index{cross\+Product@{cross\+Product}!my\+Vector@{my\+Vector}}
+\subsubsection[{cross\+Product(const my\+Vector other) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+Vector} my\+Vector\+::cross\+Product (
+\begin{DoxyParamCaption}
+\item[{const {\bf my\+Vector}}]{other}
+\end{DoxyParamCaption}
+) const}\label{classmy_vector_af05be0fcb82238606e624b97eef10990}
+
+
+Calculates the cross product of two my\+Vectors. 
+
+\begin{DoxyReturn}{Returns}
+The cross product of the two my\+Vectors
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+myVectorA.crossProduct(myVectorB);
+\end{DoxyCode}
+ \hypertarget{classmy_vector_af43d29d51639072515cad23ef7415786}{}\index{my\+Vector@{my\+Vector}!dot\+Product@{dot\+Product}}
+\index{dot\+Product@{dot\+Product}!my\+Vector@{my\+Vector}}
+\subsubsection[{dot\+Product(const my\+Vector other) const }]{\setlength{\rightskip}{0pt plus 5cm}double my\+Vector\+::dot\+Product (
+\begin{DoxyParamCaption}
+\item[{const {\bf my\+Vector}}]{other}
+\end{DoxyParamCaption}
+) const}\label{classmy_vector_af43d29d51639072515cad23ef7415786}
+
+
+Calculates the dot product of two my\+Vectors. 
+
+\begin{DoxyReturn}{Returns}
+The dot product of the two my\+Vectors
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Usage example\+: 
+\begin{DoxyCode}
+myVectorA.dotProduct(myVectorB);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmy_vector_a69838d6c85759fa2a2c82ea42f13b989}{}\index{my\+Vector@{my\+Vector}!magnitude@{magnitude}}
+\index{magnitude@{magnitude}!my\+Vector@{my\+Vector}}
+\subsubsection[{magnitude() const }]{\setlength{\rightskip}{0pt plus 5cm}float my\+Vector\+::magnitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classmy_vector_a69838d6c85759fa2a2c82ea42f13b989}
+
+
+Gets the magnitude of a \hyperlink{classmy_vector}{my\+Vector}. 
+
+\begin{DoxyReturn}{Returns}
+Magnitude of the given \hyperlink{classmy_vector}{my\+Vector}
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+myVectorMag = myVectorA.magnitude();
+\end{DoxyCode}
+ \hypertarget{classmy_vector_a6d039a25169b58a8164f8f979d8b315b}{}\index{my\+Vector@{my\+Vector}!Make\+Negetive@{Make\+Negetive}}
+\index{Make\+Negetive@{Make\+Negetive}!my\+Vector@{my\+Vector}}
+\subsubsection[{Make\+Negetive()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+Vector} my\+Vector\+::\+Make\+Negetive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classmy_vector_a6d039a25169b58a8164f8f979d8b315b}
+
+
+Reverses the my\+Vectors polarity. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classmy_vector}{my\+Vector} with reversed polarity
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+NegativemyVectorA = myVectorA.MakeNegative();
+\end{DoxyCode}
+ \hypertarget{classmy_vector_a34a7a3b4eeda62cf4e8dfa5e3e79fcaa}{}\index{my\+Vector@{my\+Vector}!multiply@{multiply}}
+\index{multiply@{multiply}!my\+Vector@{my\+Vector}}
+\subsubsection[{multiply(const my\+Vector other) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+Vector} my\+Vector\+::multiply (
+\begin{DoxyParamCaption}
+\item[{const {\bf my\+Vector}}]{other}
+\end{DoxyParamCaption}
+) const}\label{classmy_vector_a34a7a3b4eeda62cf4e8dfa5e3e79fcaa}
+
+
+Multiplies given Vector by other Vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{classmy_vector}{my\+Vector} to multiply by\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result from multiplication
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+myVectorA.multiply(myVectorB);
+\end{DoxyCode}
+ \hypertarget{classmy_vector_a9465f76761927752eea5a66664443500}{}\index{my\+Vector@{my\+Vector}!multiply@{multiply}}
+\index{multiply@{multiply}!my\+Vector@{my\+Vector}}
+\subsubsection[{multiply(const float scalar) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+Vector} my\+Vector\+::multiply (
+\begin{DoxyParamCaption}
+\item[{const float}]{scalar}
+\end{DoxyParamCaption}
+) const}\label{classmy_vector_a9465f76761927752eea5a66664443500}
+
+
+Multiplies given Vector by a scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & A float to multiply the \hyperlink{classmy_vector}{my\+Vector} by\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result from multiplication
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+myVectorA.multiply(7.0f);
+\end{DoxyCode}
+ \hypertarget{classmy_vector_aad23cd26628305a6a0b470a3650c326b}{}\index{my\+Vector@{my\+Vector}!normalise@{normalise}}
+\index{normalise@{normalise}!my\+Vector@{my\+Vector}}
+\subsubsection[{normalise(my\+Vector vector)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+Vector} my\+Vector\+::normalise (
+\begin{DoxyParamCaption}
+\item[{{\bf my\+Vector}}]{vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classmy_vector_aad23cd26628305a6a0b470a3650c326b}
+
+
+Static function which normalises a given \hyperlink{classmy_vector}{my\+Vector}. 
+
+\begin{DoxyReturn}{Returns}
+Normalised Vector
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+VectorANorm = \hyperlink{classmy_vector_aad23cd26628305a6a0b470a3650c326b}{myVector::normalise}(myVectorA);
+\end{DoxyCode}
+ \hypertarget{classmy_vector_a417556fbd4eda0e98ae1b76973bb75b4}{}\index{my\+Vector@{my\+Vector}!Rotate\+Vector@{Rotate\+Vector}}
+\index{Rotate\+Vector@{Rotate\+Vector}!my\+Vector@{my\+Vector}}
+\subsubsection[{Rotate\+Vector(float Angle)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+Vector} my\+Vector\+::\+Rotate\+Vector (
+\begin{DoxyParamCaption}
+\item[{float}]{Angle}
+\end{DoxyParamCaption}
+)}\label{classmy_vector_a417556fbd4eda0e98ae1b76973bb75b4}
+
+
+Rotates a given My\+Vector by an angle. 
+
+\begin{DoxyReturn}{Returns}
+Rotated \hyperlink{classmy_vector}{my\+Vector}
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+myVectorA = myVectorA.RotateVector(55);
+\end{DoxyCode}
+ \hypertarget{classmy_vector_a14e8c2e0a550947a93cf178d50525a30}{}\index{my\+Vector@{my\+Vector}!set@{set}}
+\index{set@{set}!my\+Vector@{my\+Vector}}
+\subsubsection[{set(my\+Vector Setter)}]{\setlength{\rightskip}{0pt plus 5cm}void my\+Vector\+::set (
+\begin{DoxyParamCaption}
+\item[{{\bf my\+Vector}}]{Setter}
+\end{DoxyParamCaption}
+)}\label{classmy_vector_a14e8c2e0a550947a93cf178d50525a30}
+
+
+Set a vector to be another \hyperlink{classmy_vector}{my\+Vector}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Setter} & The \hyperlink{classmy_vector}{my\+Vector} which the current vector will be set to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmy_vector_af5d310b4175917d94960f8d8a915583d}{}\index{my\+Vector@{my\+Vector}!set\+X@{set\+X}}
+\index{set\+X@{set\+X}!my\+Vector@{my\+Vector}}
+\subsubsection[{set\+X(const double A)}]{\setlength{\rightskip}{0pt plus 5cm}void my\+Vector\+::set\+X (
+\begin{DoxyParamCaption}
+\item[{const double}]{A}
+\end{DoxyParamCaption}
+)}\label{classmy_vector_af5d310b4175917d94960f8d8a915583d}
+
+
+Set only the X coordinate from the \hyperlink{classmy_vector}{my\+Vector}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & X coordinate \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmy_vector_a67046769203977128c5869519a96981c}{}\index{my\+Vector@{my\+Vector}!set\+Y@{set\+Y}}
+\index{set\+Y@{set\+Y}!my\+Vector@{my\+Vector}}
+\subsubsection[{set\+Y(const double B)}]{\setlength{\rightskip}{0pt plus 5cm}void my\+Vector\+::set\+Y (
+\begin{DoxyParamCaption}
+\item[{const double}]{B}
+\end{DoxyParamCaption}
+)}\label{classmy_vector_a67046769203977128c5869519a96981c}
+
+
+Set only the Y coordinate from the \hyperlink{classmy_vector}{my\+Vector}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & Y coordinate \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmy_vector_a43d29af4b84766a8b27c0a6e50067ead}{}\index{my\+Vector@{my\+Vector}!subtract@{subtract}}
+\index{subtract@{subtract}!my\+Vector@{my\+Vector}}
+\subsubsection[{subtract(const my\+Vector other) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+Vector} my\+Vector\+::subtract (
+\begin{DoxyParamCaption}
+\item[{const {\bf my\+Vector}}]{other}
+\end{DoxyParamCaption}
+) const}\label{classmy_vector_a43d29af4b84766a8b27c0a6e50067ead}
+
+
+Subtract given \hyperlink{classmy_vector}{my\+Vector} from another \hyperlink{classmy_vector}{my\+Vector}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{classmy_vector}{my\+Vector} to be subtracted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result from subtraction Usage example\+: 
+\begin{DoxyCode}
+myVectorA.subtract(myVectorB);
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\hypertarget{classmy_vector_a240764ad5e79de7a6ce9e950bc531682}{}\index{my\+Vector@{my\+Vector}!x@{x}}
+\index{x@{x}!my\+Vector@{my\+Vector}}
+\subsubsection[{x()}]{\setlength{\rightskip}{0pt plus 5cm}double my\+Vector\+::x (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classmy_vector_a240764ad5e79de7a6ce9e950bc531682}
+
+
+Static function which normalises a given \hyperlink{classmy_vector}{my\+Vector}. 
+
+\begin{DoxyReturn}{Returns}
+Normalised Vector
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+VectorANorm = \hyperlink{classmy_vector_aad23cd26628305a6a0b470a3650c326b}{myVector::normalise}(myVectorA);
+\end{DoxyCode}
+ A getter for the X coordinate of a \hyperlink{classmy_vector}{my\+Vector}
+
+\begin{DoxyReturn}{Returns}
+X coordinate of a \hyperlink{classmy_vector}{my\+Vector}
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+myVectorA.x();
+\end{DoxyCode}
+ \hypertarget{classmy_vector_a940c23ee317384a6fd3b4588986ad3cb}{}\index{my\+Vector@{my\+Vector}!y@{y}}
+\index{y@{y}!my\+Vector@{my\+Vector}}
+\subsubsection[{y()}]{\setlength{\rightskip}{0pt plus 5cm}double my\+Vector\+::y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classmy_vector_a940c23ee317384a6fd3b4588986ad3cb}
+
+
+A getter for the Y coordinate of a \hyperlink{classmy_vector}{my\+Vector}. 
+
+\begin{DoxyReturn}{Returns}
+Y coordinate of a \hyperlink{classmy_vector}{my\+Vector}
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+myVectorA.y();
+\end{DoxyCode}
+ 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
