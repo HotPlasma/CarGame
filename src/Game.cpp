@@ -7,7 +7,6 @@ Game::Game()
 	generateMap(TexLoader.getTextureIterator(2));
 	m_Car.setCarTexture(TexLoader.getTextureIterator(3));
 	m_Spedo.SetRPMTexture(TexLoader.getTextureIterator(0));
-	m_Spedo.setupCheckpoints();
 }
 
 void Game::draw(RenderTarget & target, RenderStates states) const 

@@ -14,7 +14,6 @@
 #include <HUD.h>
 #include <Tyre.h>
 
-
 using namespace sf;
 
 class Car : public Collidable
