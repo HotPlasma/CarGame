@@ -84,10 +84,6 @@ void Tyre::Collide(Tyre* B)
 	}
 }
 
-Sprite Tyre::getTyreSprite()
-{
-	return TyreSprite;
-}
 
 void Tyre::setTyreTexture(vector<Texture>::iterator GivenTexture)
 {

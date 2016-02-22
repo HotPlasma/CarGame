@@ -137,13 +137,13 @@ public:
 	/// \brief Sets the texture to the car sprite from the texture loader
 	///
 	/// Iterator is dereferenced to get texture
-	/// \param GivenTexture A iterator of textures in a vector game time
+	/// \param GivenTexture A iterator of textures in a vector
 	///
 	////////////////////////////////////////////////////////////
 	void setCarTexture(vector<Texture>::iterator GivenTexture);
 
 	////////////////////////////////////////////////////////////
-	/// \brief Polymorphic function derived from collidable class which takes any collidable in this case a tyre and allows it to collide with any other collidable. 
+	/// \brief Polymorphic function derived from collidable class which takes any collidable and allows it to collide with any other collidable. In this case a Car and a tyre. 
 	///
 	/// \param B A tyre collidable to be collided with
 	///

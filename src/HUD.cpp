@@ -81,8 +81,7 @@ void HUD::updateGear(int gear)
 
 void HUD::SetRPMTexture(vector<Texture>::iterator GivenTexture)
 {
-	RPMTexture = *GivenTexture;
-	RPMSprite.setTexture(RPMTexture);
+	RPMSprite.setTexture(*GivenTexture);
 }
 Vector2f HUD::getRPMCounterPos()
 {

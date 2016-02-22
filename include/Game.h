@@ -12,14 +12,15 @@ using namespace sf;
 
 class Game : public Drawable
 {
-public:
-	Game();
+private:
 	Car m_Car;
-	HUD m_Spedo;
 	vector<Tyre*> Tyres;
 	TextureLoader TexLoader;
 	Sprite MapSprite;
 	bool MidPassed = false;
+public:
+	Game();
+	HUD m_Spedo;
 	void CreatePlayerCar();
 	void CreateObstacles();
 	void CreateTrack();

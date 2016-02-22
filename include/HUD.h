@@ -13,7 +13,6 @@ class HUD : public Drawable
 private:
 	RectangleShape m_needle;
 	Sprite RPMSprite;
-	Texture RPMTexture;
 	Font DigiFont;
 	Text GearText;
 	Text TimerText;
