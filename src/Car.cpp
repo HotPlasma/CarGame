@@ -182,7 +182,9 @@ void Car::update(float timestep)
 	myVector SteeringVector(cosf((m_fRotationAngle + m_fSteeringAngle) * g_kfDegToRad), sinf((m_fRotationAngle + m_fSteeringAngle) * g_kfDegToRad));
 	m_render.setRotation(m_fRotationAngle); // Sets rotation 
 
+	// Displacement is equal to the magnitude of velocity mutliplied by the timestep
 	float fDisplacement = m_velocity.magnitude() * timestep;
+	// Set Wheelbase 65% of the size of the car
 	float fWheelBase = m_render.getLocalBounds().width * 0.65f;
 
 	if (m_velocity.dotProduct(SteeringVector) < 0)
@@ -190,14 +192,14 @@ void Car::update(float timestep)
 		fDisplacement = -fDisplacement;
 	}
 
+	// Sets up 4 tyres for the car
 	myVector fWheelPos[2];
 	myVector rWheelPos[2];
 
-	myVector PerpCarAngle(-m_RotationVector.y(), m_RotationVector.x());
+	myVector PerpCarAngle(-m_RotationVector.y(), m_RotationVector.x()); // Used for placing wheels correctly
 
 	fWheelPos[0].set(m_position.add(m_RotationVector.multiply(fWheelBase / 2)));
 	fWheelPos[1].set(m_position.add(m_RotationVector.multiply(fWheelBase / 2)));
-	//fWheelPos[1].set(m_position.add(m_RotationVector.multiply(fWheelBase / 2)));
 	rWheelPos[0].set(m_position.subtract(m_RotationVector.multiply(fWheelBase / 2)));
 
 	fWheelPos[0] = fWheelPos[0].add(SteeringVector.multiply(fDisplacement));
@@ -208,8 +210,8 @@ void Car::update(float timestep)
 		/*m_FrontWheel[0].setPosition(Vector2f(fWheelPos[0].x(), fWheelPos[0].y()));
 		m_RearWheel[0].setPosition(Vector2f(rWheelPos[0].x(), rWheelPos[0].y()));*/
 
-		m_FrontWheel[i].setRotation(m_fSteeringAngle + m_fRotationAngle);
-		m_RearWheel[i].setRotation(m_fRotationAngle);
+		m_FrontWheel[i].setRotation(m_fSteeringAngle + m_fRotationAngle); // Sets the rotation of the front wheels
+		m_RearWheel[i].setRotation(m_fRotationAngle); // Sets the rotation of the backwheels
 	}
 
 	// Sets up my vectors for my wheels
@@ -228,7 +230,7 @@ void Car::update(float timestep)
 	{
 		Turn();
 	}
-	else
+	else // If user not turning then slowly to default to middle position
 	{
 		if (m_fSteeringAngle > 0)
 		m_fSteeringAngle -= 1;

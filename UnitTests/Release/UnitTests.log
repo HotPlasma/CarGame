@@ -1,0 +1,24 @@
+﻿Build started 2/23/2016 6:19:31 PM.
+     1>Project "C:\Users\EK\Desktop\C++Projects\RacingGame\UnitTests\UnitTests.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\UnitTest\include" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\UnitTests.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /FC /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\UnitTest\include" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\UnitTests.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /FC /errorReport:prompt unittest1.cpp
+         unittest1.cpp
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\unittest\include\cppunittestassert.h(66): error C2338: Test writer must define specialization of ToString<const Q& q> for your class class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > __cdecl Microsoft::VisualStudio::CppUnitTestFramework::ToString<class sf::Vector2<float>>(const class sf::Vector2<float> &).
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\unittest\include\cppunittestassert.h(129) : see reference to function template instantiation 'std::wstring Microsoft::VisualStudio::CppUnitTestFramework::ToString<T>(const Q &)' being compiled
+                 with
+                 [
+                     T=sf::Vector2f
+         ,            Q=sf::Vector2f
+                 ]
+                 c:\users\ek\desktop\c++projects\racinggame\unittests\unittest1.cpp(18) : see reference to function template instantiation 'void Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual<sf::Vector2f>(const T &,const T &,const wchar_t *,const Microsoft::VisualStudio::CppUnitTestFramework::__LineInfo *)' being compiled
+                 with
+                 [
+                     T=sf::Vector2f
+                 ]
+     1>Done Building Project "C:\Users\EK\Desktop\C++Projects\RacingGame\UnitTests\UnitTests.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.54

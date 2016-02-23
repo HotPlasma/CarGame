@@ -52,9 +52,8 @@ int main()
 			{
 				if (event.mouseButton.button == Mouse::Left) // Allows m_Tyres to be placed by clicking on the map
 				{
-					//game.createTyre(window.mapPixelToCoords(Mouse::getPosition(window),gameview));
-					//cout << window.mapPixelToCoords(Mouse::getPosition(window)).x << "    " << window.mapPixelToCoords(Mouse::getPosition(window)).y << endl;
-					//cout << Mouse::getPosition().x << "    " << Mouse::getPosition().y << endl;
+					game.createTyre(window.mapPixelToCoords(Mouse::getPosition(window),gameview));
+					
 				}
 			}
 		
@@ -80,7 +79,7 @@ int main()
 		window.setView(miniMap);
 		window.draw(game);
 
-		//Draws RPM counter
+		//Draws HUD
 		window.setView(HUD);
 		window.draw(game.m_HUD);
 

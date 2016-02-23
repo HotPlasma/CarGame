@@ -1,10 +1,14 @@
 ////////////////////////////////////////////////////////////
-//
-// Car Game - Created by Egor Kharlamov
-// Created for C++ Year 2 Coursework at DMU - Games Programming Course
-//
-// This project is a racing game which contains realistic car physics and polymorphic impulse resolution 
-//
+///
+/// \mainpage Car Game - Created by Egor Kharlamov
+/// Created for C++ Year 2 Coursework at DMU - Games Programming Course
+///
+/// This project is a racing game which contains realistic car physics and polymorphic impulse resolution.
+/// 
+/// This documentation follows all of the objects and their variables and functions
+/// within the code.
+/// 
+/// Please use task bar to above to navigate.
 ////////////////////////////////////////////////////////////
 #ifndef GAME_H
 #define GAME_H

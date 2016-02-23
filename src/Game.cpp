@@ -113,6 +113,16 @@ void Game::processKeyRelease(Keyboard::Key code)
 	{
 		m_Car.m_iGear = 0;
 	}
+	if (code == Keyboard::Return) //If enter is pressed then save all tyre positions to file
+	{
+		saveTyrePosToFile();
+	}
+
+	if (code == Keyboard::BackSpace) // Load tyres positions from file
+	{
+		loadTyrePosFromFile();
+	}
+	
 }
 
 void Game::generateMap(vector<Texture>::iterator GivenTexture)
@@ -136,12 +146,8 @@ Vector2f Game::getRPMCounterPos()
 
 void Game::createTyre(Vector2f Position)
 {
-	//Tyre1 = Tyre(myVector::ConvertToMyVector(Position), 0.1);
-	//Tyre1.m_Tyresprite.setPosition(Position);
-
 	m_Tyres.push_back(new Tyre(myVector::ConvertToMyVector(Position), 0.1));
 	m_Tyres.back()->setTyreTexture(m_TexLoader.getTextureIterator(1));
-	saveTyrePosToFile();
 }
 
 void Game::saveTyrePosToFile()
@@ -167,15 +173,16 @@ void Game::loadTyrePosFromFile()
 	float fX;
 	float fY;
 
+	//Open file
 	fileHandle.open("..\\assets\\Maps\\tyrepos.txt");
 	if (fileHandle.is_open())
 	{
-		while (fileHandle >> fX >> fY)
+		while (fileHandle >> fX >> fY) // While 2 floats with a space inbetween exist on each line
 		{
-			m_Tyres.push_back(new Tyre(myVector(fX,fY), 0.1));
-			m_Tyres.back()->setTyreTexture(m_TexLoader.getTextureIterator(1));
+			m_Tyres.push_back(new Tyre(myVector(fX,fY), 0.1)); // Pushback new tyre with these X,Y positions
+			m_Tyres.back()->setTyreTexture(m_TexLoader.getTextureIterator(1));// Set tyre texture
 		}
 	}
-
+	// Close file
 	fileHandle.close();
 }

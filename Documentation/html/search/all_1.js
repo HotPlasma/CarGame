@@ -7,5 +7,6 @@ var searchData=
   ['convert2f',['Convert2f',['../classmy_vector.html#a2a99754a40661435447dd17138e8f63a',1,'myVector']]],
   ['converttomyvector',['ConvertToMyVector',['../classmy_vector.html#a19b37337f80ec19c1c70cd4e5d8ade14',1,'myVector']]],
   ['createtyre',['createTyre',['../class_game.html#a8eb2aefb1a563b1ca91d080131e0f1a3',1,'Game']]],
-  ['crossproduct',['crossProduct',['../classmy_vector.html#af05be0fcb82238606e624b97eef10990',1,'myVector']]]
+  ['crossproduct',['crossProduct',['../classmy_vector.html#af05be0fcb82238606e624b97eef10990',1,'myVector']]],
+  ['car_20game_20_2d_20created_20by_20egor_20kharlamov',['Car Game - Created by Egor Kharlamov',['../index.html',1,'']]]
 ];
