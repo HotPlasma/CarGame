@@ -1,16 +1,19 @@
-﻿Build started 2/22/2016 10:50:07 PM.
+﻿Build started 2/23/2016 3:12:32 PM.
      1>Project "C:\Users\EK\Desktop\C++Projects\RacingGame\RacingGame\RacingGame.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\Game.cpp
-         Game.cpp
-     1>..\src\Game.cpp(5): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>..\src\Game.cpp(17): warning C4018: '<' : signed/unsigned mismatch
-     1>..\src\Game.cpp(26): warning C4018: '<' : signed/unsigned mismatch
-     1>..\src\Game.cpp(33): warning C4018: '<' : signed/unsigned mismatch
-     1>..\src\Game.cpp(36): warning C4018: '<' : signed/unsigned mismatch
-     1>..\src\Game.cpp(140): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>..\src\Game.cpp(152): warning C4018: '<' : signed/unsigned mismatch
-     1>..\src\Game.cpp(173): warning C4305: 'argument' : truncation from 'double' to 'float'
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\Car.cpp
+         Car.cpp
+     1>..\src\Car.cpp(5): warning C4305: 'initializing' : truncation from 'double' to 'const float'
+     1>..\src\Car.cpp(23): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\Car.cpp(34): warning C4305: '=' : truncation from 'double' to 'float'
+     1>..\src\Car.cpp(79): warning C4244: 'argument' : conversion from 'int' to 'const float', possible loss of data
+     1>..\src\Car.cpp(110): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>..\src\Car.cpp(157): warning C4244: '-=' : conversion from 'float' to 'int', possible loss of data
+     1>..\src\Car.cpp(256): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\Car.cpp(257): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\Car.cpp(312): warning C4305: 'argument' : truncation from 'double' to 'const float'
+     1>..\src\Car.cpp(312): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+     1>..\src\Car.cpp(356): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\EK\Desktop\C++Projects\RacingGame\Release\RacingGame.exe" /NOLOGO "sfml-main.lib" "sfml-system.lib" "sfml-graphics.lib" "sfml-window.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\EK\Desktop\C++Projects\RacingGame\Release\RacingGame.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\EK\Desktop\C++Projects\RacingGame\Release\RacingGame.lib" /MACHINE:X86 /SAFESEH Release\Car.obj
          Release\Collidable.obj
@@ -27,4 +30,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.07
+Time Elapsed 00:00:03.83

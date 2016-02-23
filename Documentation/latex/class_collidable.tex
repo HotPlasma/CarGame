@@ -1,5 +1,9 @@
 \hypertarget{class_collidable}{}\section{Collidable Class Reference}
 \label{class_collidable}\index{Collidable@{Collidable}}
+
+
+{\ttfamily \#include $<$Collidable.\+h$>$}
+
 Inheritance diagram for Collidable\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,36 +13,116 @@ Inheritance diagram for Collidable\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_collidable_ad2dd423735fd869f76c55df162d6eff2}{}{\bfseries Collidable} (\hyperlink{classmy_vector}{my\+Vector} position, \hyperlink{classmy_vector}{my\+Vector} acceleration, float inv\+Mass, \hyperlink{classmy_vector}{my\+Vector} velocity)\label{class_collidable_ad2dd423735fd869f76c55df162d6eff2}
-
-\item 
-\hypertarget{class_collidable_abfe491d3368cfc9c1407b91b4d5d3d77}{}virtual void {\bfseries Collide} (\hyperlink{class_collidable}{Collidable} $\ast$Object2)\label{class_collidable_abfe491d3368cfc9c1407b91b4d5d3d77}
-
-\end{DoxyCompactItemize}
+\hyperlink{class_collidable_a92ce9e2b08086bb2f466168ffc69c9ed}{Collidable} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_collidable_ad2dd423735fd869f76c55df162d6eff2}{Collidable} (\hyperlink{classmy_vector}{my\+Vector} position, \hyperlink{classmy_vector}{my\+Vector} acceleration, float inv\+Mass, \hyperlink{classmy_vector}{my\+Vector} velocity)
+\begin{DoxyCompactList}\small\item\em Overloaded constructer which contructs the collidable from its position, acceleration, inverse mass and starting velocity. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_collidable_abfe491d3368cfc9c1407b91b4d5d3d77}{Collide} (\hyperlink{class_collidable}{Collidable} $\ast$Object2)
+\begin{DoxyCompactList}\small\item\em Polymorphic function collide which allows a collidable to collide with another collidable. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_collidable_abb12d204a079d68951d396005270c70b}{}\hyperlink{classmy_vector}{my\+Vector} {\bfseries m\+\_\+position}\label{class_collidable_abb12d204a079d68951d396005270c70b}
+\hypertarget{class_collidable_abb12d204a079d68951d396005270c70b}{}\hyperlink{classmy_vector}{my\+Vector} \hyperlink{class_collidable_abb12d204a079d68951d396005270c70b}{m\+\_\+position}\label{class_collidable_abb12d204a079d68951d396005270c70b}
 
-\item 
-\hypertarget{class_collidable_adfeaec03dc9c1c5791b7bc94cff04c44}{}\hyperlink{classmy_vector}{my\+Vector} {\bfseries m\+\_\+velocity}\label{class_collidable_adfeaec03dc9c1c5791b7bc94cff04c44}
+\begin{DoxyCompactList}\small\item\em Holds the position of a collidable. \end{DoxyCompactList}\item 
+\hypertarget{class_collidable_adfeaec03dc9c1c5791b7bc94cff04c44}{}\hyperlink{classmy_vector}{my\+Vector} \hyperlink{class_collidable_adfeaec03dc9c1c5791b7bc94cff04c44}{m\+\_\+velocity}\label{class_collidable_adfeaec03dc9c1c5791b7bc94cff04c44}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Holds the velocity of a collidable. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_collidable_a5aaff018202f598eeefd6bc0968d5adb}{}\hyperlink{classmy_vector}{my\+Vector} {\bfseries get\+Friction} ()\label{class_collidable_a5aaff018202f598eeefd6bc0968d5adb}
-
-\end{DoxyCompactItemize}
+\hyperlink{classmy_vector}{my\+Vector} \hyperlink{class_collidable_a5aaff018202f598eeefd6bc0968d5adb}{get\+Friction} ()
+\begin{DoxyCompactList}\small\item\em Return a friction by multiplying a velocity by a coefficient and by gravity. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_collidable_aacad0202ea0d4f51a6875bce682ff3eb}{}\hyperlink{classmy_vector}{my\+Vector} {\bfseries m\+\_\+acceleration}\label{class_collidable_aacad0202ea0d4f51a6875bce682ff3eb}
+\hypertarget{class_collidable_aacad0202ea0d4f51a6875bce682ff3eb}{}\hyperlink{classmy_vector}{my\+Vector} \hyperlink{class_collidable_aacad0202ea0d4f51a6875bce682ff3eb}{m\+\_\+acceleration}\label{class_collidable_aacad0202ea0d4f51a6875bce682ff3eb}
 
-\item 
-\hypertarget{class_collidable_a729958861685b10ff9718a24fca09c8e}{}float {\bfseries m\+\_\+finv\+Mass}\label{class_collidable_a729958861685b10ff9718a24fca09c8e}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmy_vector}{my\+Vector} holding the acceleration of a collidable \end{DoxyCompactList}\item 
+\hypertarget{class_collidable_a729958861685b10ff9718a24fca09c8e}{}float \hyperlink{class_collidable_a729958861685b10ff9718a24fca09c8e}{m\+\_\+finv\+Mass}\label{class_collidable_a729958861685b10ff9718a24fca09c8e}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Float holding the inverse mass of a collidable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_collidable}{Collidable} is an abstract class which all objects which can be collided with inherit from. It used late binding to run its Collide function with any other collideable object.
+
+The advantage of this is that in the future, if any other collidable objects are created they would be very easy to collide with all the other collidables using this system.
+
+This class also serves to retreive friction which I used for a more realistic driving experience in this game. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_collidable_a92ce9e2b08086bb2f466168ffc69c9ed}{}\index{Collidable@{Collidable}!Collidable@{Collidable}}
+\index{Collidable@{Collidable}!Collidable@{Collidable}}
+\subsubsection[{Collidable()}]{\setlength{\rightskip}{0pt plus 5cm}Collidable\+::\+Collidable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_collidable_a92ce9e2b08086bb2f466168ffc69c9ed}
+
+
+Default constructor. 
+
+Creates a \hyperlink{class_collidable}{Collidable}. Can not be used as \hyperlink{class_collidable}{Collidable} is an abstract class \hypertarget{class_collidable_ad2dd423735fd869f76c55df162d6eff2}{}\index{Collidable@{Collidable}!Collidable@{Collidable}}
+\index{Collidable@{Collidable}!Collidable@{Collidable}}
+\subsubsection[{Collidable(my\+Vector position, my\+Vector acceleration, float inv\+Mass, my\+Vector velocity)}]{\setlength{\rightskip}{0pt plus 5cm}Collidable\+::\+Collidable (
+\begin{DoxyParamCaption}
+\item[{{\bf my\+Vector}}]{position, }
+\item[{{\bf my\+Vector}}]{acceleration, }
+\item[{float}]{inv\+Mass, }
+\item[{{\bf my\+Vector}}]{velocity}
+\end{DoxyParamCaption}
+)}\label{class_collidable_ad2dd423735fd869f76c55df162d6eff2}
+
+
+Overloaded constructer which contructs the collidable from its position, acceleration, inverse mass and starting velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position \hyperlink{classmy_vector}{my\+Vector} \\
+\hline
+{\em acceleration} & Acceleration \hyperlink{classmy_vector}{my\+Vector} \\
+\hline
+{\em inv\+Mass} & Inverse Mass float \\
+\hline
+{\em velocity} & Velocity \hyperlink{classmy_vector}{my\+Vector} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_collidable_abfe491d3368cfc9c1407b91b4d5d3d77}{}\index{Collidable@{Collidable}!Collide@{Collide}}
+\index{Collide@{Collide}!Collidable@{Collidable}}
+\subsubsection[{Collide(\+Collidable $\ast$\+Object2)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Collidable\+::\+Collide (
+\begin{DoxyParamCaption}
+\item[{{\bf Collidable} $\ast$}]{Object2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_collidable_abfe491d3368cfc9c1407b91b4d5d3d77}
+
+
+Polymorphic function collide which allows a collidable to collide with another collidable. 
+
+Due to its polymorphic nature the function is instantiated in both \hyperlink{class_tyre}{Tyre} and \hyperlink{class_car}{Car} and allows cars to collide with m\+\_\+\+Tyres and m\+\_\+\+Tyres to collide with m\+\_\+\+Tyres.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Object2} & A second collidable that the collidable will collide with \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collidable_a5aaff018202f598eeefd6bc0968d5adb}{}\index{Collidable@{Collidable}!get\+Friction@{get\+Friction}}
+\index{get\+Friction@{get\+Friction}!Collidable@{Collidable}}
+\subsubsection[{get\+Friction()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+Vector} Collidable\+::get\+Friction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_collidable_a5aaff018202f598eeefd6bc0968d5adb}
+
+
+Return a friction by multiplying a velocity by a coefficient and by gravity. 
+
+\begin{DoxyReturn}{Returns}
+A \hyperlink{classmy_vector}{my\+Vector} of Friction 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

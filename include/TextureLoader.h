@@ -23,8 +23,8 @@ private:
 	// Member data
 	////////////////////////////////////////////////////////////
 	vector<Texture> textures;///< A vector of textures which all textures used in the program should be loaded into.
-	string baseDirectory;///< A string holding a base directory to find textures
-	Texture Holder; ///< A tempary holder of a texture before it is added to the vector of textures;
+	string m_sBaseDirectory;///< A string holding a base directory to find textures
+	Texture m_Holder; ///< A tempary m_Holder of a texture before it is added to the vector of textures;
 
 public:
 	////////////////////////////////////////////////////////////
@@ -46,8 +46,8 @@ public:
 	////////////////////////////////////////////////////////////
 	/// \brief Function where all necessary textures should be loaded in.
 	///
-	/// \see Holder
-	/// \see baseDirectory
+	/// \see m_Holder
+	/// \see m_sBaseDirectory
 	/// \see textures
 	///
 	////////////////////////////////////////////////////////////

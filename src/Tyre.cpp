@@ -7,25 +7,25 @@ Tyre::Tyre()
 
 Tyre::Tyre(myVector position, float invMass)
 {
-	TyreSprite.setOrigin(40, 40);
-	TyreSprite.setScale(1, 1);
+	m_Tyresprite.setOrigin(40, 40);
+	m_Tyresprite.setScale(1, 1);
 	m_finvMass = invMass;
 	m_acceleration.set(0, 0);
 	m_velocity.set(0, 0);
 	Radius = 40;
-	TyreSprite.setPosition(position.x(), position.y());
+	m_Tyresprite.setPosition(position.x(), position.y());
 	Collidable::m_position = position;
 }
 
 void Tyre::draw(RenderTarget & target, RenderStates states) const
 {
-	target.draw(TyreSprite, states);
+	target.draw(m_Tyresprite, states);
 }
 
 void Tyre::Collide(Tyre* B)
 {
-	myVector CircleA(TyreSprite.getPosition().x, TyreSprite.getPosition().y);
-	myVector CircleB(B->TyreSprite.getPosition().x, B->TyreSprite.getPosition().y);
+	myVector CircleA(m_Tyresprite.getPosition().x, m_Tyresprite.getPosition().y);
+	myVector CircleB(B->m_Tyresprite.getPosition().x, B->m_Tyresprite.getPosition().y);
 
 	float RadiusA = Radius;
 	float RadiusB = B->Radius;
@@ -87,7 +87,7 @@ void Tyre::Collide(Tyre* B)
 
 void Tyre::setTyreTexture(vector<Texture>::iterator GivenTexture)
 {
-	TyreSprite.setTexture(*GivenTexture);
+	m_Tyresprite.setTexture(*GivenTexture);
 }
 
 void Tyre::update(float timestep)
@@ -96,6 +96,6 @@ void Tyre::update(float timestep)
 
 	m_velocity = m_velocity.add(m_acceleration.multiply(timestep));
 	m_position = m_position.add(m_velocity.multiply(timestep));
-	TyreSprite.setPosition(Vector2f(m_position.x(), m_position.y()));
+	m_Tyresprite.setPosition(Vector2f(m_position.x(), m_position.y()));
 	
 }

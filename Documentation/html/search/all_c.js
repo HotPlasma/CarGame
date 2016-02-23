@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['textureloader',['TextureLoader',['../class_texture_loader.html',1,'TextureLoader'],['../class_texture_loader.html#aafa6ca3bdbee3874a73aafae39d5c804',1,'TextureLoader::TextureLoader()']]],
-  ['turn',['Turn',['../class_car.html#ad3c6ba8be8f38d8a4fac3c11d2c851d5',1,'Car']]],
-  ['tyre',['Tyre',['../class_tyre.html',1,'Tyre'],['../class_tyre.html#a162dbaad7ae74443df530dfb147fb694',1,'Tyre::Tyre()'],['../class_tyre.html#a1908351bf7262df0b42b24f036af21ac',1,'Tyre::Tyre(myVector position, float invMass)']]],
-  ['tyresprite',['TyreSprite',['../class_tyre.html#a068f6dcd12733c3df6d760053daf08ac',1,'Tyre']]]
+  ['update',['update',['../class_car.html#afe9470e7880c07e082633d900328b312',1,'Car::update()'],['../class_game.html#acc8519c7ced1cf9eb9bbb3a2f325f6a0',1,'Game::update()'],['../class_tyre.html#abdcd021058ef1c1821f472f79835e4ab',1,'Tyre::update()']]],
+  ['updatebesttime',['updateBestTime',['../class_h_u_d.html#aff3c87dbcce63e0fb4136c18149f3a65',1,'HUD']]],
+  ['updategear',['updateGear',['../class_h_u_d.html#a0dc3e03d60ae3626345d9dc7e8287ff5',1,'HUD']]],
+  ['updateneedle',['updateNeedle',['../class_h_u_d.html#a96d4d120cedd21c3153d3c1fc45f5ef6',1,'HUD']]],
+  ['updatetimers',['updateTimers',['../class_h_u_d.html#a18bacebe294e788fd5ed81df01231915',1,'HUD']]]
 ];

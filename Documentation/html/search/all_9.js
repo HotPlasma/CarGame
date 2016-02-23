@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['processkeypress',['processKeyPress',['../class_game.html#ad3053e3b15bbcb049dc040801d58be7c',1,'Game']]],
-  ['processkeyrelease',['processKeyRelease',['../class_game.html#adb2ea3b70e0038d2caceedfde3bfc663',1,'Game']]]
+  ['radius',['Radius',['../class_tyre.html#a1c0fd8531b72c94915867cb90dd175c9',1,'Tyre']]],
+  ['resettimer',['resetTimer',['../class_h_u_d.html#a489a9c8cb61422fa5f3256346e3fb3a9',1,'HUD']]],
+  ['returncarpos',['ReturnCarPos',['../class_car.html#aa54320ce418c1f377eb595853dd1939c',1,'Car']]],
+  ['reversingaccel',['ReversingAccel',['../class_car.html#afb8da2fa315e9bb953ec87fb23ddd653',1,'Car']]],
+  ['rotatevector',['RotateVector',['../classmy_vector.html#a417556fbd4eda0e98ae1b76973bb75b4',1,'myVector']]]
 ];

@@ -109,12 +109,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad59df6562a58a614fda24622d3715b65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game</a> ()</td></tr>
 <tr class="memdesc:ad59df6562a58a614fda24622d3715b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#ad59df6562a58a614fda24622d3715b65">More...</a><br /></td></tr>
 <tr class="separator:ad59df6562a58a614fda24622d3715b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79853b667c44be836272528805943168"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a79853b667c44be836272528805943168">CreatePlayerCar</a> ()</td></tr>
-<tr class="memdesc:a79853b667c44be836272528805943168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_car.html">Car</a>.  <a href="#a79853b667c44be836272528805943168">More...</a><br /></td></tr>
-<tr class="separator:a79853b667c44be836272528805943168"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf56462c5f8473018fad9b25cc5af607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#adf56462c5f8473018fad9b25cc5af607">CreateTyre</a> (Vector2f Position)</td></tr>
-<tr class="memdesc:adf56462c5f8473018fad9b25cc5af607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_car.html">Car</a>.  <a href="#adf56462c5f8473018fad9b25cc5af607">More...</a><br /></td></tr>
-<tr class="separator:adf56462c5f8473018fad9b25cc5af607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eb2aefb1a563b1ca91d080131e0f1a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a8eb2aefb1a563b1ca91d080131e0f1a3">createTyre</a> (Vector2f Position)</td></tr>
+<tr class="memdesc:a8eb2aefb1a563b1ca91d080131e0f1a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a tyre in a given position.  <a href="#a8eb2aefb1a563b1ca91d080131e0f1a3">More...</a><br /></td></tr>
+<tr class="separator:a8eb2aefb1a563b1ca91d080131e0f1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a260c4d5123eb3a51cbd0bb685546cef4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a260c4d5123eb3a51cbd0bb685546cef4">draw</a> (RenderTarget &amp;target, RenderStates states) const </td></tr>
 <tr class="memdesc:a260c4d5123eb3a51cbd0bb685546cef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws all drawables to the screen when game is drawn in main.  <a href="#a260c4d5123eb3a51cbd0bb685546cef4">More...</a><br /></td></tr>
 <tr class="separator:a260c4d5123eb3a51cbd0bb685546cef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,24 +128,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a917e25c51c6b20c74e9f9a441c72717e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the texture to the Map sprite from the texture loader.  <a href="#a917e25c51c6b20c74e9f9a441c72717e">More...</a><br /></td></tr>
 <tr class="separator:a917e25c51c6b20c74e9f9a441c72717e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a907fa46ec6aa134985c1845d4cf20de2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a907fa46ec6aa134985c1845d4cf20de2">saveTyrePosToFile</a> ()</td></tr>
-<tr class="memdesc:a907fa46ec6aa134985c1845d4cf20de2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the position of tyres into a .txt file so I can generate obsticles around any map.  <a href="#a907fa46ec6aa134985c1845d4cf20de2">More...</a><br /></td></tr>
+<tr class="memdesc:a907fa46ec6aa134985c1845d4cf20de2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the position of m_Tyres into a .txt file so I can generate obsticles around any map.  <a href="#a907fa46ec6aa134985c1845d4cf20de2">More...</a><br /></td></tr>
 <tr class="separator:a907fa46ec6aa134985c1845d4cf20de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16d92220f4808914017486e36c7e44cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a16d92220f4808914017486e36c7e44cb">loadTyrePosFromFile</a> ()</td></tr>
-<tr class="memdesc:a16d92220f4808914017486e36c7e44cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads all the tyres from a .txt.  <a href="#a16d92220f4808914017486e36c7e44cb">More...</a><br /></td></tr>
+<tr class="memdesc:a16d92220f4808914017486e36c7e44cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads all the m_Tyres from a .txt.  <a href="#a16d92220f4808914017486e36c7e44cb">More...</a><br /></td></tr>
 <tr class="separator:a16d92220f4808914017486e36c7e44cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac1c9b79494aa3ec9564134bcbe885da"><td class="memItemLeft" align="right" valign="top">Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aac1c9b79494aa3ec9564134bcbe885da">GetCarPos</a> ()</td></tr>
-<tr class="memdesc:aac1c9b79494aa3ec9564134bcbe885da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the cars position as a Vector2f.  <a href="#aac1c9b79494aa3ec9564134bcbe885da">More...</a><br /></td></tr>
-<tr class="separator:aac1c9b79494aa3ec9564134bcbe885da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ab3e29bdade1f0a90723878a34abef5"><td class="memItemLeft" align="right" valign="top">Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a1ab3e29bdade1f0a90723878a34abef5">GetRPMCounterPos</a> ()</td></tr>
-<tr class="memdesc:a1ab3e29bdade1f0a90723878a34abef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the RPM counters position as a Vector2f.  <a href="#a1ab3e29bdade1f0a90723878a34abef5">More...</a><br /></td></tr>
-<tr class="separator:a1ab3e29bdade1f0a90723878a34abef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e73dcb8b9d6a9fb89c00a5446fbc473"><td class="memItemLeft" align="right" valign="top">Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a2e73dcb8b9d6a9fb89c00a5446fbc473">getCarPos</a> ()</td></tr>
+<tr class="memdesc:a2e73dcb8b9d6a9fb89c00a5446fbc473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the cars position as a Vector2f.  <a href="#a2e73dcb8b9d6a9fb89c00a5446fbc473">More...</a><br /></td></tr>
+<tr class="separator:a2e73dcb8b9d6a9fb89c00a5446fbc473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c9677367a84a4201e45200a3fc08dcc"><td class="memItemLeft" align="right" valign="top">Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a6c9677367a84a4201e45200a3fc08dcc">getRPMCounterPos</a> ()</td></tr>
+<tr class="memdesc:a6c9677367a84a4201e45200a3fc08dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the RPM counters position as a Vector2f.  <a href="#a6c9677367a84a4201e45200a3fc08dcc">More...</a><br /></td></tr>
+<tr class="separator:a6c9677367a84a4201e45200a3fc08dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a848d449a2e906074d4a28668ad36bdc5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a848d449a2e906074d4a28668ad36bdc5"></a>
-<a class="el" href="class_h_u_d.html">HUD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a848d449a2e906074d4a28668ad36bdc5">m_Spedo</a></td></tr>
-<tr class="memdesc:a848d449a2e906074d4a28668ad36bdc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of the <a class="el" href="class_h_u_d.html">HUD</a> used for the UI. <br /></td></tr>
-<tr class="separator:a848d449a2e906074d4a28668ad36bdc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da845052dc5b3e38721d6a1564f0f82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7da845052dc5b3e38721d6a1564f0f82"></a>
+<a class="el" href="class_h_u_d.html">HUD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a7da845052dc5b3e38721d6a1564f0f82">m_HUD</a></td></tr>
+<tr class="memdesc:a7da845052dc5b3e38721d6a1564f0f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of the <a class="el" href="class_h_u_d.html">HUD</a> used for the UI. <br /></td></tr>
+<tr class="separator:a7da845052dc5b3e38721d6a1564f0f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_game.html">Game</a> is absolutely essential to the game. It pulls together all of the other classes and makes them function with eachother in order to maken this game playable.</p>
@@ -171,35 +168,17 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default constructor. </p>
-<p>Creates a <a class="el" href="class_game.html">Game</a>. </p>
+<p>Creates a <a class="el" href="class_game.html">Game</a>. This includes instantiating a car and a map </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a79853b667c44be836272528805943168"></a>
+<a class="anchor" id="a8eb2aefb1a563b1ca91d080131e0f1a3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Game::CreatePlayerCar </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates a <a class="el" href="class_car.html">Car</a>. </p>
-<dl class="section see"><dt>See also</dt><dd>m_Car </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="adf56462c5f8473018fad9b25cc5af607"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Game::CreateTyre </td>
+          <td class="memname">void Game::createTyre </td>
           <td>(</td>
           <td class="paramtype">Vector2f&#160;</td>
           <td class="paramname"><em>Position</em></td><td>)</td>
@@ -208,20 +187,19 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a <a class="el" href="class_car.html">Car</a>. </p>
-<dl class="section see"><dt>See also</dt><dd>m_Car Creates a tyre in a given position</dd></dl>
+<p>Creates a tyre in a given position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Position</td><td>The position the tyre will be created in</td></tr>
   </table>
   </dd>
 </dl>
-<p>Used to create tyres by clicking. I use this generate my map. <a class="el" href="class_tyre.html">Tyre</a> positions are added to a .txt file and are loaded in.</p>
-<dl class="section see"><dt>See also</dt><dd>Tyres </dd>
+<p>Used to create m_Tyres by clicking. I use this generate my map. <a class="el" href="class_tyre.html">Tyre</a> positions are added to a .txt file and are loaded in.</p>
+<dl class="section see"><dt>See also</dt><dd>m_Tyres </dd>
 <dd>
 SaveTyrePosToFile() </dd>
 <dd>
-<a class="el" href="class_game.html#a16d92220f4808914017486e36c7e44cb" title="Loads all the tyres from a .txt. ">loadTyrePosFromFile()</a> </dd></dl>
+<a class="el" href="class_game.html#a16d92220f4808914017486e36c7e44cb" title="Loads all the m_Tyres from a .txt. ">loadTyrePosFromFile()</a> </dd></dl>
 
 </div>
 </div>
@@ -284,12 +262,12 @@ SaveTyrePosToFile() </dd>
 
 </div>
 </div>
-<a class="anchor" id="aac1c9b79494aa3ec9564134bcbe885da"></a>
+<a class="anchor" id="a2e73dcb8b9d6a9fb89c00a5446fbc473"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Vector2f Game::GetCarPos </td>
+          <td class="memname">Vector2f Game::getCarPos </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -302,12 +280,12 @@ SaveTyrePosToFile() </dd>
 
 </div>
 </div>
-<a class="anchor" id="a1ab3e29bdade1f0a90723878a34abef5"></a>
+<a class="anchor" id="a6c9677367a84a4201e45200a3fc08dcc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Vector2f Game::GetRPMCounterPos </td>
+          <td class="memname">Vector2f Game::getRPMCounterPos </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -333,10 +311,10 @@ SaveTyrePosToFile() </dd>
       </table>
 </div><div class="memdoc">
 
-<p>Loads all the tyres from a .txt. </p>
-<p>Allows me to create boundaries for any map of any shape then save them to be loaded </p><dl class="section see"><dt>See also</dt><dd>Tyres </dd>
+<p>Loads all the m_Tyres from a .txt. </p>
+<p>Allows me to create boundaries for any map of any shape then save them to be loaded </p><dl class="section see"><dt>See also</dt><dd>m_Tyres </dd>
 <dd>
-<a class="el" href="class_game.html#adf56462c5f8473018fad9b25cc5af607" title="Creates a Car. ">CreateTyre</a> </dd></dl>
+<a class="el" href="class_game.html#a8eb2aefb1a563b1ca91d080131e0f1a3" title="Creates a tyre in a given position. ">createTyre</a> </dd></dl>
 
 </div>
 </div>
@@ -401,10 +379,10 @@ SaveTyrePosToFile() </dd>
       </table>
 </div><div class="memdoc">
 
-<p>Saves the position of tyres into a .txt file so I can generate obsticles around any map. </p>
-<dl class="section see"><dt>See also</dt><dd>Tyres </dd>
+<p>Saves the position of m_Tyres into a .txt file so I can generate obsticles around any map. </p>
+<dl class="section see"><dt>See also</dt><dd>m_Tyres </dd>
 <dd>
-<a class="el" href="class_game.html#adf56462c5f8473018fad9b25cc5af607" title="Creates a Car. ">CreateTyre</a> </dd></dl>
+<a class="el" href="class_game.html#a8eb2aefb1a563b1ca91d080131e0f1a3" title="Creates a tyre in a given position. ">createTyre</a> </dd></dl>
 
 </div>
 </div>

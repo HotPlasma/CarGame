@@ -39,7 +39,7 @@ public:
 	////////////////////////////////////////////////////////////
 	// Member data
 	////////////////////////////////////////////////////////////
-	Sprite TyreSprite;///< Sprite which represents the car
+	Sprite m_Tyresprite;///< Sprite which represents the car
 
 	float Radius;///< Float which represents the radius of the tyre. Used for collisions.
 
@@ -52,7 +52,7 @@ public:
 	void update(float timestep);
 
 	////////////////////////////////////////////////////////////
-	/// \brief Allows Tyres
+	/// \brief Allows m_Tyres
 	///
 	/// \param target Drawable to be drawn
 	/// \param states States to be drawn
@@ -83,10 +83,10 @@ public:
 ////////////////////////////////////////////////////////////
 /// \class Tyre
 ///
-/// Tyre  is class which holds all infomation about the Tyres in the game.
+/// Tyre  is class which holds all infomation about the m_Tyres in the game.
 /// To be instantiated it needs to be given a position and inverse mass.
 ///
-/// Tyre is also a collidable, which means that it can collide with any other collidable. It is able to collide with other tyres using the
+/// Tyre is also a collidable, which means that it can collide with any other collidable. It is able to collide with other m_Tyres using the
 /// circle-circle collison method. 
 ///
 /// Usage example:

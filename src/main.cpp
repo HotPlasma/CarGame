@@ -17,13 +17,13 @@ int main()
 
 	View gameview;
 	View miniMap;
-	View RPMCounter;
+	View HUD;
 
 	// Sets minimap to be distant away from gameview
 	miniMap.zoom(4);
 	// Makes gameview use the entire window screen
 	gameview.setSize(Vector2f(window.getSize()));
-	RPMCounter.setSize(Vector2f(window.getSize()));
+	HUD.setSize(Vector2f(window.getSize()));
 
 	game.loadTyrePosFromFile();
 			
@@ -50,9 +50,9 @@ int main()
 			}
 			if (event.type == Event::MouseButtonReleased)
 			{
-				if (event.mouseButton.button == Mouse::Left) // Allows tyres to be placed by clicking on the map
+				if (event.mouseButton.button == Mouse::Left) // Allows m_Tyres to be placed by clicking on the map
 				{
-					//game.CreateTyre(window.mapPixelToCoords(Mouse::getPosition(window),gameview));
+					//game.createTyre(window.mapPixelToCoords(Mouse::getPosition(window),gameview));
 					//cout << window.mapPixelToCoords(Mouse::getPosition(window)).x << "    " << window.mapPixelToCoords(Mouse::getPosition(window)).y << endl;
 					//cout << Mouse::getPosition().x << "    " << Mouse::getPosition().y << endl;
 				}
@@ -63,11 +63,11 @@ int main()
 		if (clock.getElapsedTime().asSeconds() > 0.005)
 		{
 			game.update(clock.getElapsedTime().asSeconds());
-			gameview.setCenter(game.GetCarPos());
+			gameview.setCenter(game.getCarPos());
 			miniMap.setViewport(FloatRect(0.75f, 0, 0.25f, 0.25f));
 			miniMap.setCenter(2000,1600);
 			//RPMCounter.setViewport(FloatRect(0.6f, 0.6f, 1.f, 1.f));
-			RPMCounter.setCenter(game.GetRPMCounterPos().x - 200, game.GetRPMCounterPos().y - 100);
+			HUD.setCenter(game.getRPMCounterPos().x - 200, game.getRPMCounterPos().y - 100);
 			clock.restart();
 		}
 
@@ -81,8 +81,8 @@ int main()
 		window.draw(game);
 
 		//Draws RPM counter
-		window.setView(RPMCounter);
-		window.draw(game.m_Spedo);
+		window.setView(HUD);
+		window.draw(game.m_HUD);
 
 		window.display();
 	}

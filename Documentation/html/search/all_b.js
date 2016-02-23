@@ -1,14 +1,6 @@
 var searchData=
 [
-  ['savetyrepostofile',['saveTyrePosToFile',['../class_game.html#a907fa46ec6aa134985c1845d4cf20de2',1,'Game']]],
-  ['set',['set',['../classmy_vector.html#a14e8c2e0a550947a93cf178d50525a30',1,'myVector']]],
-  ['setbasedirectory',['setBaseDirectory',['../class_texture_loader.html#a8c6ef2773da422d2b40a98e839c0ccf8',1,'TextureLoader']]],
-  ['setcartexture',['setCarTexture',['../class_car.html#a6a4377866be6ad14841bb70f87a68327',1,'Car']]],
-  ['setrpmtexture',['SetRPMTexture',['../class_h_u_d.html#ab8ff106a8d659c4fc96ae8fae8771388',1,'HUD']]],
-  ['settyretexture',['setTyreTexture',['../class_tyre.html#ab66f2659c2384b6c608b5eb51bb50425',1,'Tyre']]],
-  ['setx',['setX',['../classmy_vector.html#af5d310b4175917d94960f8d8a915583d',1,'myVector']]],
-  ['sety',['setY',['../classmy_vector.html#a67046769203977128c5869519a96981c',1,'myVector']]],
-  ['speedometer',['Speedometer',['../class_speedometer.html',1,'']]],
-  ['startline',['StartLine',['../class_h_u_d.html#a7bb7d2643771405999f4d303441b14cb',1,'HUD']]],
-  ['subtract',['subtract',['../classmy_vector.html#a43d29af4b84766a8b27c0a6e50067ead',1,'myVector']]]
+  ['textureloader',['TextureLoader',['../class_texture_loader.html',1,'TextureLoader'],['../class_texture_loader.html#aafa6ca3bdbee3874a73aafae39d5c804',1,'TextureLoader::TextureLoader()']]],
+  ['turn',['Turn',['../class_car.html#ad3c6ba8be8f38d8a4fac3c11d2c851d5',1,'Car']]],
+  ['tyre',['Tyre',['../class_tyre.html',1,'Tyre'],['../class_tyre.html#a162dbaad7ae74443df530dfb147fb694',1,'Tyre::Tyre()'],['../class_tyre.html#a1908351bf7262df0b42b24f036af21ac',1,'Tyre::Tyre(myVector position, float invMass)']]]
 ];

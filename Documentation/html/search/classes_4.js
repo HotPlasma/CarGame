@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['speedometer',['Speedometer',['../class_speedometer.html',1,'']]]
+  ['textureloader',['TextureLoader',['../class_texture_loader.html',1,'']]],
+  ['tyre',['Tyre',['../class_tyre.html',1,'']]]
 ];

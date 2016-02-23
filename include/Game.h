@@ -25,50 +25,36 @@ private:
 	// Member data
 	////////////////////////////////////////////////////////////
 	Car m_Car;///< The instance of the car in Game
-	vector<Tyre*> Tyres;///< Vector containing all tyres that need to be drawn
-	TextureLoader TexLoader; ///< TextureLoader instance used for loading in textures
-	Sprite MapSprite;///< Sprite to hold the map
-	bool MidPassed = false; ///< Boolean used to keep track on wether the player has reached the mid point of the race
+	vector<Tyre*> m_Tyres;///< Vector containing all m_Tyres that need to be drawn
+	TextureLoader m_TexLoader; ///< TextureLoader instance used for loading in textures
+	Sprite m_MapSprite;///< Sprite to hold the map
+	bool m_bMidPassed = false; ///< Boolean used to keep track on wether the player has reached the mid point of the race
 public:
-	HUD m_Spedo; ///< Instance of the HUD used for the UI
+	HUD m_HUD; ///< Instance of the HUD used for the UI
 
 	////////////////////////////////////////////////////////////
 	/// \brief Default constructor
 	///
 	/// Creates a Game.
+	/// This includes instantiating a car and a map
 	///
 	////////////////////////////////////////////////////////////
 	Game();
-
-	////////////////////////////////////////////////////////////
-	/// \brief Creates a Car
-	///
-	/// \see m_Car
-	///
-	////////////////////////////////////////////////////////////
-	void CreatePlayerCar();
-
-	////////////////////////////////////////////////////////////
-	/// \brief Creates a Car
-	///
-	/// \see m_Car
-	///
-	////////////////////////////////////////////////////////////
 
 	////////////////////////////////////////////////////////////
 	/// \brief Creates a tyre in a given position
 	///
 	/// \param Position The position the tyre will be created in
 	///
-	/// Used to create tyres by clicking. I use this generate my map. Tyre positions are added to
+	/// Used to create m_Tyres by clicking. I use this generate my map. Tyre positions are added to
 	/// a .txt file and are loaded in. 
 	///
-	/// \see Tyres
+	/// \see m_Tyres
 	/// \see SaveTyrePosToFile()
 	/// \see loadTyrePosFromFile()
 	///
 	////////////////////////////////////////////////////////////
-	void CreateTyre(Vector2f Position);
+	void createTyre(Vector2f Position);
 
 	////////////////////////////////////////////////////////////
 	/// \brief Draws all drawables to the screen when game is drawn in main
@@ -115,20 +101,20 @@ public:
 	void generateMap(vector<Texture>::iterator GivenTexture);
 
 	////////////////////////////////////////////////////////////
-	/// \brief Saves the position of tyres into a .txt file so I can generate obsticles around any map
+	/// \brief Saves the position of m_Tyres into a .txt file so I can generate obsticles around any map
 	///
-	/// \see Tyres
-	/// \see CreateTyre
+	/// \see m_Tyres
+	/// \see createTyre
 	///
 	////////////////////////////////////////////////////////////
 	void saveTyrePosToFile();
 
 	////////////////////////////////////////////////////////////
-	/// \brief Loads all the tyres from a .txt 
+	/// \brief Loads all the m_Tyres from a .txt 
 	///
 	/// Allows me to create boundaries for any map of any shape then save them to be loaded
-	/// \see Tyres
-	/// \see CreateTyre
+	/// \see m_Tyres
+	/// \see createTyre
 	///
 	////////////////////////////////////////////////////////////
 	void loadTyrePosFromFile();
@@ -141,7 +127,7 @@ public:
 	/// 
 	///
 	////////////////////////////////////////////////////////////
-	Vector2f GetCarPos();
+	Vector2f getCarPos();
 
 	////////////////////////////////////////////////////////////
 	/// \brief Gets the RPM counters position as a Vector2f
@@ -151,7 +137,7 @@ public:
 	/// 
 	///
 	////////////////////////////////////////////////////////////
-	Vector2f GetRPMCounterPos();
+	Vector2f getRPMCounterPos();
 };
 
 

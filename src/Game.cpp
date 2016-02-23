@@ -3,61 +3,61 @@
 Game::Game()
 {
 	m_Car = Car(myVector(2075, 65), myVector(0, 0), 0.3, myVector(0, 0)); // Creates players car with default paramaters
-	TexLoader.load();
-	generateMap(TexLoader.getTextureIterator(2));
-	m_Car.setCarTexture(TexLoader.getTextureIterator(3));
-	m_Spedo.SetRPMTexture(TexLoader.getTextureIterator(0));
+	m_TexLoader.load();
+	generateMap(m_TexLoader.getTextureIterator(2));
+	m_Car.setCarTexture(m_TexLoader.getTextureIterator(3));
+	m_HUD.setRPMTexture(m_TexLoader.getTextureIterator(0));
 }
 
 void Game::draw(RenderTarget & target, RenderStates states) const 
 {
-	target.draw(MapSprite);
+	target.draw(m_MapSprite);
 	target.draw(m_Car);  // Draws car to screen
 
-	for (int i = 0; i < Tyres.size(); i++) // Draws all tyres in vector of tyres
+	for (int i = 0; i < m_Tyres.size(); i++) // Draws all m_Tyres in vector of m_Tyres
 	{
-		target.draw(*Tyres.at(i));
+		target.draw(*m_Tyres.at(i));
 	}
 }
 
 void Game::update(float timestep)
 {
 	m_Car.update(timestep); // Passes car timestep for update
-	for (int i = 0; i < Tyres.size(); i++) // Draws all tyres in vector of tyres
+	for (int i = 0; i < m_Tyres.size(); i++) // Draws all m_Tyres in vector of m_Tyres
 	{
-		Tyres.at(i)->update(timestep);
+		m_Tyres.at(i)->update(timestep);
 	}
-	m_Spedo.updateNeedle(m_Car.m_iRPM);
-	m_Spedo.updateGear(m_Car.m_iGear);
+	m_HUD.updateNeedle(m_Car.m_iRPM);
+	m_HUD.updateGear(m_Car.m_iGear);
 
-	for (int i = 0; i < Tyres.size(); i++) // Ssets up out collisions
+	for (int i = 0; i < m_Tyres.size(); i++) // Ssets up out collisions
 	{
-		m_Car.Collide(Tyres.at(i)); // Car collides with all tyres
-		for (int j = 0; j < Tyres.size(); j++)
+		m_Car.Collide(m_Tyres.at(i)); // Car collides with all m_Tyres
+		for (int j = 0; j < m_Tyres.size(); j++)
 		{
-			if (i != j) // Stops tyres from colliding with themselves
+			if (i != j) // Stops m_Tyres from colliding with themselves
 			{
-				Tyres.at(i)->Collide(Tyres.at(j));
+				m_Tyres.at(i)->Collide(m_Tyres.at(j));
 			}
 		}
 
 	}
-	m_Spedo.updateTimers();
+	m_HUD.updateTimers();
 
 	// Restarts laptime and sets new best time if player has beaten previous best time
-	if (m_Spedo.StartLine.intersects(m_Car.m_render.getGlobalBounds()))
+	if (m_HUD.m_StartLine.intersects(m_Car.m_render.getGlobalBounds()))
 	{
-		if (MidPassed == true)
+		if (m_bMidPassed == true)
 		{
-			m_Spedo.UpdateBestTime();
+			m_HUD.updateBestTime();
 		}
-		m_Spedo.ResetTimer();
-		MidPassed = false;
+		m_HUD.resetTimer();
+		m_bMidPassed = false;
 	}
 
-	if (m_Spedo.MidLine.intersects(m_Car.m_render.getGlobalBounds()))
+	if (m_HUD.m_MidLine.intersects(m_Car.m_render.getGlobalBounds()))
 	{
-		MidPassed = true;
+		m_bMidPassed = true;
 	}
 
 }
@@ -74,14 +74,14 @@ void Game::processKeyPress(Keyboard::Key code)
 
 	if (code == Keyboard::D || code == Keyboard::Right) // If 'D' or 'Right' pressed then rotate clockwise
 	{
-		m_Car.RotatingRight = true;
-		m_Car.RotatingLeft = false;
+		m_Car.m_bRotatingRight = true;
+		m_Car.m_bRotatingLeft = false;
 	}
 
 	if (code == Keyboard::A || code == Keyboard::Left) //If 'A' or 'Left' pressed then rotate anti-clockwise
 	{
-		m_Car.RotatingRight = false;
-		m_Car.RotatingLeft = true;
+		m_Car.m_bRotatingRight = false;
+		m_Car.m_bRotatingLeft = true;
 	}
 
 	if (code == Keyboard::S || code == Keyboard::Down) // If 'S' or 'Down' pressed then reverse
@@ -99,14 +99,14 @@ void Game::processKeyRelease(Keyboard::Key code)
 
 	if (code == Keyboard::D || code == Keyboard::Right) // Stops turning car after 'D' or 'Right' key release
 	{
-		m_Car.RotatingRight = false;
-		m_Car.RotatingLeft = false;
+		m_Car.m_bRotatingRight = false;
+		m_Car.m_bRotatingLeft = false;
 	}
 
 	if (code == Keyboard::A || code == Keyboard::Left) // Stops turning car after 'A' or 'Left' release
 	{
-		m_Car.RotatingRight = false;
-		m_Car.RotatingLeft = false;
+		m_Car.m_bRotatingRight = false;
+		m_Car.m_bRotatingLeft = false;
 	}
 
 	if (code == Keyboard::S || code == Keyboard::Down) //If 'A' or 'Down' key released then enter neutral
@@ -117,30 +117,30 @@ void Game::processKeyRelease(Keyboard::Key code)
 
 void Game::generateMap(vector<Texture>::iterator GivenTexture)
 {
-	MapSprite.setTexture(*GivenTexture);
+	m_MapSprite.setTexture(*GivenTexture);
 
-	MapSprite.setPosition(0, -360); // Centers Map
+	m_MapSprite.setPosition(0, -360); // Centers Map
 
-	MapSprite.setScale(1, 1);
+	m_MapSprite.setScale(1, 1);
 }
 
-Vector2f Game::GetCarPos()
+Vector2f Game::getCarPos()
 {
 	return Vector2f(m_Car.ReturnCarPos());
 }
 
-Vector2f Game::GetRPMCounterPos()
+Vector2f Game::getRPMCounterPos()
 {
-	return m_Spedo.getRPMCounterPos();
+	return m_HUD.getRPMCounterPos();
 }
 
-void Game::CreateTyre(Vector2f Position)
+void Game::createTyre(Vector2f Position)
 {
 	//Tyre1 = Tyre(myVector::ConvertToMyVector(Position), 0.1);
-	//Tyre1.TyreSprite.setPosition(Position);
+	//Tyre1.m_Tyresprite.setPosition(Position);
 
-	Tyres.push_back(new Tyre(myVector::ConvertToMyVector(Position), 0.1));
-	Tyres.back()->setTyreTexture(TexLoader.getTextureIterator(1));
+	m_Tyres.push_back(new Tyre(myVector::ConvertToMyVector(Position), 0.1));
+	m_Tyres.back()->setTyreTexture(m_TexLoader.getTextureIterator(1));
 	saveTyrePosToFile();
 }
 
@@ -151,9 +151,9 @@ void Game::saveTyrePosToFile()
 	file.open("..\\assets\\Maps\\tyrepos.txt");
 
 	//Write to file;
-	for (int i = 0; i < Tyres.size(); i++)
+	for (int i = 0; i < m_Tyres.size(); i++)
 	{
-		file << Tyres.at(i)->m_position.x() << " " << Tyres.at(i)->m_position.y() << endl;
+		file << m_Tyres.at(i)->m_position.x() << " " << m_Tyres.at(i)->m_position.y() << endl;
 	}
 	//Close file
 	file.close();
@@ -172,8 +172,8 @@ void Game::loadTyrePosFromFile()
 	{
 		while (fileHandle >> fX >> fY)
 		{
-			Tyres.push_back(new Tyre(myVector(fX,fY), 0.1));
-			Tyres.back()->setTyreTexture(TexLoader.getTextureIterator(1));
+			m_Tyres.push_back(new Tyre(myVector(fX,fY), 0.1));
+			m_Tyres.back()->setTyreTexture(m_TexLoader.getTextureIterator(1));
 		}
 	}
 

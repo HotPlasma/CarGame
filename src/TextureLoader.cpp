@@ -2,14 +2,14 @@
 
 TextureLoader::TextureLoader()
 {
-	baseDirectory = "..\\assets\\"; //Default base directory
+	m_sBaseDirectory = "..\\assets\\"; //Default base directory
 	load();
 }
 
 
 void TextureLoader::setBaseDirectory(string dir) // Allows base directory to be changed if neccessary
 {
-	baseDirectory = dir;
+	m_sBaseDirectory = dir;
 }
 
 void TextureLoader::load() // Loads in all needed textures and adds them to the textures vector
@@ -23,11 +23,11 @@ void TextureLoader::load() // Loads in all needed textures and adds them to the 
 
 	for (int i = 0; i < fileNames.size(); i++)
 	{
-		if (!Holder.loadFromFile(baseDirectory + fileNames.at(i)))
+		if (!m_Holder.loadFromFile(m_sBaseDirectory + fileNames.at(i)))
 		{
 			cout << "Could not load " << fileNames.at(i) << endl;
 		}
-		textures.push_back(Holder);
+		textures.push_back(m_Holder);
 	}
 }
 

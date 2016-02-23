@@ -31,22 +31,22 @@ Car::Car(myVector position, myVector acceleration, float invMass, myVector veloc
 	m_aiAccelRates[3] = 1000;
 	m_aiAccelRates[4] = 700;
 
-	m_aiGearRates[0] = 0.4;
-	m_aiGearRates[1] = 0.5f;
-	m_aiGearRates[2] = 0.6f;
-	m_aiGearRates[3] = 0.7f;
-	m_aiGearRates[4] = 0.8f;
-	m_aiGearRates[5] = 1.f;
+	m_afGearRates[0] = 0.4;
+	m_afGearRates[1] = 0.5f;
+	m_afGearRates[2] = 0.6f;
+	m_afGearRates[3] = 0.7f;
+	m_afGearRates[4] = 0.8f;
+	m_afGearRates[5] = 1.f;
 
 	//Wheels set up
 	for (int i = 0; i < 2; i++)
 	{
-		FrontWheel[i].setSize(Vector2f(10, 4));
-		RearWheel[i].setSize(Vector2f(10, 4));
-		FrontWheel[i].setOrigin(FrontWheel[i].getSize() / 2.f);
-		RearWheel[i].setOrigin(RearWheel[i].getSize() / 2.f);
-		FrontWheel[i].setFillColor(Color::Black);
-		RearWheel[i].setFillColor(Color::Black);
+		m_FrontWheel[i].setSize(Vector2f(10, 4));
+		m_RearWheel[i].setSize(Vector2f(10, 4));
+		m_FrontWheel[i].setOrigin(m_FrontWheel[i].getSize() / 2.f);
+		m_RearWheel[i].setOrigin(m_RearWheel[i].getSize() / 2.f);
+		m_FrontWheel[i].setFillColor(Color::Black);
+		m_RearWheel[i].setFillColor(Color::Black);
 	}
 	
 
@@ -62,8 +62,8 @@ void Car::draw(RenderTarget & target, RenderStates states) const
 {
 	for (int i = 0; i < 2; i++)
 	{
-		target.draw(FrontWheel[i]);
-		target.draw(RearWheel[i]);
+		target.draw(m_FrontWheel[i]);
+		target.draw(m_RearWheel[i]);
 	}
 	
 	target.draw(m_render);
@@ -71,37 +71,32 @@ void Car::draw(RenderTarget & target, RenderStates states) const
 
 void Car::Accelerate() //Accelerates car by RPM multiplied by the rotation of the car after being affected by friction
 {
-	m_acceleration = RotationVector.multiply(m_iRPM * m_aiGearRates[m_iGear]).subtract(getFriction());
-	//cout << getFriction().x() << "   " << getFriction().y() << endl;
-	//cout << m_aiGearRates[m_iGear] << endl;
-	//cout << m_velocity.x() << "     " << m_velocity.y() << endl;
+	m_acceleration = m_RotationVector.multiply(m_iRPM * m_afGearRates[m_iGear]).subtract(getFriction());
 }
 
 void Car::Neutral()
 {
-	float UnAccel = m_iRPM * m_aiGearRates[m_iGear];
-	m_acceleration = RotationVector.multiply(m_iRPM -1800 ).subtract(getFriction());
-	cout << m_iRPM / UnAccel << endl;
+	m_acceleration = m_RotationVector.multiply(m_iRPM -1800 ).subtract(getFriction());
 }
 
 void Car::ReversingAccel()
 {
 	m_iRPM = 1800;
-	m_acceleration = RotationVector.multiply(-500).subtract(getFriction());
+	m_acceleration = m_RotationVector.multiply(-1000).subtract(getFriction());
 	
 }
 
 void Car::Turn() //Turns vehicle left or right depending on key pressed
 {
 
-	if (RotatingRight)
+	if (m_bRotatingRight)
 	{
-		m_fSteeringAngle += 0.5;
+		m_fSteeringAngle += 1;
 	}
 
-	else if (RotatingLeft)
+	else if (m_bRotatingLeft)
 	{
-		m_fSteeringAngle -= 0.5;
+		m_fSteeringAngle -= 1;
 	}
 }
 
@@ -183,7 +178,7 @@ void Car::update(float timestep)
 	//cout << m_velocity.x() << "     " << m_velocity.y() << endl;
 
 	// Creates vector facing same direction as car
-	RotationVector = myVector(cosf(g_kfDegToRad * m_fRotationAngle), sinf(g_kfDegToRad * m_fRotationAngle));
+	m_RotationVector = myVector(cosf(g_kfDegToRad * m_fRotationAngle), sinf(g_kfDegToRad * m_fRotationAngle));
 	myVector SteeringVector(cosf((m_fRotationAngle + m_fSteeringAngle) * g_kfDegToRad), sinf((m_fRotationAngle + m_fSteeringAngle) * g_kfDegToRad));
 	m_render.setRotation(m_fRotationAngle); // Sets rotation 
 
@@ -198,30 +193,30 @@ void Car::update(float timestep)
 	myVector fWheelPos[2];
 	myVector rWheelPos[2];
 
-	myVector PerpCarAngle(-RotationVector.y(), RotationVector.x());
+	myVector PerpCarAngle(-m_RotationVector.y(), m_RotationVector.x());
 
-	fWheelPos[0].set(m_position.add(RotationVector.multiply(fWheelBase / 2)));
-	fWheelPos[1].set(m_position.add(RotationVector.multiply(fWheelBase / 2)));
-	//fWheelPos[1].set(m_position.add(RotationVector.multiply(fWheelBase / 2)));
-	rWheelPos[0].set(m_position.subtract(RotationVector.multiply(fWheelBase / 2)));
+	fWheelPos[0].set(m_position.add(m_RotationVector.multiply(fWheelBase / 2)));
+	fWheelPos[1].set(m_position.add(m_RotationVector.multiply(fWheelBase / 2)));
+	//fWheelPos[1].set(m_position.add(m_RotationVector.multiply(fWheelBase / 2)));
+	rWheelPos[0].set(m_position.subtract(m_RotationVector.multiply(fWheelBase / 2)));
 
 	fWheelPos[0] = fWheelPos[0].add(SteeringVector.multiply(fDisplacement));
-	rWheelPos[0] = rWheelPos[0].add(RotationVector.multiply(fDisplacement));
+	rWheelPos[0] = rWheelPos[0].add(m_RotationVector.multiply(fDisplacement));
 
 	for  (int i = 0; i < 2; i++)
 	{
-		/*FrontWheel[0].setPosition(Vector2f(fWheelPos[0].x(), fWheelPos[0].y()));
-		RearWheel[0].setPosition(Vector2f(rWheelPos[0].x(), rWheelPos[0].y()));*/
+		/*m_FrontWheel[0].setPosition(Vector2f(fWheelPos[0].x(), fWheelPos[0].y()));
+		m_RearWheel[0].setPosition(Vector2f(rWheelPos[0].x(), rWheelPos[0].y()));*/
 
-		FrontWheel[i].setRotation(m_fSteeringAngle + m_fRotationAngle);
-		RearWheel[i].setRotation(m_fRotationAngle);
+		m_FrontWheel[i].setRotation(m_fSteeringAngle + m_fRotationAngle);
+		m_RearWheel[i].setRotation(m_fRotationAngle);
 	}
 
 	// Sets up my vectors for my wheels
-	FrontWheel[0].setPosition(Vector2f(fWheelPos[0].add(PerpCarAngle.multiply(10)).Convert2f()));
-	FrontWheel[1].setPosition(Vector2f(fWheelPos[0].add(PerpCarAngle.multiply(-12)).Convert2f()));
-	RearWheel[0].setPosition(Vector2f(rWheelPos[0].add(PerpCarAngle.multiply(-12)).Convert2f()));
-	RearWheel[1].setPosition(Vector2f(rWheelPos[0].add(PerpCarAngle.multiply(11)).Convert2f()));
+	m_FrontWheel[0].setPosition(Vector2f(fWheelPos[0].add(PerpCarAngle.multiply(10)).Convert2f()));
+	m_FrontWheel[1].setPosition(Vector2f(fWheelPos[0].add(PerpCarAngle.multiply(-12)).Convert2f()));
+	m_RearWheel[0].setPosition(Vector2f(rWheelPos[0].add(PerpCarAngle.multiply(-12)).Convert2f()));
+	m_RearWheel[1].setPosition(Vector2f(rWheelPos[0].add(PerpCarAngle.multiply(11)).Convert2f()));
 
 	if (m_iGear >= 1)
 	{
@@ -229,7 +224,7 @@ void Car::update(float timestep)
 	}
 
 	// Detects if user is trying to turn
-	if (RotatingLeft || RotatingRight)
+	if (m_bRotatingLeft || m_bRotatingRight)
 	{
 		Turn();
 	}
@@ -270,7 +265,7 @@ Vector2f Car::ReturnCarPos()
 void Car::Collide(Tyre* B)
 {
 	//Creates a position for a tyre minus the position of car
-	myVector LocalTyrePos(B->TyreSprite.getPosition().x - m_render.getPosition().x, B->TyreSprite.getPosition().y - m_render.getPosition().y);
+	myVector LocalTyrePos(B->m_Tyresprite.getPosition().x - m_render.getPosition().x, B->m_Tyresprite.getPosition().y - m_render.getPosition().y);
 	
 	//Will hold closest point within car pointing towards tyre 
 	myVector Clamp;

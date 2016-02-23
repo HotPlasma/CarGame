@@ -111,18 +111,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// Member data</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"></span>    RectangleShape m_needle;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Sprite RPMSprite;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Sprite m_RPMSprite;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    Font DigiFont;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    Text GearText;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Text TimerText;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">float</span> BestTime; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    Text m_GearText;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Text m_TimerText;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">float</span> m_BestTime; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    Clock m_timer; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Text BestTimeText; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Text m_BestTimeText; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_h_u_d.html">HUD</a>();</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// Member data</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_h_u_d.html#a7bb7d2643771405999f4d303441b14cb">   44</a></span>&#160;<span class="comment"></span>    FloatRect <a class="code" href="class_h_u_d.html#a7bb7d2643771405999f4d303441b14cb">StartLine</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_h_u_d.html#a5fe514e987ad2dfac4ba3bf44b77244c">   45</a></span>&#160;    FloatRect <a class="code" href="class_h_u_d.html#a5fe514e987ad2dfac4ba3bf44b77244c">MidLine</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_h_u_d.html#a22d7ec3ed9526c49701e2fbe57c3a509">   44</a></span>&#160;<span class="comment"></span>    FloatRect <a class="code" href="class_h_u_d.html#a22d7ec3ed9526c49701e2fbe57c3a509">m_StartLine</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_h_u_d.html#a00ad3821cf2d266c31c5eb095ded60f1">   45</a></span>&#160;    FloatRect <a class="code" href="class_h_u_d.html#a00ad3821cf2d266c31c5eb095ded60f1">m_MidLine</a>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> draw(RenderTarget&amp; target, RenderStates states) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
@@ -132,22 +132,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    Vector2f getRPMCounterPos();</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> SetRPMTexture(vector&lt;Texture&gt;::iterator GivenTexture);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> setRPMTexture(vector&lt;Texture&gt;::iterator GivenTexture);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> updateTimers();</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> ResetTimer();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> resetTimer();</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> UpdateBestTime();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> updateBestTime();</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;};</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="ttc" id="class_h_u_d_html_a5fe514e987ad2dfac4ba3bf44b77244c"><div class="ttname"><a href="class_h_u_d.html#a5fe514e987ad2dfac4ba3bf44b77244c">HUD::MidLine</a></div><div class="ttdeci">FloatRect MidLine</div><div class="ttdoc">Float Rect used to make the mid line during the race. </div><div class="ttdef"><b>Definition:</b> HUD.h:45</div></div>
-<div class="ttc" id="class_h_u_d_html_a7bb7d2643771405999f4d303441b14cb"><div class="ttname"><a href="class_h_u_d.html#a7bb7d2643771405999f4d303441b14cb">HUD::StartLine</a></div><div class="ttdeci">FloatRect StartLine</div><div class="ttdoc">Float Rect used to mark the start line during the race. </div><div class="ttdef"><b>Definition:</b> HUD.h:44</div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
 <div class="ttc" id="class_h_u_d_html"><div class="ttname"><a href="class_h_u_d.html">HUD</a></div><div class="ttdef"><b>Definition:</b> HUD.h:19</div></div>
 <div class="ttc" id="namespacesf_html"><div class="ttname"><a href="namespacesf.html">sf</a></div></div>
+<div class="ttc" id="class_h_u_d_html_a22d7ec3ed9526c49701e2fbe57c3a509"><div class="ttname"><a href="class_h_u_d.html#a22d7ec3ed9526c49701e2fbe57c3a509">HUD::m_StartLine</a></div><div class="ttdeci">FloatRect m_StartLine</div><div class="ttdoc">Float Rect used to mark the start line during the race. </div><div class="ttdef"><b>Definition:</b> HUD.h:44</div></div>
+<div class="ttc" id="class_h_u_d_html_a00ad3821cf2d266c31c5eb095ded60f1"><div class="ttname"><a href="class_h_u_d.html#a00ad3821cf2d266c31c5eb095ded60f1">HUD::m_MidLine</a></div><div class="ttdeci">FloatRect m_MidLine</div><div class="ttdoc">Float Rect used to make the mid line during the race. </div><div class="ttdef"><b>Definition:</b> HUD.h:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

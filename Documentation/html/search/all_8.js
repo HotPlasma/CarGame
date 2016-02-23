@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['neutral',['Neutral',['../class_car.html#aa8a2aacbb529a44221893b4e2877b03b',1,'Car']]],
-  ['normalise',['normalise',['../classmy_vector.html#aad23cd26628305a6a0b470a3650c326b',1,'myVector']]]
+  ['processkeypress',['processKeyPress',['../class_game.html#ad3053e3b15bbcb049dc040801d58be7c',1,'Game']]],
+  ['processkeyrelease',['processKeyRelease',['../class_game.html#adb2ea3b70e0038d2caceedfde3bfc663',1,'Game']]]
 ];

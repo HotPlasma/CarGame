@@ -41,20 +41,20 @@ public:
 	////////////////////////////////////////////////////////////
 	// Member data
 	////////////////////////////////////////////////////////////
-	RectangleShape FrontWheel[2]; ///< Array of two rectangle shapes which will be my front wheels 
-	RectangleShape RearWheel[2]; ///< Array of two rectangle shapes which will be my rear wheels 
+	RectangleShape m_FrontWheel[2]; ///< Array of two rectangle shapes which will be my front wheels 
+	RectangleShape m_RearWheel[2]; ///< Array of two rectangle shapes which will be my rear wheels 
 	int m_iRPM; ///< Integer which holds the Rotations Per Minute by which the car will accelerate
 	int m_iGear; ///< Integer which holds which gear the car is in
 	int m_aiAccelRates[5]; ///< Array of integers which store the rates of acceleration for each gear
-	float m_aiGearRates[6]; ///< Array of floats which hold what value the acceleration rates are multiplied by in order for the car to gain gain speed when accelerating. 
+	float m_afGearRates[6]; ///< Array of floats which hold what value the acceleration rates are multiplied by in order for the car to gain gain speed when accelerating. 
 
-	float m_fSteeringAngle; ///< Float which contains the angle my tyres would face
+	float m_fSteeringAngle; ///< Float which contains the angle my m_Tyres would face
 
 	float m_fRotationAngle; ///< Float which holds the rotation angle of my car
-	myVector RotationVector; ///< Vector which contains the direction my car is facing 
+	myVector m_RotationVector; ///< Vector which contains the direction my car is facing 
 
-	bool RotatingRight = false;///< Rotational bool for right direction
-	bool RotatingLeft = false;///< Roational bool for left direction
+	bool m_bRotatingRight = false;///< Rotational bool for right direction
+	bool m_bRotatingLeft = false;///< Roational bool for left direction
 
 	Sprite m_render; ///< Sprite which represents the car
 
@@ -102,7 +102,7 @@ public:
 	/// \see m_iRPM
 	/// \see m_iGear
 	/// \see m_aiAccelRates
-	/// \see  m_aiGearRates
+	/// \see  m_afGearRates
 	/// \see Accelerate
 	////////////////////////////////////////////////////////////
 	void GearsManagement(float timestep);
@@ -175,7 +175,7 @@ public:
 /// The car features a bicycle method of steering which means that the rotation of the car is based on the position of the wheels.
 /// This system has its limitations but definitely has its limitations aspecially when it comes to side collisions but it helps 
 ///
-/// Car is also a collidable, which means that it can collide with any other collidable. It is able to collide with tyres using the
+/// Car is also a collidable, which means that it can collide with any other collidable. It is able to collide with m_Tyres using the
 /// clamp method of circle-OBB collision. 
 ///
 /// Usage example:

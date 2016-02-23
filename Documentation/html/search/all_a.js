@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['radius',['Radius',['../class_tyre.html#a1c0fd8531b72c94915867cb90dd175c9',1,'Tyre']]],
-  ['rearwheel',['RearWheel',['../class_car.html#af8c8ae2d2e022338d13bce2eb4fed1e2',1,'Car']]],
-  ['resettimer',['ResetTimer',['../class_h_u_d.html#afafdadaf2c5c10c0e86f9fa8663069f8',1,'HUD']]],
-  ['returncarpos',['ReturnCarPos',['../class_car.html#aa54320ce418c1f377eb595853dd1939c',1,'Car']]],
-  ['reversingaccel',['ReversingAccel',['../class_car.html#afb8da2fa315e9bb953ec87fb23ddd653',1,'Car']]],
-  ['rotatevector',['RotateVector',['../classmy_vector.html#a417556fbd4eda0e98ae1b76973bb75b4',1,'myVector']]],
-  ['rotatingleft',['RotatingLeft',['../class_car.html#a936486153a35079ef6faf7dd6ebdddbc',1,'Car']]],
-  ['rotatingright',['RotatingRight',['../class_car.html#a53ecb53c65d3a0a27905e8c080758188',1,'Car']]],
-  ['rotationvector',['RotationVector',['../class_car.html#ad3930029165ec53a59367e5c27261500',1,'Car']]]
+  ['savetyrepostofile',['saveTyrePosToFile',['../class_game.html#a907fa46ec6aa134985c1845d4cf20de2',1,'Game']]],
+  ['set',['set',['../classmy_vector.html#a14e8c2e0a550947a93cf178d50525a30',1,'myVector::set(myVector Setter)'],['../classmy_vector.html#a15d24fec4efc0a50a2648a7a54e79b4f',1,'myVector::set(const double A, const double B) const ']]],
+  ['setbasedirectory',['setBaseDirectory',['../class_texture_loader.html#a8c6ef2773da422d2b40a98e839c0ccf8',1,'TextureLoader']]],
+  ['setcartexture',['setCarTexture',['../class_car.html#a6a4377866be6ad14841bb70f87a68327',1,'Car']]],
+  ['setrpmtexture',['setRPMTexture',['../class_h_u_d.html#a2dbbea5e46016273c6d916718d0e3d5d',1,'HUD']]],
+  ['settyretexture',['setTyreTexture',['../class_tyre.html#ab66f2659c2384b6c608b5eb51bb50425',1,'Tyre']]],
+  ['setx',['setX',['../classmy_vector.html#af5d310b4175917d94960f8d8a915583d',1,'myVector']]],
+  ['sety',['setY',['../classmy_vector.html#a67046769203977128c5869519a96981c',1,'myVector']]],
+  ['subtract',['subtract',['../classmy_vector.html#a43d29af4b84766a8b27c0a6e50067ead',1,'myVector']]]
 ];

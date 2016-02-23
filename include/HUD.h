@@ -23,13 +23,13 @@ private:
 	// Member data
 	////////////////////////////////////////////////////////////
 	RectangleShape m_needle;///< The RectangleShape which represents the needle for the RPM counter
-	Sprite RPMSprite;///< The RPM counter on the Heads Up Display
+	Sprite m_RPMSprite;///< The RPM counter on the Heads Up Display
 	Font DigiFont;///< Electronic font
-	Text GearText;///< The text that displays on the RPM counter and dispays the current gear the car is in
-	Text TimerText;///< Holds the current laptime. Will get reset when a lap is completed
-	float BestTime; ///< Holds the current best laptime the track has been completed in
+	Text m_GearText;///< The text that displays on the RPM counter and dispays the current gear the car is in
+	Text m_TimerText;///< Holds the current laptime. Will get reset when a lap is completed
+	float m_BestTime; ///< Holds the current best laptime the track has been completed in
 	Clock m_timer; ///< sf::Clock which times the laps
-	Text BestTimeText; ///< Used to display the best laptime ton the screen
+	Text m_BestTimeText; ///< Used to display the best laptime ton the screen
 public:
 	////////////////////////////////////////////////////////////
 	/// \brief Default constructor
@@ -41,8 +41,8 @@ public:
 	////////////////////////////////////////////////////////////
 	// Member data
 	////////////////////////////////////////////////////////////
-	FloatRect StartLine;///< Float Rect used to mark the start line during the race
-	FloatRect MidLine;///< Float Rect used to make the mid line during the race
+	FloatRect m_StartLine;///< Float Rect used to mark the start line during the race
+	FloatRect m_MidLine;///< Float Rect used to make the mid line during the race
 
 	////////////////////////////////////////////////////////////
 	/// \brief Allows car and wheels to be drawn to the screen
@@ -66,9 +66,9 @@ public:
 	////////////////////////////////////////////////////////////
 	/// \brief Keeps the Gear text updated depending on the gear the car is in.
 	///
-	/// \param gear Used to set the text of GearText
+	/// \param gear Used to set the text of m_GearText
 	/// 
-	/// \see GearText
+	/// \see m_GearText
 	///
 	////////////////////////////////////////////////////////////
 	void updateGear(int gear);
@@ -78,7 +78,7 @@ public:
 	///
 	/// \return A Vector2f of the position of the RPM counter
 	/// 
-	/// \see RPMSprite
+	/// \see m_RPMSprite
 	///
 	////////////////////////////////////////////////////////////
 	Vector2f getRPMCounterPos();
@@ -91,13 +91,13 @@ public:
 	/// \param GivenTexture A iterator of textures in a vector
 	///
 	////////////////////////////////////////////////////////////
-	void SetRPMTexture(vector<Texture>::iterator GivenTexture);
+	void setRPMTexture(vector<Texture>::iterator GivenTexture);
 
 	////////////////////////////////////////////////////////////
 	/// \brief Keeps the time text updated. Needs to be run every frame from game.
 	///
 	///
-	/// \see TimerText
+	/// \see m_TimerText
 	/// \see m_timer
 	///
 	////////////////////////////////////////////////////////////
@@ -107,11 +107,11 @@ public:
 	/// \brief Resets the m_timer
 	///
 	///
-	/// \see TimerText
+	/// \see m_TimerText
 	/// \see m_timer
 	///
 	////////////////////////////////////////////////////////////
-	void ResetTimer();
+	void resetTimer();
 
 	////////////////////////////////////////////////////////////
 	/// \brief Updates the best time with the time in m_timer.
@@ -120,13 +120,13 @@ public:
 	/// Should only be run if best time was beaten
 	///
 	///
-	/// \see TimerText
+	/// \see m_TimerText
 	/// \see m_timer
-	/// \see BestTime
-	/// \see BestTimeText
+	/// \see m_BestTime
+	/// \see m_BestTimeText
 	///
 	////////////////////////////////////////////////////////////
-	void UpdateBestTime();
+	void updateBestTime();
 };
 
 #endif
