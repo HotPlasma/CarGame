@@ -87,6 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_texture_loader-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TextureLoader Class Reference</div>  </div>
@@ -109,6 +110,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa579911f752f74d993459639b326ed41"><td class="memItemLeft" align="right" valign="top">vector&lt; Texture &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_loader.html#aa579911f752f74d993459639b326ed41">getTextureIterator</a> (int index)</td></tr>
 <tr class="memdesc:aa579911f752f74d993459639b326ed41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows textures from the Texture Loader to be used for sprite in other classes.  <a href="#aa579911f752f74d993459639b326ed41">More...</a><br /></td></tr>
 <tr class="separator:aa579911f752f74d993459639b326ed41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aebdefad4be5b524ed9181c2eb2d7c7d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebdefad4be5b524ed9181c2eb2d7c7d3"></a>
+vector&lt; Texture &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_loader.html#aebdefad4be5b524ed9181c2eb2d7c7d3">textures</a></td></tr>
+<tr class="memdesc:aebdefad4be5b524ed9181c2eb2d7c7d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of textures which all textures used in the program should be loaded into. <br /></td></tr>
+<tr class="separator:aebdefad4be5b524ed9181c2eb2d7c7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622f8e4f8807763a6260450345295a0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a622f8e4f8807763a6260450345295a0f"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_loader.html#a622f8e4f8807763a6260450345295a0f">m_sBaseDirectory</a></td></tr>
+<tr class="memdesc:a622f8e4f8807763a6260450345295a0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A string holding a base directory to find textures. <br /></td></tr>
+<tr class="separator:a622f8e4f8807763a6260450345295a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76329b161e033d8c5284025c58142382"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76329b161e033d8c5284025c58142382"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_loader.html#a76329b161e033d8c5284025c58142382">m_Holder</a></td></tr>
+<tr class="memdesc:a76329b161e033d8c5284025c58142382"><td class="mdescLeft">&#160;</td><td class="mdescRight">A tempary m_Holder of a texture before it is added to the vector of textures;. <br /></td></tr>
+<tr class="separator:a76329b161e033d8c5284025c58142382"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The Texture Loader makes loading in textures far more efficient as a new texture doesn't need to be loaded in everytime a new instance of something is created.</p>
@@ -176,11 +192,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Function where all necessary textures should be loaded in. </p>
-<dl class="section see"><dt>See also</dt><dd>m_Holder </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_texture_loader.html#a76329b161e033d8c5284025c58142382" title="A tempary m_Holder of a texture before it is added to the vector of textures;. ">m_Holder</a> </dd>
 <dd>
-m_sBaseDirectory </dd>
+<a class="el" href="class_texture_loader.html#a622f8e4f8807763a6260450345295a0f" title="A string holding a base directory to find textures. ">m_sBaseDirectory</a> </dd>
 <dd>
-textures </dd></dl>
+<a class="el" href="class_texture_loader.html#aebdefad4be5b524ed9181c2eb2d7c7d3" title="A vector of textures which all textures used in the program should be loaded into. ">textures</a> </dd></dl>
 
 </div>
 </div>

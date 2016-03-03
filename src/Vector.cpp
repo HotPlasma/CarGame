@@ -78,19 +78,10 @@ double myVector::dotProduct(const myVector other) const
 	
 }
 
-myVector myVector::crossProduct(const myVector other) const
-{
-	// ALMOST DEFINITELY WRONG
-	double i;
-	double j;
-
-	i = m_adVector[0] * other.m_adVector[1];
-	j = other.m_adVector[0] * m_adVector[0];
-
-	return myVector(i, j);
-
-	//empVect.set(x()  Vect2.y(), Vect2.x()  x());
-}
+//myVector myVector::crossProduct(const myVector other) const
+//{
+//	// TO BE WRITTEN
+//}
 
 float myVector::magnitude() const
 {

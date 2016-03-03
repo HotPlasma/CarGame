@@ -3,15 +3,15 @@
 Game::Game()
 {
 	m_Car = Car(myVector(2075, 65), myVector(0, 0), 0.3, myVector(0, 0)); // Creates players car with default paramaters
-	m_TexLoader.load();
-	generateMap(m_TexLoader.getTextureIterator(2));
-	m_Car.setCarTexture(m_TexLoader.getTextureIterator(3));
-	m_HUD.setRPMTexture(m_TexLoader.getTextureIterator(0));
+	m_TexLoader.load(); // Loads in all textures
+	generateMap(m_TexLoader.getTextureIterator(2)); // Assigns correct texture to map
+	m_Car.setCarTexture(m_TexLoader.getTextureIterator(3)); // Assigns correct texture to Car
+	m_HUD.setRPMTexture(m_TexLoader.getTextureIterator(0)); // Assigns correct texture to RPM counter
 }
 
 void Game::draw(RenderTarget & target, RenderStates states) const 
 {
-	target.draw(m_MapSprite);
+	target.draw(m_MapSprite); // Draw map
 	target.draw(m_Car);  // Draws car to screen
 
 	for (int i = 0; i < m_Tyres.size(); i++) // Draws all m_Tyres in vector of m_Tyres
@@ -23,12 +23,12 @@ void Game::draw(RenderTarget & target, RenderStates states) const
 void Game::update(float timestep)
 {
 	m_Car.update(timestep); // Passes car timestep for update
-	for (int i = 0; i < m_Tyres.size(); i++) // Draws all m_Tyres in vector of m_Tyres
+	for (int i = 0; i < m_Tyres.size(); i++) // Allows updating for all tyres
 	{
 		m_Tyres.at(i)->update(timestep);
 	}
-	m_HUD.updateNeedle(m_Car.m_iRPM);
-	m_HUD.updateGear(m_Car.m_iGear);
+	m_HUD.updateNeedle(m_Car.m_iRPM); // Updates needle for RPM counter
+	m_HUD.updateGear(m_Car.m_iGear); // Updates gear for HUD
 
 	for (int i = 0; i < m_Tyres.size(); i++) // Ssets up out collisions
 	{
@@ -42,22 +42,22 @@ void Game::update(float timestep)
 		}
 
 	}
-	m_HUD.updateTimers();
+	m_HUD.updateTimers(); // Updates timers for HUD
 
 	// Restarts laptime and sets new best time if player has beaten previous best time
 	if (m_HUD.m_StartLine.intersects(m_Car.m_render.getGlobalBounds()))
 	{
-		if (m_bMidPassed == true)
+		if (m_bMidPassed == true) // If player has reached midpoint then returned to start point
 		{
-			m_HUD.updateBestTime();
+			m_HUD.updateBestTime();// Update best time
 		}
 		m_HUD.resetTimer();
-		m_bMidPassed = false;
+		m_bMidPassed = false; // Reset mid point check
 	}
 
-	if (m_HUD.m_MidLine.intersects(m_Car.m_render.getGlobalBounds()))
+	if (m_HUD.m_MidLine.intersects(m_Car.m_render.getGlobalBounds())) // If player has reached midline checkpoint
 	{
-		m_bMidPassed = true;
+		m_bMidPassed = true; // Set pass bool to true
 	}
 
 }
@@ -134,23 +134,23 @@ void Game::generateMap(vector<Texture>::iterator GivenTexture)
 	m_MapSprite.setScale(1, 1);
 }
 
-Vector2f Game::getCarPos()
+Vector2f Game::getCarPos() // Returns car position
 {
 	return Vector2f(m_Car.ReturnCarPos());
 }
 
-Vector2f Game::getRPMCounterPos()
+Vector2f Game::getRPMCounterPos() // Returns RPM position
 {
 	return m_HUD.getRPMCounterPos();
 }
 
-void Game::createTyre(Vector2f Position)
+void Game::createTyre(Vector2f Position) // Creates a tyre with the given position
 {
 	m_Tyres.push_back(new Tyre(myVector::ConvertToMyVector(Position), 0.1));
-	m_Tyres.back()->setTyreTexture(m_TexLoader.getTextureIterator(1));
+	m_Tyres.back()->setTyreTexture(m_TexLoader.getTextureIterator(1)); // Assigns texture to tyre
 }
 
-void Game::saveTyrePosToFile()
+void Game::saveTyrePosToFile() // Saves all tyres to a file
 {
 	//Open file
 	ofstream file;
@@ -165,7 +165,7 @@ void Game::saveTyrePosToFile()
 	file.close();
 }
 
-void Game::loadTyrePosFromFile()
+void Game::loadTyrePosFromFile() // Loads all tyres from a file
 {
 	ifstream fileHandle;
 	string sLineFromFile;

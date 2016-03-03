@@ -41,6 +41,24 @@ Vector2f \hyperlink{class_game_a6c9677367a84a4201e45200a3fc08dcc}{get\+R\+P\+M\+
 \hypertarget{class_game_a7da845052dc5b3e38721d6a1564f0f82}{}\hyperlink{class_h_u_d}{H\+U\+D} \hyperlink{class_game_a7da845052dc5b3e38721d6a1564f0f82}{m\+\_\+\+H\+U\+D}\label{class_game_a7da845052dc5b3e38721d6a1564f0f82}
 
 \begin{DoxyCompactList}\small\item\em Instance of the \hyperlink{class_h_u_d}{H\+U\+D} used for the U\+I. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_ac542da39deb8370524eb7573a3dac252}{}\hyperlink{class_car}{Car} \hyperlink{class_game_ac542da39deb8370524eb7573a3dac252}{m\+\_\+\+Car}\label{class_game_ac542da39deb8370524eb7573a3dac252}
+
+\begin{DoxyCompactList}\small\item\em The instance of the car in \hyperlink{class_game}{Game}. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a8937c3fbd8360865d71f3352cbf56ea9}{}vector$<$ \hyperlink{class_tyre}{Tyre} $\ast$ $>$ \hyperlink{class_game_a8937c3fbd8360865d71f3352cbf56ea9}{m\+\_\+\+Tyres}\label{class_game_a8937c3fbd8360865d71f3352cbf56ea9}
+
+\begin{DoxyCompactList}\small\item\em Vector containing all m\+\_\+\+Tyres that need to be drawn. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a66fd394e4813c7c0cb9dda72ad7739ca}{}\hyperlink{class_texture_loader}{Texture\+Loader} \hyperlink{class_game_a66fd394e4813c7c0cb9dda72ad7739ca}{m\+\_\+\+Tex\+Loader}\label{class_game_a66fd394e4813c7c0cb9dda72ad7739ca}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_texture_loader}{Texture\+Loader} instance used for loading in textures. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a6425cac6484cfcb4d8d3436bb9a5c6c6}{}Sprite \hyperlink{class_game_a6425cac6484cfcb4d8d3436bb9a5c6c6}{m\+\_\+\+Map\+Sprite}\label{class_game_a6425cac6484cfcb4d8d3436bb9a5c6c6}
+
+\begin{DoxyCompactList}\small\item\em Sprite to hold the map. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a1171e3aa8d0fbc5c59c92c8cff68896d}{}bool \hyperlink{class_game_a1171e3aa8d0fbc5c59c92c8cff68896d}{m\+\_\+b\+Mid\+Passed} = false\label{class_game_a1171e3aa8d0fbc5c59c92c8cff68896d}
+
+\begin{DoxyCompactList}\small\item\em Boolean used to keep track on wether the player has reached the mid point of the race. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -88,7 +106,7 @@ Creates a tyre in a given position.
 Used to create m\+\_\+\+Tyres by clicking. I use this generate my map. \hyperlink{class_tyre}{Tyre} positions are added to a .txt file and are loaded in.
 
 \begin{DoxySeeAlso}{See also}
-m\+\_\+\+Tyres 
+\hyperlink{class_game_a8937c3fbd8360865d71f3352cbf56ea9}{m\+\_\+\+Tyres} 
 
 Save\+Tyre\+Pos\+To\+File() 
 
@@ -169,7 +187,7 @@ The position of the R\+P\+M counter as Vector2f
 Loads all the m\+\_\+\+Tyres from a .txt. 
 
 Allows me to create boundaries for any map of any shape then save them to be loaded \begin{DoxySeeAlso}{See also}
-m\+\_\+\+Tyres 
+\hyperlink{class_game_a8937c3fbd8360865d71f3352cbf56ea9}{m\+\_\+\+Tyres} 
 
 \hyperlink{class_game_a8eb2aefb1a563b1ca91d080131e0f1a3}{create\+Tyre} 
 \end{DoxySeeAlso}
@@ -217,7 +235,7 @@ Used for telling the car when to stop accelerating, turning, ect
 Saves the position of m\+\_\+\+Tyres into a .txt file so I can generate obsticles around any map. 
 
 \begin{DoxySeeAlso}{See also}
-m\+\_\+\+Tyres 
+\hyperlink{class_game_a8937c3fbd8360865d71f3352cbf56ea9}{m\+\_\+\+Tyres} 
 
 \hyperlink{class_game_a8eb2aefb1a563b1ca91d080131e0f1a3}{create\+Tyre} 
 \end{DoxySeeAlso}

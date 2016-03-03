@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_game-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Game Class Reference</div>  </div>
@@ -146,6 +147,29 @@ Public Attributes</h2></td></tr>
 <a class="el" href="class_h_u_d.html">HUD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a7da845052dc5b3e38721d6a1564f0f82">m_HUD</a></td></tr>
 <tr class="memdesc:a7da845052dc5b3e38721d6a1564f0f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of the <a class="el" href="class_h_u_d.html">HUD</a> used for the UI. <br /></td></tr>
 <tr class="separator:a7da845052dc5b3e38721d6a1564f0f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ac542da39deb8370524eb7573a3dac252"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac542da39deb8370524eb7573a3dac252"></a>
+<a class="el" href="class_car.html">Car</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ac542da39deb8370524eb7573a3dac252">m_Car</a></td></tr>
+<tr class="memdesc:ac542da39deb8370524eb7573a3dac252"><td class="mdescLeft">&#160;</td><td class="mdescRight">The instance of the car in <a class="el" href="class_game.html">Game</a>. <br /></td></tr>
+<tr class="separator:ac542da39deb8370524eb7573a3dac252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8937c3fbd8360865d71f3352cbf56ea9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8937c3fbd8360865d71f3352cbf56ea9"></a>
+vector&lt; <a class="el" href="class_tyre.html">Tyre</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a8937c3fbd8360865d71f3352cbf56ea9">m_Tyres</a></td></tr>
+<tr class="memdesc:a8937c3fbd8360865d71f3352cbf56ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector containing all m_Tyres that need to be drawn. <br /></td></tr>
+<tr class="separator:a8937c3fbd8360865d71f3352cbf56ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66fd394e4813c7c0cb9dda72ad7739ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66fd394e4813c7c0cb9dda72ad7739ca"></a>
+<a class="el" href="class_texture_loader.html">TextureLoader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a66fd394e4813c7c0cb9dda72ad7739ca">m_TexLoader</a></td></tr>
+<tr class="memdesc:a66fd394e4813c7c0cb9dda72ad7739ca"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_texture_loader.html">TextureLoader</a> instance used for loading in textures. <br /></td></tr>
+<tr class="separator:a66fd394e4813c7c0cb9dda72ad7739ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6425cac6484cfcb4d8d3436bb9a5c6c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6425cac6484cfcb4d8d3436bb9a5c6c6"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a6425cac6484cfcb4d8d3436bb9a5c6c6">m_MapSprite</a></td></tr>
+<tr class="memdesc:a6425cac6484cfcb4d8d3436bb9a5c6c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite to hold the map. <br /></td></tr>
+<tr class="separator:a6425cac6484cfcb4d8d3436bb9a5c6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1171e3aa8d0fbc5c59c92c8cff68896d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1171e3aa8d0fbc5c59c92c8cff68896d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a1171e3aa8d0fbc5c59c92c8cff68896d">m_bMidPassed</a> = false</td></tr>
+<tr class="memdesc:a1171e3aa8d0fbc5c59c92c8cff68896d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean used to keep track on wether the player has reached the mid point of the race. <br /></td></tr>
+<tr class="separator:a1171e3aa8d0fbc5c59c92c8cff68896d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_game.html">Game</a> is absolutely essential to the game. It pulls together all of the other classes and makes them function with eachother in order to maken this game playable.</p>
@@ -195,7 +219,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <p>Used to create m_Tyres by clicking. I use this generate my map. <a class="el" href="class_tyre.html">Tyre</a> positions are added to a .txt file and are loaded in.</p>
-<dl class="section see"><dt>See also</dt><dd>m_Tyres </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_game.html#a8937c3fbd8360865d71f3352cbf56ea9" title="Vector containing all m_Tyres that need to be drawn. ">m_Tyres</a> </dd>
 <dd>
 SaveTyrePosToFile() </dd>
 <dd>
@@ -312,7 +336,7 @@ SaveTyrePosToFile() </dd>
 </div><div class="memdoc">
 
 <p>Loads all the m_Tyres from a .txt. </p>
-<p>Allows me to create boundaries for any map of any shape then save them to be loaded </p><dl class="section see"><dt>See also</dt><dd>m_Tyres </dd>
+<p>Allows me to create boundaries for any map of any shape then save them to be loaded </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_game.html#a8937c3fbd8360865d71f3352cbf56ea9" title="Vector containing all m_Tyres that need to be drawn. ">m_Tyres</a> </dd>
 <dd>
 <a class="el" href="class_game.html#a8eb2aefb1a563b1ca91d080131e0f1a3" title="Creates a tyre in a given position. ">createTyre</a> </dd></dl>
 
@@ -380,7 +404,7 @@ SaveTyrePosToFile() </dd>
 </div><div class="memdoc">
 
 <p>Saves the position of m_Tyres into a .txt file so I can generate obsticles around any map. </p>
-<dl class="section see"><dt>See also</dt><dd>m_Tyres </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_game.html#a8937c3fbd8360865d71f3352cbf56ea9" title="Vector containing all m_Tyres that need to be drawn. ">m_Tyres</a> </dd>
 <dd>
 <a class="el" href="class_game.html#a8eb2aefb1a563b1ca91d080131e0f1a3" title="Creates a tyre in a given position. ">createTyre</a> </dd></dl>
 

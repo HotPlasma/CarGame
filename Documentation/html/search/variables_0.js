@@ -1,23 +1,4 @@
 var searchData=
 [
-  ['m_5facceleration',['m_acceleration',['../class_collidable.html#aacad0202ea0d4f51a6875bce682ff3eb',1,'Collidable']]],
-  ['m_5fafgearrates',['m_afGearRates',['../class_car.html#a8f521ca3c67a2eb82a8dd2b074f2ef18',1,'Car']]],
-  ['m_5faiaccelrates',['m_aiAccelRates',['../class_car.html#a42b2cb593b38ebbf22733931740b68cc',1,'Car']]],
-  ['m_5fbrotatingleft',['m_bRotatingLeft',['../class_car.html#ab95acc2df88b466d369bed8b15527d4b',1,'Car']]],
-  ['m_5fbrotatingright',['m_bRotatingRight',['../class_car.html#a50c84c8ca82629d8bf806733b2ed3dcd',1,'Car']]],
-  ['m_5ffinvmass',['m_finvMass',['../class_collidable.html#a729958861685b10ff9718a24fca09c8e',1,'Collidable']]],
-  ['m_5ffrontwheel',['m_FrontWheel',['../class_car.html#acd5aa786fc90d6408bfa25da88b3d9db',1,'Car']]],
-  ['m_5ffrotationangle',['m_fRotationAngle',['../class_car.html#a982be320c4ff138458a2d9aa6c14ed54',1,'Car']]],
-  ['m_5ffsteeringangle',['m_fSteeringAngle',['../class_car.html#aa9a2cb08891629d7b40e9e01e219da21',1,'Car']]],
-  ['m_5fhud',['m_HUD',['../class_game.html#a7da845052dc5b3e38721d6a1564f0f82',1,'Game']]],
-  ['m_5figear',['m_iGear',['../class_car.html#aa05d717a7339d5c9fc6fc420fec7041d',1,'Car']]],
-  ['m_5firpm',['m_iRPM',['../class_car.html#a4d453c99f080df6d44f0f44eaa5d24e1',1,'Car']]],
-  ['m_5fmidline',['m_MidLine',['../class_h_u_d.html#a00ad3821cf2d266c31c5eb095ded60f1',1,'HUD']]],
-  ['m_5fposition',['m_position',['../class_collidable.html#abb12d204a079d68951d396005270c70b',1,'Collidable']]],
-  ['m_5frearwheel',['m_RearWheel',['../class_car.html#a028cb3de89f07167130322eeaa35d252',1,'Car']]],
-  ['m_5frender',['m_render',['../class_car.html#aeaaafebefc59dfd9d3976b5bf3ac37e2',1,'Car']]],
-  ['m_5frotationvector',['m_RotationVector',['../class_car.html#a7c36ad715e5d8047ddb069b29326eebf',1,'Car']]],
-  ['m_5fstartline',['m_StartLine',['../class_h_u_d.html#a22d7ec3ed9526c49701e2fbe57c3a509',1,'HUD']]],
-  ['m_5ftyresprite',['m_Tyresprite',['../class_tyre.html#af0e442ef7f1d1198a452f165df7a9237',1,'Tyre']]],
-  ['m_5fvelocity',['m_velocity',['../class_collidable.html#adfeaec03dc9c1c5791b7bc94cff04c44',1,'Collidable']]]
+  ['digifont',['DigiFont',['../class_h_u_d.html#a32e045163732743d7049e2bb011c675a',1,'HUD']]]
 ];

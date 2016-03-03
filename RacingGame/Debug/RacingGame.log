@@ -1,9 +1,52 @@
-﻿Build started 2/23/2016 6:23:06 PM.
+﻿Build started 2/24/2016 7:56:40 PM.
      1>Project "C:\Users\EK\Desktop\C++Projects\RacingGame\RacingGame\RacingGame.vcxproj" on node 2 (Build target(s)).
-     1>Link:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\Car.cpp ..\src\Collidable.cpp ..\src\Game.cpp ..\src\HUD.cpp ..\src\Tyre.cpp ..\src\main.cpp
+         Tyre.cpp
+     1>c:\users\ek\desktop\c++projects\racinggame\src\tyre.cpp(17): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\ek\desktop\c++projects\racinggame\src\tyre.cpp(52): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\ek\desktop\c++projects\racinggame\src\tyre.cpp(76): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         HUD.cpp
+     1>c:\users\ek\desktop\c++projects\racinggame\src\hud.cpp(54): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Game.cpp
+     1>c:\users\ek\desktop\c++projects\racinggame\src\game.cpp(5): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\ek\desktop\c++projects\racinggame\src\game.cpp(17): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\ek\desktop\c++projects\racinggame\src\game.cpp(26): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\ek\desktop\c++projects\racinggame\src\game.cpp(33): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\ek\desktop\c++projects\racinggame\src\game.cpp(36): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\ek\desktop\c++projects\racinggame\src\game.cpp(149): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\ek\desktop\c++projects\racinggame\src\game.cpp(160): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\ek\desktop\c++projects\racinggame\src\game.cpp(182): warning C4305: 'argument' : truncation from 'double' to 'float'
+         Collidable.cpp
+     1>c:\users\ek\desktop\c++projects\racinggame\src\collidable.cpp(16): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\ek\desktop\c++projects\racinggame\src\collidable.cpp(17): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         Car.cpp
+     1>c:\users\ek\desktop\c++projects\racinggame\src\car.cpp(5): warning C4305: 'initializing' : truncation from 'double' to 'const float'
+     1>c:\users\ek\desktop\c++projects\racinggame\src\car.cpp(23): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\ek\desktop\c++projects\racinggame\src\car.cpp(34): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\ek\desktop\c++projects\racinggame\src\car.cpp(79): warning C4244: 'argument' : conversion from 'int' to 'const float', possible loss of data
+     1>c:\users\ek\desktop\c++projects\racinggame\src\car.cpp(110): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\ek\desktop\c++projects\racinggame\src\car.cpp(157): warning C4244: '-=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\ek\desktop\c++projects\racinggame\src\car.cpp(258): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\ek\desktop\c++projects\racinggame\src\car.cpp(259): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\ek\desktop\c++projects\racinggame\src\car.cpp(314): warning C4305: 'argument' : truncation from 'double' to 'const float'
+     1>c:\users\ek\desktop\c++projects\racinggame\src\car.cpp(314): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+     1>c:\users\ek\desktop\c++projects\racinggame\src\car.cpp(345): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         main.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\EK\Desktop\C++Projects\RacingGame\Debug\RacingGame.exe" /INCREMENTAL /NOLOGO "sfml-main-d.lib" "sfml-system-d.lib" "sfml-graphics-d.lib" "sfml-window-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\EK\Desktop\C++Projects\RacingGame\Debug\RacingGame.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\EK\Desktop\C++Projects\RacingGame\Debug\RacingGame.lib" /MACHINE:X86 Debug\Car.obj
+         Debug\Collidable.obj
+         Debug\Game.obj
+         Debug\main.obj
+         Debug\HUD.obj
+         Debug\TextureLoader.obj
+         Debug\Tyre.obj
+         Debug\Vector.obj
          RacingGame.vcxproj -> C:\Users\EK\Desktop\C++Projects\RacingGame\Debug\RacingGame.exe
      1>Done Building Project "C:\Users\EK\Desktop\C++Projects\RacingGame\RacingGame\RacingGame.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.10
+Time Elapsed 00:00:14.37

@@ -24,7 +24,6 @@ int main()
 	// Makes gameview use the entire window screen
 	gameview.setSize(Vector2f(window.getSize()));
 	HUD.setSize(Vector2f(window.getSize()));
-
 	game.loadTyrePosFromFile();
 			
 	

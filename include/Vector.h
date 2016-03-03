@@ -166,7 +166,7 @@ public:
 	/// myVectorA.crossProduct(myVectorB);
 	///	\endcode
 	////////////////////////////////////////////////////////////
-	myVector crossProduct(const myVector other) const;
+	//myVector crossProduct(const myVector other) const;
 
 	////////////////////////////////////////////////////////////
 	/// \brief Rotates a given MyVector by an angle

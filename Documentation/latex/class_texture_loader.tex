@@ -15,6 +15,18 @@ void \hyperlink{class_texture_loader_a887d3fd9f794498a8273f65d994e9250}{load} ()
 \begin{DoxyCompactList}\small\item\em Function where all necessary textures should be loaded in. \end{DoxyCompactList}\item 
 vector$<$ Texture $>$\+::iterator \hyperlink{class_texture_loader_aa579911f752f74d993459639b326ed41}{get\+Texture\+Iterator} (int index)
 \begin{DoxyCompactList}\small\item\em Allows textures from the Texture Loader to be used for sprite in other classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_texture_loader_aebdefad4be5b524ed9181c2eb2d7c7d3}{}vector$<$ Texture $>$ \hyperlink{class_texture_loader_aebdefad4be5b524ed9181c2eb2d7c7d3}{textures}\label{class_texture_loader_aebdefad4be5b524ed9181c2eb2d7c7d3}
+
+\begin{DoxyCompactList}\small\item\em A vector of textures which all textures used in the program should be loaded into. \end{DoxyCompactList}\item 
+\hypertarget{class_texture_loader_a622f8e4f8807763a6260450345295a0f}{}string \hyperlink{class_texture_loader_a622f8e4f8807763a6260450345295a0f}{m\+\_\+s\+Base\+Directory}\label{class_texture_loader_a622f8e4f8807763a6260450345295a0f}
+
+\begin{DoxyCompactList}\small\item\em A string holding a base directory to find textures. \end{DoxyCompactList}\item 
+\hypertarget{class_texture_loader_a76329b161e033d8c5284025c58142382}{}Texture \hyperlink{class_texture_loader_a76329b161e033d8c5284025c58142382}{m\+\_\+\+Holder}\label{class_texture_loader_a76329b161e033d8c5284025c58142382}
+
+\begin{DoxyCompactList}\small\item\em A tempary m\+\_\+\+Holder of a texture before it is added to the vector of textures;. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -77,11 +89,11 @@ The texture from the index
 Function where all necessary textures should be loaded in. 
 
 \begin{DoxySeeAlso}{See also}
-m\+\_\+\+Holder 
+\hyperlink{class_texture_loader_a76329b161e033d8c5284025c58142382}{m\+\_\+\+Holder} 
 
-m\+\_\+s\+Base\+Directory 
+\hyperlink{class_texture_loader_a622f8e4f8807763a6260450345295a0f}{m\+\_\+s\+Base\+Directory} 
 
-textures 
+\hyperlink{class_texture_loader_aebdefad4be5b524ed9181c2eb2d7c7d3}{textures} 
 \end{DoxySeeAlso}
 \hypertarget{class_texture_loader_a8c6ef2773da422d2b40a98e839c0ccf8}{}\index{Texture\+Loader@{Texture\+Loader}!set\+Base\+Directory@{set\+Base\+Directory}}
 \index{set\+Base\+Directory@{set\+Base\+Directory}!Texture\+Loader@{Texture\+Loader}}

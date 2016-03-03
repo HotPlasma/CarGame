@@ -1,0 +1,38 @@
+﻿Build started 2/24/2016 7:56:30 PM.
+     1>Project "C:\Users\EK\Desktop\C++Projects\RacingGame\UnitTest1\UnitTest1.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\EK\Desktop\C++Projects\RacingGame\Release\UnitTest1.dll" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\UnitTest\lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\EK\Desktop\C++Projects\RacingGame\Release\UnitTest1.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\EK\Desktop\C++Projects\RacingGame\Release\UnitTest1.lib" /MACHINE:X86 /SAFESEH /DLL Release\MyVectorTest.obj
+         Release\stdafx.obj
+         Release\GameTest.obj
+     1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+            Creating library C:\Users\EK\Desktop\C++Projects\RacingGame\Release\UnitTest1.lib and object C:\Users\EK\Desktop\C++Projects\RacingGame\Release\UnitTest1.exp
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: __thiscall myVector::myVector(double,double)" (??0myVector@@QAE@NN@Z)
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: double __thiscall myVector::x(void)" (?x@myVector@@QAENXZ)
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: double __thiscall myVector::y(void)" (?y@myVector@@QAENXZ)
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: class myVector __thiscall myVector::add(class myVector)const " (?add@myVector@@QBE?AV1@V1@@Z)
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: class myVector __thiscall myVector::subtract(class myVector)const " (?subtract@myVector@@QBE?AV1@V1@@Z)
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: class myVector __thiscall myVector::multiply(class myVector)const " (?multiply@myVector@@QBE?AV1@V1@@Z)
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: class myVector __thiscall myVector::multiply(float)const " (?multiply@myVector@@QBE?AV1@M@Z)
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: double __thiscall myVector::dotProduct(class myVector)const " (?dotProduct@myVector@@QBENV1@@Z)
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: float __thiscall myVector::magnitude(void)const " (?magnitude@myVector@@QBEMXZ)
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: static class myVector __cdecl myVector::normalise(class myVector)" (?normalise@myVector@@SA?AV1@V1@@Z)
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: class sf::Vector2<float> __thiscall myVector::Convert2f(void)" (?Convert2f@myVector@@QAE?AV?$Vector2@M@sf@@XZ)
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: static class myVector __cdecl myVector::ConvertToMyVector(class sf::Vector2<float>)" (?ConvertToMyVector@myVector@@SA?AV1@V?$Vector2@M@sf@@@Z)
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: class myVector __thiscall myVector::MakeNegetive(void)" (?MakeNegetive@myVector@@QAE?AV1@XZ)
+     1>MyVectorTest.obj : error LNK2001: unresolved external symbol "public: class myVector __thiscall myVector::RotateVector(float)" (?RotateVector@myVector@@QAE?AV1@M@Z)
+     1>GameTest.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) const sf::Drawable::`vftable'" (__imp_??_7Drawable@sf@@6B@)
+     1>GameTest.obj : error LNK2001: unresolved external symbol "public: __thiscall Game::Game(void)" (??0Game@@QAE@XZ)
+     1>GameTest.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Texture::~Texture(void)" (__imp_??1Texture@sf@@QAE@XZ)
+     1>GameTest.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Font::~Font(void)" (__imp_??1Font@sf@@QAE@XZ)
+     1>GameTest.obj : error LNK2001: unresolved external symbol "public: class sf::Vector2<float> __thiscall Game::getCarPos(void)" (?getCarPos@Game@@QAE?AV?$Vector2@M@sf@@XZ)
+     1>GameTest.obj : error LNK2001: unresolved external symbol "public: class sf::Vector2<float> __thiscall Game::getRPMCounterPos(void)" (?getRPMCounterPos@Game@@QAE?AV?$Vector2@M@sf@@XZ)
+     1>GameTest.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::Text::~Text(void)" (__imp_??1Text@sf@@UAE@XZ)
+     1>GameTest.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::RectangleShape::~RectangleShape(void)" (__imp_??1RectangleShape@sf@@UAE@XZ)
+     1>GameTest.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::Sprite::~Sprite(void)" (__imp_??1Sprite@sf@@UAE@XZ)
+     1>GameTest.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::Drawable::~Drawable(void)" (__imp_??1Drawable@sf@@UAE@XZ)
+     1>C:\Users\EK\Desktop\C++Projects\RacingGame\Release\UnitTest1.dll : fatal error LNK1120: 24 unresolved externals
+     1>Done Building Project "C:\Users\EK\Desktop\C++Projects\RacingGame\UnitTest1\UnitTest1.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.81

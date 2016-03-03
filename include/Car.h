@@ -18,6 +18,22 @@ using namespace sf;
 
 class Car : public Collidable
 {
+private:
+	////////////////////////////////////////////////////////////
+	// Member data
+	////////////////////////////////////////////////////////////
+	RectangleShape m_FrontWheel[2]; ///< Array of two rectangle shapes which will be my front wheels 
+	RectangleShape m_RearWheel[2]; ///< Array of two rectangle shapes which will be my rear wheels 
+
+	int m_aiAccelRates[5]; ///< Array of integers which store the rates of acceleration for each gear
+	float m_afGearRates[6]; ///< Array of floats which hold what value the acceleration rates are multiplied by in order for the car to gain gain speed when accelerating. 
+
+	float m_fSteeringAngle; ///< Float which contains the angle my m_Tyres would face
+
+	float m_fRotationAngle; ///< Float which holds the rotation angle of my car
+	myVector m_RotationVector; ///< Vector which contains the direction my car is facing 
+
+
 public:
 	////////////////////////////////////////////////////////////
 	/// \brief Default constructor
@@ -41,20 +57,12 @@ public:
 	////////////////////////////////////////////////////////////
 	// Member data
 	////////////////////////////////////////////////////////////
-	RectangleShape m_FrontWheel[2]; ///< Array of two rectangle shapes which will be my front wheels 
-	RectangleShape m_RearWheel[2]; ///< Array of two rectangle shapes which will be my rear wheels 
-	int m_iRPM; ///< Integer which holds the Rotations Per Minute by which the car will accelerate
-	int m_iGear; ///< Integer which holds which gear the car is in
-	int m_aiAccelRates[5]; ///< Array of integers which store the rates of acceleration for each gear
-	float m_afGearRates[6]; ///< Array of floats which hold what value the acceleration rates are multiplied by in order for the car to gain gain speed when accelerating. 
-
-	float m_fSteeringAngle; ///< Float which contains the angle my m_Tyres would face
-
-	float m_fRotationAngle; ///< Float which holds the rotation angle of my car
-	myVector m_RotationVector; ///< Vector which contains the direction my car is facing 
 
 	bool m_bRotatingRight = false;///< Rotational bool for right direction
 	bool m_bRotatingLeft = false;///< Roational bool for left direction
+
+	int m_iRPM; ///< Integer which holds the Rotations Per Minute by which the car will accelerate
+	int m_iGear; ///< Integer which holds which gear the car is in
 
 	Sprite m_render; ///< Sprite which represents the car
 

@@ -7,10 +7,7 @@ Collidable::Collidable()
 
 Collidable::Collidable(myVector position, myVector acceleration, float invMass, myVector velocity)
 {
-	/*m_position = position;
-	m_acceleration = acceleration;
-	m_finvMass = invMass;
-	m_velocity = velocity;*/
+
 }
 
 myVector Collidable::getFriction()

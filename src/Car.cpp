@@ -58,15 +58,15 @@ Car::Car()
 }
 
 
-void Car::draw(RenderTarget & target, RenderStates states) const
+void Car::draw(RenderTarget & target, RenderStates states) const 
 {
-	for (int i = 0; i < 2; i++)
+	for (int i = 0; i < 2; i++) // Draws wheels to screen
 	{
 		target.draw(m_FrontWheel[i]);
 		target.draw(m_RearWheel[i]);
 	}
 	
-	target.draw(m_render);
+	target.draw(m_render); // Draws car to screen
 }
 
 void Car::Accelerate() //Accelerates car by RPM multiplied by the rotation of the car after being affected by friction
@@ -74,12 +74,12 @@ void Car::Accelerate() //Accelerates car by RPM multiplied by the rotation of th
 	m_acceleration = m_RotationVector.multiply(m_iRPM * m_afGearRates[m_iGear]).subtract(getFriction());
 }
 
-void Car::Neutral()
+void Car::Neutral() // Slow down to a stop
 {
 	m_acceleration = m_RotationVector.multiply(m_iRPM -1800 ).subtract(getFriction());
 }
 
-void Car::ReversingAccel()
+void Car::ReversingAccel() // Reverse backwards
 {
 	m_iRPM = 1800;
 	m_acceleration = m_RotationVector.multiply(-1000).subtract(getFriction());
@@ -174,9 +174,6 @@ void Car::update(float timestep)
 		m_fSteeringAngle = -30;
 	}
 
-	//cout << m_fSteeringAngle;
-	//cout << m_velocity.x() << "     " << m_velocity.y() << endl;
-
 	// Creates vector facing same direction as car
 	m_RotationVector = myVector(cosf(g_kfDegToRad * m_fRotationAngle), sinf(g_kfDegToRad * m_fRotationAngle));
 	myVector SteeringVector(cosf((m_fRotationAngle + m_fSteeringAngle) * g_kfDegToRad), sinf((m_fRotationAngle + m_fSteeringAngle) * g_kfDegToRad));
@@ -198,29 +195,29 @@ void Car::update(float timestep)
 
 	myVector PerpCarAngle(-m_RotationVector.y(), m_RotationVector.x()); // Used for placing wheels correctly
 
-	fWheelPos[0].set(m_position.add(m_RotationVector.multiply(fWheelBase / 2)));
-	fWheelPos[1].set(m_position.add(m_RotationVector.multiply(fWheelBase / 2)));
+	//Wheels used for bicycle method 
+
+	// Attaches wheels to cars position
+	fWheelPos[0].set(m_position.add(m_RotationVector.multiply(fWheelBase / 2))); 
 	rWheelPos[0].set(m_position.subtract(m_RotationVector.multiply(fWheelBase / 2)));
 
-	fWheelPos[0] = fWheelPos[0].add(SteeringVector.multiply(fDisplacement));
+	fWheelPos[0] = fWheelPos[0].add(SteeringVector.multiply(fDisplacement)); 
 	rWheelPos[0] = rWheelPos[0].add(m_RotationVector.multiply(fDisplacement));
+
 
 	for  (int i = 0; i < 2; i++)
 	{
-		/*m_FrontWheel[0].setPosition(Vector2f(fWheelPos[0].x(), fWheelPos[0].y()));
-		m_RearWheel[0].setPosition(Vector2f(rWheelPos[0].x(), rWheelPos[0].y()));*/
-
 		m_FrontWheel[i].setRotation(m_fSteeringAngle + m_fRotationAngle); // Sets the rotation of the front wheels
 		m_RearWheel[i].setRotation(m_fRotationAngle); // Sets the rotation of the backwheels
 	}
 
-	// Sets up my vectors for my wheels
+	// Sets up my positions for all 4 wheels
 	m_FrontWheel[0].setPosition(Vector2f(fWheelPos[0].add(PerpCarAngle.multiply(10)).Convert2f()));
 	m_FrontWheel[1].setPosition(Vector2f(fWheelPos[0].add(PerpCarAngle.multiply(-12)).Convert2f()));
 	m_RearWheel[0].setPosition(Vector2f(rWheelPos[0].add(PerpCarAngle.multiply(-12)).Convert2f()));
 	m_RearWheel[1].setPosition(Vector2f(rWheelPos[0].add(PerpCarAngle.multiply(11)).Convert2f()));
 
-	if (m_iGear >= 1)
+	if (m_iGear >= 1) // Accelerate if gear equal to or above 1
 	{
 		Accelerate();
 	}
@@ -240,21 +237,24 @@ void Car::update(float timestep)
 		}
 	}
 	
-	if (m_iGear == 0)
+	if (m_iGear == 0) // If gear is 0 enter neutral
 	{
 		Neutral();
 	}
 
-	if (m_iGear == -1)
+	if (m_iGear == -1) // If gear is minus 1 then reverse
 	{
 		ReversingAccel();
 	}
 
 	GearsManagement(timestep); // Changes gears and RPM
 	
+	// Euler for movement using bicycle method
 	m_velocity = m_velocity.add(m_acceleration.multiply(timestep));
-	m_position.setX((fWheelPos[0].x() + rWheelPos[0].x()) / 2);
+	// Position of car is equal to mid point between wheels
+	m_position.setX((fWheelPos[0].x() + rWheelPos[0].x()) / 2); 
 	m_position.setY((fWheelPos[0].y() + rWheelPos[0].y()) / 2);
+	// Sets Rotation angle
 	m_fRotationAngle = atan2f(fWheelPos[0].y() - rWheelPos[0].y(), fWheelPos[0].x() - rWheelPos[0].x()) / g_kfDegToRad;
 	m_render.setPosition(Vector2f(m_position.x(), m_position.y()));
 }
@@ -304,7 +304,7 @@ void Car::Collide(Tyre* B)
 
 	//std::cout << Distance << endl;
 
-	if (Distance <= -0.2) //If collided
+	if (Distance <= -0.2) //If collided ...with a bit of tension
 	{
 		m_iRPM = 1800;
 		myVector CollisonNorm(Distance, 0); //Create a collision normal vector and insert distance
@@ -313,6 +313,7 @@ void Car::Collide(Tyre* B)
 		//New Velocity is equal to -(1+e)*Collision Normal*(Collision Normal.Velocity)
 		NewVel.set(CollisonNorm.multiply(-(1 + 0.2)).multiply(CollisonNorm.dotProduct(m_velocity)));
 
+		// Limits new velocity to avoid overflow errors
 		if (NewVel.x() >= 0)
 		{
 			NewVel.setX(fmin(NewVel.x(), 1000));
@@ -330,35 +331,21 @@ void Car::Collide(Tyre* B)
 			NewVel.setY(fmax(NewVel.y(), -1000));
 		}
 
+		m_iRPM = 1800; // Resets RPM
+		
+		m_velocity = m_velocity.add(NewVel); // Changes velocity to resolve collision
 
-		//std::cout << NewVel.x() << "   " << NewVel.y() << endl;
-		m_iRPM = 1800;
-		// Changes velocity to resolve collision
-		m_velocity = m_velocity.add(NewVel);
-
-		B->m_velocity = B->m_velocity.add(NewVel.MakeNegetive());
-
-
-		//myVector CollisionNormal = myVector::normalise(Clamp);
-
-		//float J;
-		//J = (-(1 + 0.6) * (m_velocity.subtract(B->m_velocity)).dotProduct(CollisionNormal)) / (m_finvMass + B->m_finvMass);
-
-		//m_velocity = m_velocity.add(CollisionNormal.multiply(J).multiply(m_finvMass));    // m_velocity + (myVector::normalise(Distance).multiply(J) / m_finvMass;
-		//B->m_velocity = B->m_velocity.add(CollisionNormal.MakeNegetive().multiply(J).multiply(B->m_finvMass));
-
-
-		//m_position = m_position.add(CollisionNormal.multiply(CollisionNormal.multiply(Distance)));
+		B->m_velocity = B->m_velocity.add(NewVel.MakeNegetive()); // Reverses impulse velocity for the tyre
 	}
 
 }
 
-void Car::CarSetPos(myVector Pos)
+void Car::CarSetPos(myVector Pos) // Sets car position
 {
 	m_render.setPosition(Vector2f(Pos.x(), Pos.y()));
 }
 
-void Car::setCarTexture(vector<Texture>::iterator GivenTexture)
+void Car::setCarTexture(vector<Texture>::iterator GivenTexture) // Sets texture for car
 {
 	m_render.setTexture(*GivenTexture);
 }
